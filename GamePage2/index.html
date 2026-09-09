@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Airsoft game information, rules, schedule and Fienta ticket registration.">
+    <meta property="og:title" content="Game Page">
+    <meta property="og:description" content="Official information and registration for the game.">
+    <meta property="og:type" content="website">
+    <title>Game Page</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Game Page home">
+        <span class="brand-mark" aria-hidden="true">GP</span>
+        <span data-i18n="brand">Game Page</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" data-menu-toggle>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span class="sr-only" data-i18n="menu">Menu</span>
+      </button>
+
+      <nav id="main-navigation" class="navigation" aria-label="Main navigation" data-navigation>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#information" data-i18n="navInformation">Information</a>
+        <a href="#schedule" data-i18n="navSchedule">Schedule</a>
+        <a href="#rules" data-i18n="navRules">Rules</a>
+        <div class="language-switcher" aria-label="Language">
+          <button type="button" data-language="et">ET</button>
+          <button type="button" data-language="ru">RU</button>
+          <button type="button" data-language="en">EN</button>
+        </div>
+        <a class="button button-small fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="register">Register</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="shell hero-content">
+          <p class="eyebrow" data-i18n="eventType">Airsoft event</p>
+          <h1 data-game="name">GAME NAME</h1>
+          <p class="hero-summary" data-i18n="heroSummary">Official game information, schedule, rules and tickets.</p>
+          <dl class="hero-facts">
+            <div>
+              <dt data-i18n="dateLabel">Date</dt>
+              <dd data-game="date">To be announced</dd>
+            </div>
+            <div>
+              <dt data-i18n="locationLabel">Location</dt>
+              <dd data-game="location">To be announced</dd>
+            </div>
+          </dl>
+          <a class="button fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
+        </div>
+        <div class="hero-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-ticket-status data-i18n="ticketStatusUnknown">Ticket status is not configured</span>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="shell split-layout">
+          <div>
+            <p class="section-index">01 / <span data-i18n="aboutLabel">The game</span></p>
+            <h2 data-i18n="aboutTitle">About the operation</h2>
+          </div>
+          <div class="prose" data-remote-content="description" aria-live="polite">
+            <p data-i18n="descriptionFallback">The description will appear here after Google Docs is connected.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section information-section" id="information">
+        <div class="shell">
+          <p class="section-index">02 / <span data-i18n="informationLabel">Practical information</span></p>
+          <h2 data-i18n="informationTitle">Plan your game day</h2>
+          <div class="information-grid">
+            <article><span>01</span><h3 data-i18n="dateLabel">Date</h3><p data-game="date">To be announced</p></article>
+            <article><span>02</span><h3 data-i18n="locationLabel">Location</h3><p data-game="location">To be announced</p></article>
+            <article><span>03</span><h3 data-i18n="priceLabel">Price</h3><p data-game="price">See Fienta</p></article>
+            <article><span>04</span><h3 data-i18n="organiserLabel">Organiser</h3><p data-game="organiser">To be announced</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="schedule">
+        <div class="shell">
+          <div class="section-heading">
+            <div><p class="section-index">03 / <span data-i18n="scheduleLabel">Timeline</span></p><h2 data-i18n="scheduleTitle">Schedule</h2></div>
+            <p data-i18n="scheduleNote">Check the latest schedule before departure.</p>
+          </div>
+          <div class="schedule" data-schedule aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section rules-section" id="rules">
+        <div class="shell rules-layout">
+          <aside>
+            <p class="section-index">04 / <span data-i18n="rulesLabel">Field manual</span></p>
+            <h2 data-i18n="rulesTitle">Rules</h2>
+            <nav class="rules-toc" data-rules-toc aria-label="Rules contents"></nav>
+          </aside>
+          <div class="rules-content" data-remote-content="rules" aria-live="polite">
+            <article id="rules-placeholder"><span>01</span><h3 data-i18n="rulesFallbackTitle">Rules are being prepared</h3><p data-i18n="rulesFallback">The complete rules will appear here after Google Docs is connected.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section registration-section" id="registration">
+        <div class="shell registration-layout">
+          <div><p class="section-index">05 / <span data-i18n="registrationLabel">Registration</span></p><h2 data-i18n="registrationTitle">Choose your ticket in Fienta</h2></div>
+          <div class="registration-card">
+            <p data-i18n="registrationText">Registration, attendee details and payment are handled securely by Fienta.</p>
+            <p class="registration-note" data-i18n="registrationNote">Ticket types can represent different game sides and sales periods.</p>
+            <a class="button fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
+            <p class="configuration-warning" data-fienta-warning data-i18n="fientaNotConfigured">Add the real Fienta event URL in config.js before publishing.</p>
+            <noscript><p>JavaScript is disabled. Open the event directly on Fienta after the organiser configures the event link.</p></noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contacts">
+        <div class="shell split-layout">
+          <div><p class="section-index">06 / <span data-i18n="contactsLabel">Organisers</span></p><h2 data-i18n="contactsTitle">Contact</h2></div>
+          <div class="contact-card"><p data-i18n="contactsFallback">Approved organiser contacts will be shown here.</p><a data-contact-email hidden></a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-layout">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">GP</span><span data-i18n="brand">Game Page</span></a>
+        <p>© <span data-year></span> <span data-i18n="footerText">Game organisers. Information may change.</span></p>
+        <a href="#top" data-i18n="backToTop">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
