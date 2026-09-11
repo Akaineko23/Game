@@ -2,22 +2,18 @@ export const config = {
   apiUrl: 'https://script.google.com/macros/s/AKfycbw8LE9DEtwK7kzmxYZjSo4XB3Ijy2X9ASnHwbip4Qs_-RCJ7CRJvzQExZWPLI6NjNqo/exec',
 
   fienta: {
-    eventUrl: '',
+    eventUrl: 'https://fienta.com/',
     embedEnabled: true,
   },
 
   game: {
-    name: 'GAME NAME',
-    date: {
-      et: 'Kuupäev täpsustamisel',
-      ru: 'Дата уточняется',
-      en: 'Date to be announced',
-    },
-    location: {
-      et: 'Asukoht täpsustamisel',
-      ru: 'Место уточняется',
-      en: 'Location to be announced',
-    },
+    name: 'Mouse Hunt',
+    date: '24.10.2026',
+ 
+    location: 'Kadila raketibaas',
+
+    mapUrl: 'https://maps.app.goo.gl/6uLXVncmYRrDBbps5',
+
     price: {
       et: 'Vaata Fientast',
       ru: 'Смотрите в Fienta',

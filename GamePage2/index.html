@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Airsoft game information, rules, schedule and Fienta ticket registration.">
-    <meta property="og:title" content="Game Page">
+    <meta property="og:title" content="Mouse Hunt">
     <meta property="og:description" content="Official information and registration for the game.">
     <meta property="og:type" content="website">
-    <title>Game Page</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script type="module" src="assets/js/app.js"></script>
+    <title>Mouse Hunt - Airsoft Game</title>
+    <link rel="stylesheet" href="assets/css/main.css?v=0.2.3">
+    <script type="module" src="assets/js/app.js?v=0.2.3"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Game Page home">
-        <span class="brand-mark" aria-hidden="true">GP</span>
-        <span data-i18n="brand">Game Page</span>
+        <span class="brand-mark" aria-hidden="true">AH</span>
+        <span data-i18n="brand">Mouse Hunt</span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" data-menu-toggle>
@@ -37,7 +37,7 @@
           <button type="button" data-language="ru">RU</button>
           <button type="button" data-language="en">EN</button>
         </div>
-        <a class="button button-small fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="register">Register</a>
+        <a class="button button-small fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / Buy Ticket</a>
       </nav>
     </header>
 
@@ -55,7 +55,15 @@
             </div>
             <div>
               <dt data-i18n="locationLabel">Location</dt>
-              <dd data-game="location">To be announced</dd>
+              <dd>
+                <a 
+                  data-game="location"
+                  href="https://maps.app.goo.gl/6uLXVncmYRrDBbps5"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    To be announced
+                  </a>
+                  </dd>
             </div>
           </dl>
           <a class="button fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
@@ -67,7 +75,7 @@
       </section>
 
       <section class="section" id="about">
-        <div class="shell split-layout">
+        <div class="shell split-layout about-layout">
           <div>
             <p class="section-index">01 / <span data-i18n="aboutLabel">The game</span></p>
             <h2 data-i18n="aboutTitle">About the operation</h2>

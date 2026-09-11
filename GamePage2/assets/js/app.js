@@ -4,6 +4,7 @@ import { configureFienta } from './fienta.js';
 import { messages } from './i18n.js';
 
 let language = chooseInitialLanguage();
+const remoteCachePrefix = 'game-page-remote-content-';
 
 function chooseInitialLanguage() {
   const saved = localStorage.getItem('game-language');
@@ -94,30 +95,84 @@ function buildRulesContents() {
   });
 }
 
+function readRemoteCache(cacheLanguage) {
+  try {
+    const cached = localStorage.getItem(`${remoteCachePrefix}${cacheLanguage}`);
+    return cached ? JSON.parse(cached) : null;
+  } catch (error) {
+    console.warn('Cached remote content could not be read.', error);
+    return null;
+  }
+}
+
+function writeRemoteCache(cacheLanguage, values) {
+  try {
+    const current = readRemoteCache(cacheLanguage) || {};
+    const updated = {
+      ...current,
+      ...values,
+      cachedAt: Date.now(),
+    };
+
+    localStorage.setItem(`${remoteCachePrefix}${cacheLanguage}`, JSON.stringify(updated));
+  } catch (error) {
+    console.warn('Remote content could not be cached.', error);
+  }
+}
+
+function renderContent(content) {
+  if (content.description) {
+    document.querySelector('[data-remote-content="description"]').innerHTML = content.description;
+  }
+
+  if (content.rules) {
+    document.querySelector('[data-remote-content="rules"]').innerHTML = content.rules;
+  }
+
+  buildRulesContents();
+}
+
 async function loadRemoteContent() {
   if (!config.apiUrl) {
     return;
   }
 
-  try {
-    const [content, schedule] = await Promise.all([
-      api.getContent(language),
-      api.getSchedule(language),
-    ]);
+  const requestedLanguage = language;
+  const cached = readRemoteCache(requestedLanguage);
 
-    if (content.description) {
-      document.querySelector('[data-remote-content="description"]').innerHTML = content.description;
-    }
-
-    if (content.rules) {
-      document.querySelector('[data-remote-content="rules"]').innerHTML = content.rules;
-    }
-
-    renderSchedule(schedule.items || []);
-    buildRulesContents();
-  } catch (error) {
-    console.error('Remote content could not be loaded.', error);
+  if (cached && cached.content) {
+    renderContent(cached.content);
   }
+
+  if (cached && cached.schedule) {
+    renderSchedule(cached.schedule.items || []);
+  }
+
+  const contentRequest = api.getContent(requestedLanguage)
+    .then((content) => {
+      writeRemoteCache(requestedLanguage, { content });
+
+      if (language === requestedLanguage) {
+        renderContent(content);
+      }
+    })
+    .catch((error) => {
+      console.error('Remote description and rules could not be loaded.', error);
+    });
+
+  const scheduleRequest = api.getSchedule(requestedLanguage)
+    .then((schedule) => {
+      writeRemoteCache(requestedLanguage, { schedule });
+
+      if (language === requestedLanguage) {
+        renderSchedule(schedule.items || []);
+      }
+    })
+    .catch((error) => {
+      console.error('Remote schedule could not be loaded.', error);
+    });
+
+  await Promise.allSettled([contentRequest, scheduleRequest]);
 }
 
 document.querySelectorAll('[data-language]').forEach((button) => {

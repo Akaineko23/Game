@@ -8,7 +8,7 @@
   --muted: #69716c;
   --white: #fafbf5;
   --line: rgba(16, 21, 18, 0.18);
-  --content-width: 75rem;
+  --content-width: 90rem;
 }
 
 * {
@@ -320,7 +320,24 @@ h2 {
   gap: 8vw;
 }
 
+.about-layout {
+  grid-template-columns: minmax(10rem, 13rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.about-layout > * {
+  min-width: 0;
+}
+
+.about-layout h2 {
+  max-width: 100%;
+  font-size: clamp(2.75rem, 4vw, 3.25rem);
+}
+
 .prose {
+  width: 100%;
+  max-width: 52rem;
+  overflow-wrap: anywhere;
   font-size: 1.125rem;
 }
 
@@ -417,14 +434,24 @@ h2 {
 
 .rules-layout {
   display: grid;
-  grid-template-columns: 20rem minmax(0, 1fr);
-  gap: 8vw;
+  grid-template-columns: minmax(10rem, 13rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.rules-layout > * {
+  min-width: 0;
 }
 
 .rules-layout aside {
   position: sticky;
   top: 7rem;
+  min-width: 0;
   align-self: start;
+}
+
+.rules-layout aside h2 {
+  max-width: 100%;
+  font-size: clamp(2.75rem, 4vw, 3.25rem);
 }
 
 .rules-toc {
@@ -436,6 +463,20 @@ h2 {
   color: #b6beb8;
   font-size: 0.875rem;
   text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.rules-content {
+  width: 100%;
+  min-width: 0;
+  max-width: 52rem;
+  overflow-wrap: anywhere;
+}
+
+.rules-content a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .rules-content article,
