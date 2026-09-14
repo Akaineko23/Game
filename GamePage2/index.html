@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Airsoft game information, rules, schedule and Fienta ticket registration.">
-    <meta property="og:title" content="Mouse Hunt">
+    <meta property="og:title" content="Undertale">
     <meta property="og:description" content="Official information and registration for the game.">
     <meta property="og:type" content="website">
-    <title>Mouse Hunt - Airsoft Game</title>
-    <link rel="stylesheet" href="assets/css/main.css?v=0.2.3">
-    <script type="module" src="assets/js/app.js?v=0.2.3"></script>
+    <title>Undertale - Airsoft Game</title>
+    <link rel="stylesheet" href="assets/css/main.css?v=0.2.9">
+    <script type="module" src="assets/js/app.js?v=0.2.7"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Game Page home">
-        <span class="brand-mark" aria-hidden="true">AH</span>
-        <span data-i18n="brand">Mouse Hunt</span>
+      <a class="brand" href="#top" aria-label="Undertail Airsoft Game home">
+        <span class="brand-mark" aria-hidden="true">UAG</span>
+        <span data-i18n="brand">Undertail Airsoft Game</span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" data-menu-toggle>
@@ -30,14 +30,13 @@
       <nav id="main-navigation" class="navigation" aria-label="Main navigation" data-navigation>
         <a href="#about" data-i18n="navAbout">About</a>
         <a href="#information" data-i18n="navInformation">Information</a>
-        <a href="#schedule" data-i18n="navSchedule">Schedule</a>
         <a href="#rules" data-i18n="navRules">Rules</a>
         <div class="language-switcher" aria-label="Language">
           <button type="button" data-language="et">ET</button>
           <button type="button" data-language="ru">RU</button>
           <button type="button" data-language="en">EN</button>
         </div>
-        <a class="button button-small fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / Buy Ticket</a>
+        <a class="button button-small fienta-link" href="https://fienta.com/et/undertail" target="_blank" rel="noopener noreferrer" data-fienta-link data-i18n="buyTicket">Register / Buy Ticket</a>
       </nav>
     </header>
 
@@ -47,26 +46,68 @@
         <div class="shell hero-content">
           <p class="eyebrow" data-i18n="eventType">Airsoft event</p>
           <h1 data-game="name">GAME NAME</h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle" data-i18n-hide-empty>SABAHÄNNA</p>
           <p class="hero-summary" data-i18n="heroSummary">Official game information, schedule, rules and tickets.</p>
-          <dl class="hero-facts">
-            <div>
-              <dt data-i18n="dateLabel">Date</dt>
-              <dd data-game="date">To be announced</dd>
-            </div>
-            <div>
-              <dt data-i18n="locationLabel">Location</dt>
+          <dl class="hero-facts" id="information">
+            <div class="hero-fact-column hero-event-details">
+              <dt class="sr-only" data-i18n="informationLabel">Information</dt>
               <dd>
-                <a 
-                  data-game="location"
-                  href="https://maps.app.goo.gl/6uLXVncmYRrDBbps5"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                    To be announced
-                  </a>
-                  </dd>
+                <dl class="hero-fact-list">
+                  <div>
+                    <dt data-i18n="dateLabel">Date</dt>
+                    <dd data-game="date">To be announced</dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="locationLabel">Location</dt>
+                    <dd><a data-game="location" data-map-link href="https://maps.app.goo.gl/6uLXVncmYRrDBbps5" target="_blank" rel="noopener noreferrer">Kadila raketibaas</a></dd>
+                  </div>
+                </dl>
+              </dd>
+            </div>
+            <div class="hero-fact-column">
+              <dt data-i18n="scheduleLabel">Schedule</dt>
+              <dd>
+                <dl class="hero-fact-list schedule-list">
+                  <div>
+                    <dt data-i18n="arrivalTimeLabel">Arrival</dt>
+                    <dd data-game-time="arrival">8.00</dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="registrationTimeLabel">Registration</dt>
+                    <dd data-game-time="registration">8.00–10.30</dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="briefingTimeLabel">Briefing</dt>
+                    <dd data-game-time="briefing">11.00</dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="gameTimeLabel">Game</dt>
+                    <dd data-game-time="game">12.00–18.00</dd>
+                  </div>
+                </dl>
+              </dd>
+            </div>
+            <div class="hero-fact-column">
+              <dt data-i18n="ticketWavesLabel">Tickets</dt>
+              <dd>
+                <dl class="hero-fact-list ticket-wave-list">
+                  <div data-ticket-wave="earlyBird">
+                    <dt data-i18n="earlyBirdLabel">Early Bird</dt>
+                    <dd><strong data-ticket-wave-price>25 €</strong><span data-ticket-wave-dates>14.09–04.10</span></dd>
+                  </div>
+                  <div data-ticket-wave="lateBird">
+                    <dt data-i18n="lateBirdLabel">Late Bird</dt>
+                    <dd><strong data-ticket-wave-price>35 €</strong><span data-ticket-wave-dates>05.10–23.10</span></dd>
+                  </div>
+                  <div data-ticket-wave="onSite">
+                    <dt data-i18n="onSiteLabel">On site</dt>
+                    <dd><strong data-ticket-wave-price>50 €</strong><span data-ticket-wave-dates></span></dd>
+                  </div>
+                </dl>
+              </dd>
             </div>
           </dl>
-          <a class="button fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
+          <a class="button fienta-link" href="https://fienta.com/et/undertail" target="_blank" rel="noopener noreferrer" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
         </div>
         <div class="hero-status">
           <span class="status-dot" aria-hidden="true"></span>
@@ -77,7 +118,6 @@
       <section class="section" id="about">
         <div class="shell split-layout about-layout">
           <div>
-            <p class="section-index">01 / <span data-i18n="aboutLabel">The game</span></p>
             <h2 data-i18n="aboutTitle">About the operation</h2>
           </div>
           <div class="prose" data-remote-content="description" aria-live="polite">
@@ -86,33 +126,9 @@
         </div>
       </section>
 
-      <section class="section information-section" id="information">
-        <div class="shell">
-          <p class="section-index">02 / <span data-i18n="informationLabel">Practical information</span></p>
-          <h2 data-i18n="informationTitle">Plan your game day</h2>
-          <div class="information-grid">
-            <article><span>01</span><h3 data-i18n="dateLabel">Date</h3><p data-game="date">To be announced</p></article>
-            <article><span>02</span><h3 data-i18n="locationLabel">Location</h3><p data-game="location">To be announced</p></article>
-            <article><span>03</span><h3 data-i18n="priceLabel">Price</h3><p data-game="price">See Fienta</p></article>
-            <article><span>04</span><h3 data-i18n="organiserLabel">Organiser</h3><p data-game="organiser">To be announced</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="schedule">
-        <div class="shell">
-          <div class="section-heading">
-            <div><p class="section-index">03 / <span data-i18n="scheduleLabel">Timeline</span></p><h2 data-i18n="scheduleTitle">Schedule</h2></div>
-            <p data-i18n="scheduleNote">Check the latest schedule before departure.</p>
-          </div>
-          <div class="schedule" data-schedule aria-live="polite"></div>
-        </div>
-      </section>
-
       <section class="section rules-section" id="rules">
         <div class="shell rules-layout">
           <aside>
-            <p class="section-index">04 / <span data-i18n="rulesLabel">Field manual</span></p>
             <h2 data-i18n="rulesTitle">Rules</h2>
             <nav class="rules-toc" data-rules-toc aria-label="Rules contents"></nav>
           </aside>
@@ -124,11 +140,11 @@
 
       <section class="section registration-section" id="registration">
         <div class="shell registration-layout">
-          <div><p class="section-index">05 / <span data-i18n="registrationLabel">Registration</span></p><h2 data-i18n="registrationTitle">Choose your ticket in Fienta</h2></div>
+          <div><h2 data-i18n="registrationTitle">Choose your ticket in Fienta</h2></div>
           <div class="registration-card">
             <p data-i18n="registrationText">Registration, attendee details and payment are handled securely by Fienta.</p>
             <p class="registration-note" data-i18n="registrationNote">Ticket types can represent different game sides and sales periods.</p>
-            <a class="button fienta-link" href="https://fienta.com/" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
+            <a class="button fienta-link" href="https://fienta.com/et/undertail" target="_blank" rel="noopener noreferrer" data-fienta-link data-i18n="buyTicket">Register / buy ticket</a>
             <p class="configuration-warning" data-fienta-warning data-i18n="fientaNotConfigured">Add the real Fienta event URL in config.js before publishing.</p>
             <noscript><p>JavaScript is disabled. Open the event directly on Fienta after the organiser configures the event link.</p></noscript>
           </div>
@@ -137,15 +153,15 @@
 
       <section class="section" id="contacts">
         <div class="shell split-layout">
-          <div><p class="section-index">06 / <span data-i18n="contactsLabel">Organisers</span></p><h2 data-i18n="contactsTitle">Contact</h2></div>
-          <div class="contact-card"><p data-i18n="contactsFallback">Approved organiser contacts will be shown here.</p><a data-contact-email hidden></a></div>
+          <div><h2 data-i18n="contactsTitle">Contact</h2></div>
+          <div class="contact-card"><a data-contact-email hidden></a></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-layout">
-        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">GP</span><span data-i18n="brand">Game Page</span></a>
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">UAG</span><span data-i18n="brand">Undertail Airsoft Game</span></a>
         <p>© <span data-year></span> <span data-i18n="footerText">Game organisers. Information may change.</span></p>
         <a href="#top" data-i18n="backToTop">Back to top ↑</a>
       </div>
