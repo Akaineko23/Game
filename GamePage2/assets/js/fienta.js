@@ -15,6 +15,8 @@ export function configureFienta(translate) {
 
   links.forEach((link) => {
     link.href = eventUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
   });
   warning.hidden = true;
 

@@ -24,10 +24,6 @@ export const api = {
     return get('content', language);
   },
 
-  getSchedule(language) {
-    return get('schedule', language);
-  },
-
   health() {
     return get('health', 'en');
   },

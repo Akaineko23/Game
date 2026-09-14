@@ -1,7 +1,7 @@
 import { api } from './api.js';
 import { config } from './config.js';
 import { configureFienta } from './fienta.js';
-import { messages } from './i18n.js';
+import { messages } from './i18n.js?v=0.2.7';
 
 let language = chooseInitialLanguage();
 const remoteCachePrefix = 'game-page-remote-content-';
@@ -31,7 +31,16 @@ function renderLanguage() {
   document.documentElement.lang = language;
 
   document.querySelectorAll('[data-i18n]').forEach((element) => {
-    element.textContent = translate(element.dataset.i18n);
+    const key = element.dataset.i18n;
+
+    if (element.hasAttribute('data-i18n-hide-empty')) {
+      const optionalText = messages[language][key] || '';
+      element.textContent = optionalText;
+      element.hidden = optionalText.length === 0;
+      return;
+    }
+
+    element.textContent = translate(key);
   });
 
   document.querySelectorAll('[data-language]').forEach((button) => {
@@ -44,39 +53,42 @@ function renderLanguage() {
     element.textContent = typeof value === 'object' ? value[language] || value.en : value;
   });
 
+  document.querySelectorAll('[data-game-time]').forEach((element) => {
+    const value = config.game.times[element.dataset.gameTime];
+    element.textContent = value || translate('timePending');
+  });
+
+  renderTicketWaves();
+
+  document.querySelector('[data-map-link]').href = config.game.mapUrl;
+  renderContactEmail();
+
   document.title = `${config.game.name} — ${translate('eventType')}`;
-  renderEmptySchedule();
   buildRulesContents();
 }
 
-function renderEmptySchedule() {
-  document.querySelector('[data-schedule]').innerHTML =
-    `<p class="empty-state">${translate('scheduleEmpty')}</p>`;
+function renderTicketWaves() {
+  document.querySelectorAll('[data-ticket-wave]').forEach((element) => {
+    const wave = config.game.ticketWaves.find((item) => item.key === element.dataset.ticketWave);
+
+    if (!wave) {
+      return;
+    }
+
+    element.querySelector('[data-ticket-wave-price]').textContent = wave.price;
+    const dates = element.querySelector('[data-ticket-wave-dates]');
+    dates.textContent = wave.dates;
+    dates.hidden = !wave.dates;
+  });
 }
 
-function renderSchedule(items) {
-  const schedule = document.querySelector('[data-schedule]');
+function renderContactEmail() {
+  const contact = document.querySelector('[data-contact-email]');
+  const email = config.game.contactEmail.trim();
 
-  if (!items.length) {
-    renderEmptySchedule();
-    return;
-  }
-
-  schedule.innerHTML = items
-    .map((item) => `
-      <article class="schedule-row">
-        <div class="schedule-date">${escapeHtml(item.date)}</div>
-        <div class="schedule-time">${escapeHtml(item.time)}</div>
-        <div class="schedule-title">${escapeHtml(item.title)}</div>
-      </article>
-    `)
-    .join('');
-}
-
-function escapeHtml(value) {
-  const element = document.createElement('div');
-  element.textContent = String(value || '');
-  return element.innerHTML;
+  contact.hidden = !email;
+  contact.textContent = email;
+  contact.href = email ? `mailto:${email}` : '';
 }
 
 function buildRulesContents() {
@@ -144,11 +156,7 @@ async function loadRemoteContent() {
     renderContent(cached.content);
   }
 
-  if (cached && cached.schedule) {
-    renderSchedule(cached.schedule.items || []);
-  }
-
-  const contentRequest = api.getContent(requestedLanguage)
+  await api.getContent(requestedLanguage)
     .then((content) => {
       writeRemoteCache(requestedLanguage, { content });
 
@@ -159,20 +167,6 @@ async function loadRemoteContent() {
     .catch((error) => {
       console.error('Remote description and rules could not be loaded.', error);
     });
-
-  const scheduleRequest = api.getSchedule(requestedLanguage)
-    .then((schedule) => {
-      writeRemoteCache(requestedLanguage, { schedule });
-
-      if (language === requestedLanguage) {
-        renderSchedule(schedule.items || []);
-      }
-    })
-    .catch((error) => {
-      console.error('Remote schedule could not be loaded.', error);
-    });
-
-  await Promise.allSettled([contentRequest, scheduleRequest]);
 }
 
 document.querySelectorAll('[data-language]').forEach((button) => {
