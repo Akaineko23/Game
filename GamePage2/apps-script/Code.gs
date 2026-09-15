@@ -58,6 +58,8 @@ function publicErrorCode_(error) {
     'WEBHOOK_VERIFICATION_NOT_CONFIGURED',
     'WEBHOOK_REJECTED',
     'PLAYER_NUMBER_LIMIT_REACHED',
+    'REGISTRATIONS_SPREADSHEET_NOT_CONFIGURED',
+    'FIENTA_API_NOT_CONFIGURED',
   ];
 
   return allowedCodes.indexOf(error.message) >= 0 ? error.message : 'SERVER_ERROR';

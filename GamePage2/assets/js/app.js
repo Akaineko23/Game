@@ -1,10 +1,9 @@
-import { api } from './api.js';
 import { config } from './config.js';
-import { configureFienta } from './fienta.js';
-import { messages } from './i18n.js?v=0.2.7';
+import { configureFienta, renderFientaStatus } from './fienta.js?v=0.2.9';
+import { messages } from './i18n.js?v=0.2.9';
+import { localContent } from './local-content.js?v=0.2.9';
 
 let language = chooseInitialLanguage();
-const remoteCachePrefix = 'game-page-remote-content-';
 
 function chooseInitialLanguage() {
   const saved = localStorage.getItem('game-language');
@@ -62,9 +61,10 @@ function renderLanguage() {
 
   document.querySelector('[data-map-link]').href = config.game.mapUrl;
   renderContactEmail();
+  renderLocalContent();
 
   document.title = `${config.game.name} — ${translate('eventType')}`;
-  buildRulesContents();
+  renderFientaStatus(translate);
 }
 
 function renderTicketWaves() {
@@ -107,66 +107,23 @@ function buildRulesContents() {
   });
 }
 
-function readRemoteCache(cacheLanguage) {
-  try {
-    const cached = localStorage.getItem(`${remoteCachePrefix}${cacheLanguage}`);
-    return cached ? JSON.parse(cached) : null;
-  } catch (error) {
-    console.warn('Cached remote content could not be read.', error);
-    return null;
-  }
-}
+function renderLocalContent() {
+  const content = localContent[language];
 
-function writeRemoteCache(cacheLanguage, values) {
-  try {
-    const current = readRemoteCache(cacheLanguage) || {};
-    const updated = {
-      ...current,
-      ...values,
-      cachedAt: Date.now(),
-    };
+  ['description', 'rules'].forEach((contentKey) => {
+    const container = document.querySelector(`[data-remote-content="${contentKey}"]`);
+    const html = content && content[contentKey];
 
-    localStorage.setItem(`${remoteCachePrefix}${cacheLanguage}`, JSON.stringify(updated));
-  } catch (error) {
-    console.warn('Remote content could not be cached.', error);
-  }
-}
+    if (typeof html === 'string' && html.trim()) {
+      container.innerHTML = html;
+    } else {
+      container.textContent = translate('contentUnavailable');
+    }
 
-function renderContent(content) {
-  if (content.description) {
-    document.querySelector('[data-remote-content="description"]').innerHTML = content.description;
-  }
-
-  if (content.rules) {
-    document.querySelector('[data-remote-content="rules"]').innerHTML = content.rules;
-  }
+    container.setAttribute('aria-busy', 'false');
+  });
 
   buildRulesContents();
-}
-
-async function loadRemoteContent() {
-  if (!config.apiUrl) {
-    return;
-  }
-
-  const requestedLanguage = language;
-  const cached = readRemoteCache(requestedLanguage);
-
-  if (cached && cached.content) {
-    renderContent(cached.content);
-  }
-
-  await api.getContent(requestedLanguage)
-    .then((content) => {
-      writeRemoteCache(requestedLanguage, { content });
-
-      if (language === requestedLanguage) {
-        renderContent(content);
-      }
-    })
-    .catch((error) => {
-      console.error('Remote description and rules could not be loaded.', error);
-    });
 }
 
 document.querySelectorAll('[data-language]').forEach((button) => {
@@ -174,7 +131,6 @@ document.querySelectorAll('[data-language]').forEach((button) => {
     language = button.dataset.language;
     localStorage.setItem('game-language', language);
     renderLanguage();
-    loadRemoteContent();
   });
 });
 
@@ -203,4 +159,3 @@ document.querySelector('[data-year]').textContent = new Date().getFullYear();
 
 renderLanguage();
 configureFienta(translate);
-loadRemoteContent();

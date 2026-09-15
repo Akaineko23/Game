@@ -7,7 +7,7 @@ export const config = {
   },
 
   game: {
-    name: 'Undertale',
+    name: 'Undertail',
     date: '24.10.2026',
  
     location: 'Kadila raketibaas',

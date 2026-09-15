@@ -4,7 +4,7 @@ Multilingual ET/RU/EN page for one airsoft game. The frontend is plain HTML, CSS
 
 ## Current state
 
-The site runs locally with safe placeholders. Description, rules, schedule and Fienta checkout become active only after real IDs and URLs are configured. The Fienta webhook intentionally rejects requests until the official verification mechanism and a real test payload have been inspected.
+The site ships with local ET/RU/EN copies of the description and rules. Google Docs remain the editing source and are pulled into the site before publication with `node scripts/sync-content.mjs`. Fienta registration export remains disabled until the organiser adds the required Script Properties and test spreadsheet.
 
 ## Local preview
 
@@ -15,6 +15,7 @@ Open this folder with VS Code and use Live Server, or run any static HTTP server
 1. Add public game details and `fienta.eventUrl` to `assets/js/config.js`.
 2. Follow `docs/google-setup.md`.
 3. Follow `docs/fienta-setup.md`.
+4. Follow `docs/content-sync.md` whenever Google Docs content changes.
 4. Deploy Apps Script using `docs/deployment.md`.
 5. Test every checklist item in `docs/testing.md`.
 

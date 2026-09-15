@@ -18,25 +18,41 @@ In the event view, current Fienta help places this under **Edit → Order form**
 
 1. Copy the published Fienta event URL.
 2. Put it in `assets/js/config.js` as `fienta.eventUrl`.
-3. Keep `embedEnabled: true` to load `https://fienta.com/embed.js`.
-4. Test the normal link first. Then test that the same link opens the Fienta overlay with JavaScript enabled.
+3. The three visible ticket buttons remain ordinary links with `target="_blank"` and do not open an overlay.
+4. The frontend loads `https://fienta.com/embed.js` against a hidden status-only link so the official availability callback can update the HERO status.
 5. With JavaScript disabled, the anchor remains an ordinary link. Before publishing, replace the generic HTML fallback URL with the same real event URL if true no-JavaScript fallback is required.
 
-The official availability callback supports: `true` for more than 50 tickets, `1..50` for an exact remaining count, `0` for sold out and `false` for sale ended.
+The official availability callback supports: `true` for more than 50 tickets, `1..50` for an exact remaining count, `0` for sold out and `false` for sale ended. It does not provide a documented count of paid tickets, so the site never derives or displays an estimated sold count.
 
 ## Webhook
 
 1. Current public help places webhooks under **Settings → Integration**. Verify the current location in Fienta organiser interface.
-2. Use the deployed Apps Script `/exec` URL.
-3. Enable purchase/registration, registration update and validation events that exist in the current interface.
-4. Use Fienta's test button and inspect its displayed sample payload.
-5. Compare the current official API documentation for the verification/authentication mechanism.
-6. Implement that exact mechanism in `verifyFientaWebhook_()` and map the observed fields in `normalizeFientaWebhook_()`.
-7. If the official mechanism requires secrets, store only placeholders such as `FIENTA_WEBHOOK_SECRET` or `FIENTA_API_KEY` in **Apps Script → Project Settings → Script Properties**. Never commit real values.
-8. Send a test and inspect **Apps Script → Executions** plus the private Registrations sheet.
+2. Generate a long random value for `FIENTA_WEBHOOK_SECRET` and save it in Apps Script **Project Settings → Script Properties**.
+3. Use the deployed URL in this form: `https://script.google.com/macros/s/DEPLOYMENT_ID/exec?secret=YOUR_SECRET`.
+4. Enable the documented order-completion, registration-form and ticket-validation webhooks.
+5. Keep the URL private and rotate the secret if it is exposed.
+6. Use Fienta's test button and inspect **Apps Script → Executions** plus the private registrations sheet.
 
-Until steps 4–6 are complete, the endpoint returns `WEBHOOK_VERIFICATION_NOT_CONFIGURED` and writes nothing.
+Fienta's OpenAPI document describes webhook bodies but does not specify a signature header. The secret URL parameter is therefore required by this project instead of an invented signature header. Cancellation and refund states are reconciled by the authenticated API synchronization described below.
 
-## API
+## API synchronization
 
-Fienta's public events API can list published public events and does not belong in a secret configuration. Organiser-level APIs may require an API key; keep that key in Script Properties and never in frontend JavaScript.
+Create these Script Properties:
+
+- `REGISTRATIONS_SPREADSHEET_ID`: ID of the Google spreadsheet chosen by the organiser.
+- `FIENTA_API_TOKEN`: organiser-level API key from Fienta **Settings → Integration**.
+- `FIENTA_ORGANIZER_ID`: numeric organiser ID.
+- `FIENTA_EVENT_ID`: numeric event ID.
+- `FIENTA_WEBHOOK_SECRET`: the random webhook URL secret described above.
+- `FIENTA_TICKET_TYPE_SIDE_MAP`: JSON object mapping ticket-type IDs or exact titles to game sides, for example `{"142835":"Alliance","142836":"Undertail"}`. Unmapped ticket types remain blank.
+
+Optional attendee-field mappings are `FIENTA_FIRST_NAME_FIELD`, `FIENTA_LAST_NAME_FIELD`, `FIENTA_CALLSIGN_FIELD`, and `FIENTA_EMAIL_FIELD`. Their defaults are `first_name`, `last_name`, `callsign`, and `email`. Change them only when the custom-field names shown by Fienta differ.
+
+After adding all Apps Script files and properties:
+
+1. Run `syncFientaRegistrations` manually from the Apps Script editor and approve Spreadsheet and external-request permissions. This imports existing orders and tickets using the documented paginated API.
+2. Verify several rows, including an order containing multiple tickets. The unique Fienta ticket code is used for updates, so repeated imports do not create duplicates.
+3. Run `installFientaSyncTrigger` once to create a single hourly synchronization trigger.
+4. Deploy a new web-app version and configure the three webhook types.
+
+Until `REGISTRATIONS_SPREADSHEET_ID` is set, synchronization stops with `REGISTRATIONS_SPREADSHEET_NOT_CONFIGURED` and does not open or write any spreadsheet. API tokens and attendee data are never returned by the public site API.

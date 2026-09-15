@@ -429,6 +429,16 @@ h2 {
   font-size: 1.125rem;
 }
 
+.remote-content-message {
+  margin: 0;
+}
+
+.remote-content-notice {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  opacity: 0.72;
+}
+
 .information-section {
   background: var(--paper-dark);
 }

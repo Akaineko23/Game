@@ -3,10 +3,11 @@
 ## Data flow
 
 ```text
-Browser ──GET──> Apps Script ──> private Google Docs (description and rules)
+Publishing command ──GET──> Apps Script ──> private Google Docs
+Browser ──local files──────────> description and rules
 Browser ──GET──> Apps Script ──> private Google Sheet (schedule)
-Browser ──link/embed────────────> Fienta checkout
-Fienta  ──webhook──> Apps Script ──> private Google Sheet (registrations)
+Browser ──new-tab link──────────> Fienta checkout
+Fienta  ──webhook/API──> Apps Script ──> private Google Sheet (registrations)
 ```
 
 The browser receives only public content. Document and spreadsheet IDs stay in `apps-script/Config.gs`. Secrets belong in Apps Script Script Properties.
@@ -14,13 +15,14 @@ The browser receives only public content. Document and spreadsheet IDs stay in `
 ## Modules
 
 - `assets/js/app.js`: language, navigation and page rendering.
-- `assets/js/api.js`: GET requests to Apps Script.
+- `assets/js/local-content.js`: generated ET/RU/EN description and rules.
 - `assets/js/fienta.js`: official embed loader and availability callback.
 - `apps-script/Code.gs`: small request router and safe errors.
 - `ContentService.gs` and `ScheduleService.gs`: cached public reads.
 - `FientaWebhookService.gs`: webhook verification and payload adapter boundary.
 - `RegistrationRepository.gs`: idempotent ticket upsert.
 - `PlayerNumberService.gs`: sequential four-digit numbers.
+- `FientaApiService.gs`: paginated initial and periodic imports from the authenticated Fienta API.
 
 ## Important migration decision
 
@@ -28,4 +30,4 @@ The folder was empty, so there was no legacy form to remove. The new frontend co
 
 ## Webhook safety boundary
 
-Fienta's public help confirms webhooks and test payloads, but the exact verification contract was not available in the reviewed public help. `verifyFientaWebhook_()` therefore fails closed. Enable processing only after comparing the current official API documentation and a real test payload from the organiser account. Never replace it with an invented signature scheme.
+Fienta's OpenAPI document describes the JSON payloads but does not publish a signature header. The project therefore requires an organiser-generated `FIENTA_WEBHOOK_SECRET` in Script Properties and the same secret in the configured webhook URL query parameter. Periodic API synchronization remains authoritative for lifecycle changes such as cancellations and refunds that do not have a documented webhook type.
