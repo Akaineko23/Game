@@ -14,28 +14,10 @@ const status = {
   },
   textContent: '',
 };
-let source = null;
-let embeddedScriptCount = 0;
+const source = {};
+const eventListeners = new Map();
 
 const document = {
-  body: {
-    append(element) {
-      source = element;
-    },
-  },
-  createElement(tagName) {
-    return {
-      addEventListener() {},
-      after() {
-        if (tagName === 'a') {
-          embeddedScriptCount += 1;
-        }
-      },
-      setAttribute(name, value) {
-        this[name] = value;
-      },
-    };
-  },
   querySelector(selector) {
     if (selector === '[data-fienta-warning]') {
       return warning;
@@ -65,6 +47,13 @@ const context = vm.createContext({
   },
   document,
   window: {
+    addEventListener(name, listener) {
+      eventListeners.set(name, listener);
+    },
+    fientaAvailabilityState: {
+      received: false,
+      value: null,
+    },
     setTimeout() {
       return 1;
     },
@@ -86,10 +75,14 @@ context.translate = (key, values = {}) => (
 
 vm.runInContext('configureFienta(translate); configureFienta(translate);', context);
 
-assert.equal(embeddedScriptCount, 1);
+assert.equal(eventListeners.size, 1);
 assert.equal(links.every((link) => link.target === '_blank'), true);
 assert.equal(links.every((link) => link.rel === 'noopener noreferrer'), true);
-assert.equal(context.window.fientaSettings.link_selector, 'a[data-fienta-status-source]');
+assert.equal(source.href, 'https://fienta.com/et/undertail');
+
+const indexSource = fs.readFileSync(new URL('index.html', projectRoot), 'utf8');
+assert.equal((indexSource.match(/https:\/\/fienta\.com\/embed\.js/g) || []).length, 1);
+assert.match(indexSource, /link_selector: 'a\[data-fienta-status-source\]'/);
 
 const cases = [
   [true, 'available'],
@@ -107,7 +100,9 @@ for (const [value, expectedType] of cases) {
   );
 }
 
-vm.runInContext('setAvailability(normalizeAvailability(7))', context);
+eventListeners.get('fienta:tickets-available')({
+  detail: 7,
+});
 assert.equal(status.textContent, '7 left');
 assert.equal(status['aria-busy'], 'false');
 

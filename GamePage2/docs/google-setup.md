@@ -1,18 +1,23 @@
 # Google setup
 
-## Description and rules documents
+## Description, rules and news documents
 
-1. Create six Google Docs: Description ET/RU/EN and Rules ET/RU/EN.
+1. Create nine Google Docs: Description ET/RU/EN, Rules ET/RU/EN and News ET/RU/EN.
 2. In a document URL such as `https://docs.google.com/document/d/DOCUMENT_ID/edit`, copy the value between `/d/` and `/edit`.
-3. Paste each ID into the matching `DESCRIPTION_DOCS` or `RULES_DOCS` entry in `apps-script/Config.gs`.
+3. Paste each ID into the matching `DESCRIPTION_DOCS`, `RULES_DOCS` or `NEWS_DOCS` entry in `apps-script/Config.gs`.
 4. Keep the documents private. The Apps Script project should run as the same owner or an account that already has access.
 5. Use Heading 1–3 for sections. The frontend builds the rules contents from returned headings.
 6. After deployment, test:
    - `?action=content&language=et`
    - `?action=content&language=ru`
    - `?action=content&language=en`
+   - `?action=news&language=et`
+   - `?action=news&language=ru`
+   - `?action=news&language=en`
 
 The browser never sends a Document ID, so it cannot request an arbitrary Drive file.
+The news response replaces the complete local news block for its language; it
+does not merge entries or maintain a separate archive.
 
 ## Schedule sheet
 

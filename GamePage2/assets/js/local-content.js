@@ -2,15 +2,742 @@
 
 export const localContent = {
   "et": {
-    "description": "<h2>Undertail</h2><h3>Sissejuhatus</h3><p>Erinevatest riikidest koosnev Allianss otsustas vallutada ja omavahel ära jagada kaardil pimesoole moodi väljaulatuval alal asuva väikese küla. Selle küla nimi on Sabahänna (Undertail).</p><p>Allianss ootas eest leidvat sektante ja keppidega relvastatud metsikut pärismaalaste ühiskonda. Kuid nende ootused osutusid täiesti ekslikuks: kui Allianss otsustas külasse siseneda, kohtasid vallutajad sõbralikke kohalikke elanikke ja hästi arenenud infrastruktuuri.</p><p>Saabunud vallutajatele tuli vastu asula juht, kes palus enne seda, kui elanikud vabatahtlikult „alla annavad“, korraldada Alliansi auks pidu, kuhu tema ja külaelanikud kutsusid äsja saabunud „külalised“.</p><p>Peol joodavad kohalikud Alliansi väed „teega“ täis ja kostitavad neid vesipiipudega — ning sealt läheb kõik allamäge. Sõjamehed tõmbavad end nii täis kui sead, mistõttu külaelanikud lähevad Alliansi tanki lahti võtma, et selle vägesid peatada.</p><p>Kuid ka kohalikud ei jää maha — nad joovad end samuti täiesti täis, võtavad Alliansi tanki juppideks ning selle käigus, kaotades kütust ja varuosi, võtavad mingil põhjusel lahti ka omaenda tanki. Alles jäetakse ainult navigatsiooniseade, mis võimaldab suunata suurtükiväe tulelööke. „Teest“ läbi imbunud teadvus ütles asjaosalistele, et sellest täiesti piisab.</p><p>Kõik selle uuesti töökorda kokku panna suudab ainult tehnik, kes tegutseb neutraalsel territooriumil.</p><p>Siin lõpeb minu lugu, sõber. Edasiste sündmuste tunnistajaks ja osaliseks saad juba sina.</p><h2>Peamised mängumehaanikad</h2><p>Pooled: Allianss ja Sabahänna (Undertail) elanikud.</p><h3>Küla</h3><p>• Küla on peamine vallutuspunkt.</p><p>• Kontrolli kontrollitakse iga 30 minuti järel — 2 punkti. (Punktis peab olema üles pandud poole lipp. Lipud asuvad punktis.)</p><p>• Küla kontrollimine mängu lõppemise hetkel annab lisaks 5 punkti.</p><h3>Detailid ja tehnik</h3><p>• Mängualal asub 2 detailide hankimise punkti.</p><p>• Komponendid tuleb toimetada tehnikule.</p><p>• Ühe valmis detaili kokkupanek võtab 15 minutit. (Aega hakatakse arvestama hetkest, mil mõlemad detailid on tehnikule toimetatud.)</p><p>• Pool peab kokkupaneku ajal tehnikut kontrollima.</p><p>• Kontrolli vahetumisel kokkupaneku progress ei nullitu. Detaili saab pool, kes kontrollib tehnikut kokkupaneku lõppemise hetkel.</p><p>• 10 valmis detaili = taastatud navigatsiooniseade = 20 punkti.</p><p>• Taastatud navigatsiooniseade võimaldab tellida suurtükiväe tulelöögi üks kord iga 30 minuti järel.</p><h3>Kütus</h3><p>• Mängualal asub 1 kütuse hankimise punkt.</p><p>• Iga 30 minuti järel ilmub sinna 1 kanister. (Näiteks kell 11:15 ja 11:45.)</p><p>• 1 kanister = 1 tund sõiduki tööaega. (Alates tankimise hetkest.)</p><p>• Mängu alguses saab kumbki pool 2 kanistrit.</p><p>• Kütus võidupunkte ei anna.</p><h3>Väärtuslik maavara</h3><p>• Mängualal asub 1 väärtusliku maavara kaevandamise punkt.</p><p>• Elanikud kaevandavad ja säilitavad maavara.</p><p>• Allianss vallutab selle ja veab ära.</p><p>• 1 ühik = 2 punkti.</p><h3>Mängupunktid</h3><p>Mängualal on kokku 6 peamist punkti:</p><p>• Sabahänna (Undertail) küla.</p><p>• Detailide punkt nr 1.</p><p>• Detailide punkt nr 2.</p><p>• Tehnik.</p><p>• Kütusepunkt.</p><p>• Väärtusliku maavara leiukoht.</p><h3>Võit</h3><p>Võidab pool, kellel on mängu lõpuks kõige rohkem võidupunkte.</p>",
-    "rules": "<h3>Põhireeglid</h3><p>• Kasutada võib ainult BIO-kuule.</p><p>• Kõik relvad, mida plaanitakse mängul kasutada, peavad läbima kronograafikontrolli.</p><p>• Püstolid / haavlipüssid – ≤ 1,2 J, minimaalset laskekaugust ei ole.</p><p>• Automaadid (ründerelvad) – ≤ 1,6 J. Sekundaarrelv on soovitatav.</p><p>• Kuulipildujad – ≤ 2,5 J, minimaalne laskekaugus 20 m. Sekundaarrelv on kohustuslik.\r*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.\r*M4 trummelsalvega ei ole kuulipilduja.</p><p>• Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – ≤ 3,0 J, minimaalne laskekaugus 30 m. Sekundaarrelv on kohustuslik.\r*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.\r*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).\r*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.\r*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).\r*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).\r*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</p><p>• Poltlukuga snaiprirelvad – ≤ 3,5 J, minimaalne laskekaugus 30 m. Sekundaarrelv on kohustuslik.</p><p>• Granaadid – sõltuvalt tuleohust võivad olla keelatud. Lubatud on ainult tehases toodetud granaadid, millel on tabav element (isetehtud granaadid on keelatud). Tabamus loetakse tabava elemendi järgi ning 3 meetri raadiuses.</p><p>• Suits – sõltuvalt tuleohust võib olla keelatud. Lubatud on ainult valge suits.</p><p>• Pimetuli on keelatud.</p><p>• Binaarne päästik on keelatud.</p><p>• Hoonetes on lubatud ainult üksiktuli. Relvi, mille energia ületab 1,6 J, ei tohi hoonetes kasutada; sekundaarrelv on kohustuslik. Üle 1,6 J relvaga võib tulistada hoonest välja või väljast hoonesse, järgides kohustuslikku minimaalset laskekaugust.</p><h3>Poolte tähistus</h3><p>Allianss – mis tahes kamuflaaž. Lisaks võib kasutada sinist linti.</p><p>Podhvostje küla – külastiilis tsiviilriietus (igasugune absurdne riietus – kasvõi vanaema öösärk, amišid, kauboid jne). Kui sobivat riietust ei ole, seome teile külge VÄGA ERKSAD lindid.</p><p>Lintide laius peab olema 5 cm. Anname korraldajate poolt.</p><p>NB! Sellel üritusel on keelatud kõik reaalselt eksisteerivate üksuste embleemid, kõik riigilipud ja riiklik sümboolika, välja arvatud Euroopa Liidu riikide riigilipud. Samuti on keelatud igasugused solvava sisuga embleemid.</p><h3>Punased/oranžid vestid</h3><p>End surnuks või haavatuks märkimiseks peab mängijal kaasas olema punane/oranž vest, mis katab keha ning on nähtav igast küljest. Surnud/haavatud mängija paneb vesti selga või katab sellega pea.</p><p>Veste saab osta korraldajatelt.</p><p>NB! Tõstetud käsi loetakse samuti surnud/haavatud mängija märgiks, KUID ainult selleks ajaks, kui te vesti välja võtate. Kui kasutate tõstetud kätt pikemat aega surnuna märkimiseks, võib tekkida arusaamatus ja teie pihta võidakse uuesti tulistada. Sellises olukorras ärge solvake ega sõimake tulistajat – andke lihtsalt uuesti valjult teada, et olete surnud.</p><p>NB! Ärge pange vesti relva peale, eriti kui ootate meedikut. Mõnes olukorras võidakse seda valesti mõista. Näide reaalsest olukorrast: mängija istus puu taga ja riputas vesti relvale; teisele mängijale tundus, et meedik ravib puu taga haavatut.</p><p>NB! Surnualasse liikumine ainult tõstetud käega ja ilma vestita ei ole lubatud. Sellisel juhul ärge kurtke, kui surnud mängija pihta tulistatakse.</p><p>NB! Polügoonil registreerimisel näidake korraldajatele poole tunnuslinte ja oranži vesti. Võtke kaasa ka relvad kronograafikontrolliks.</p><h3>Haavatud</h3><p>Esimese tabamuse korral hüüab mängija valjult „УБИТ“ / „HIT“ / „SURNUD“, märgib ennast punase (oranži) vestiga ning jääb 5 minutiks oma kohale, hüüdes samal ajal valjult „MEEDIK!“. Selle aja jooksul võib talle osutada meditsiinilist abi.</p><p>Mängija võib kutsuda meedikut, kuid ei tohi edastada infot vastase liikumise ega positsioonide kohta. Ravi võib osutada ainult meedik, kuid haavatut võivad transportida kõik mängijad (see peab toimuma realistlikult; haavatuga joosta ei tohi).</p><p>Ravi kestab 2 minutit. Haavatule seotakse ümber käe side. Kasutada võib mängija isiklikku sidet või valget paela – nii saate olla kindlad, et teie jaoks jätkub sidemeid.</p><p>Kui mängijal on juba haavatusside käel, tähendab järgmine tabamus lõplikku surma ning mängija läheb surnualasse.</p><p>Kui olete kindel, et meedik ei jõua teid aidata, ei pea te 5 minutit ootama, kuigi see on soovitatav.</p><p>Meedikutel ja haavatut transportivatel mängijatel on keelatud kasutada haavatut varjena. Kui ravi või transportimise ajal saab haavatu uuesti tabamuse, loetakse ta surnuks.</p><h3>Meedik</h3><p>Ainult meedik võib osutada meditsiinilist abi. Meedikute arv määratakse suhtega 1 meedik 10 mängija kohta.</p><p>Meedikul peab olema meediku embleem. Selle puudumisel pannakse meedikule käele, poole tunnuslindi kõrvale, punase ristiga valge teip.</p><p>Mängijatel, kes soovivad mängida meedikuna, palume hoolitseda sidemete olemasolu eest. Teatud koguse sidemeid annavad korraldajad.</p><p>Erandina täidavad meedikud sellel mängul ka mehaanikute rolli. Vaata sõidukite reegleid.</p><p>Meedikutel ja haavatut transportivatel mängijatel on keelatud kasutada haavatut varjena. Kui transportimise ajal saab mängija uuesti tabamuse, loetakse meedik / transportiv mängija surnuks või haavatuks.</p><h3>Sõidukid</h3><p>Mängul kasutatakse sõidukeid.</p><p>Sõidukid peavad olema tähistatud vastava poole värvi lintide ja poole lipuga.</p><p>Sõiduki kiirus ei tohi ületada 20 km/h.</p><p>Sõiduki meeskond koosneb 2 inimesest (juht ja laskur).</p><p>Sõiduki akendest tulistamine on keelatud. Tulistada võib ainult sõiduki tornist.</p><p>Sõidukist väljuv mängija võib avada tule alles siis, kui mõlemad jalad puudutavad maad.</p><p>Igasugune sõidukiga suhtlemine (uste avamine, sõidukisse ronimine jne) toimub ainult sõiduki meeskonna loal.</p><p>Sõidukite hõivamist ei ole ette nähtud.</p><p>Kui sõiduk hävitatakse täielikult (2 tabamust), loetakse selle meeskond surnuks. Kõigil teistel sõidukis olevatel mängijatel on 20 sekundit sõidukist väljumiseks, vastasel juhul loetakse ka nemad surnuks.</p><p>Iga otsene tabamus laskuri või juhi pihta loetakse tabamuseks ning mängija on haavatud/surnud vastavalt tavaliste mängijate reeglitele.</p><p>• Laskurit võib ravida meedik või teda võib asendada (ainult sõiduki meeskonna loal).</p><p>• Surnud juht ja laskur peavad minema surnualasse.</p><p>• Kui meeskond on surnud, kuid sõiduk ise on terve, kehtivad meeskonnale samad taassünnireeglid nagu tavalistele mängijatele.</p><h3>Sõiduki tabamine / remont</h3><p>Sõidukite pihta on lubatud tulistada ainult märgistusgranaatidega (Paladin või analoogid).</p><p>Sõidukite pihta tulistamine mis tahes plahvatavate granaatidega on keelatud!</p><p>Tabamus loetakse kehtivaks ainult juhul, kui märgistusgranaat puruneb ja jätab sõidukile nähtava jälje. Riivamisi tabamus ei lähe arvesse.</p><p>Esimene tabamus – sõiduk kaotab liikumisvõime, peab peatuma ega tohi edasi sõita. Torn jääb töökorda. Sõidukit saab remontida.</p><p>Teine tabamus – sõiduk loetakse hävitatuks. Hävitatud sõiduk annab pika helisignaali, lülitab sisse ohutuled, tõstab punase lipu või riidetüki ning sõidab surnualasse.</p><p>Erandina täidab sellel mängul mehaaniku rolli meedik.</p><p>Sõiduki remontimiseks peab meedik asetama käed sõiduki kapotile ja hoidma neid seal 10 minutit. Meedikute arvu suurendamine kiirendab remonti:</p><p>1 meedik – 10 min / 2 meedikut – 5 min / 3 meedikut – 3 min.</p><p>Pärast hävitamist võib sõiduk mängu tagasi tulla 30 minutit pärast surnualasse jõudmist.</p><p>Sõidukid võivad transportida surnud mängijaid surnualasse.</p>"
+    "description": `
+      <h2>
+      <strong>Undertail</strong>
+      </h2>
+      <h3>
+      <strong>Sissejuhatus</strong>
+      </h3>
+      <p>Erinevatest riikidest koosnev Allianss otsustas vallutada ja omavahel ära jagada kaardil pimesoole moodi väljaulatuval alal asuva väikese küla. Selle küla nimi on Sabahänna (Undertail).</p>
+      <p>Allianss ootas eest leidvat sektante ja keppidega relvastatud metsikut pärismaalaste ühiskonda. Kuid nende ootused osutusid täiesti ekslikuks: kui Allianss otsustas külasse siseneda, kohtasid vallutajad sõbralikke kohalikke elanikke ja hästi arenenud infrastruktuuri.</p>
+      <p>Saabunud vallutajatele tuli vastu asula juht, kes palus enne seda, kui elanikud vabatahtlikult „alla annavad“, korraldada Alliansi auks pidu, kuhu tema ja külaelanikud kutsusid äsja saabunud „külalised“.</p>
+      <p>Peol joodavad kohalikud Alliansi väed „teega“ täis ja kostitavad neid vesipiipudega — ning sealt läheb kõik allamäge. Sõjamehed tõmbavad end nii täis kui sead, mistõttu külaelanikud lähevad Alliansi tanki lahti võtma, et selle vägesid peatada.</p>
+      <p>Kuid ka kohalikud ei jää maha — nad joovad end samuti täiesti täis, võtavad Alliansi tanki juppideks ning selle käigus, kaotades kütust ja varuosi, võtavad mingil põhjusel lahti ka omaenda tanki. Alles jäetakse ainult navigatsiooniseade, mis võimaldab suunata suurtükiväe tulelööke. „Teest“ läbi imbunud teadvus ütles asjaosalistele, et sellest täiesti piisab.</p>
+      <p>Kõik selle uuesti töökorda kokku panna suudab ainult tehnik, kes tegutseb neutraalsel territooriumil.</p>
+      <p>Siin lõpeb minu lugu, sõber. Edasiste sündmuste tunnistajaks ja osaliseks saad juba sina.</p>
+      <h2>
+      <strong>Peamised mängumehaanikad</strong>
+      </h2>
+      <p>
+      <strong>Pooled:</strong> Allianss ja Sabahänna (Undertail) elanikud.</p>
+      <h3>
+      <strong>Küla</strong>
+      </h3>
+      <ul>
+      <li>Küla on peamine vallutuspunkt.</li>
+      <li>Kontrolli kontrollitakse iga <strong>30 minuti</strong> järel — <strong>2 punkti</strong>. (Punktis peab olema üles pandud poole lipp. Lipud asuvad punktis.)</li>
+      <li>Küla kontrollimine mängu lõppemise hetkel annab lisaks <strong>5 punkti</strong>.</li>
+      </ul>
+      <h3>
+      <strong>Detailid ja tehnik</strong>
+      </h3>
+      <ul>
+      <li>Mängualal asub <strong>2 detailide hankimise punkti</strong>.</li>
+      <li>Komponendid tuleb toimetada tehnikule.</li>
+      <li>Ühe valmis detaili kokkupanek võtab <strong>15 minutit</strong>. (Aega hakatakse arvestama hetkest, mil mõlemad detailid on tehnikule toimetatud.)</li>
+      <li>Pool peab kokkupaneku ajal tehnikut kontrollima.</li>
+      <li>Kontrolli vahetumisel kokkupaneku progress ei nullitu. Detaili saab pool, kes kontrollib tehnikut kokkupaneku lõppemise hetkel.</li>
+      <li>
+      <strong>10 valmis detaili = taastatud navigatsiooniseade = 20 punkti.</strong>
+      </li>
+      <li>
+      <strong>Taastatud navigatsiooniseade võimaldab tellida suurtükiväe tulelöögi üks kord iga 30 minuti järel.</strong>
+      </li>
+      </ul>
+      <h3>
+      <strong>Kütus</strong>
+      </h3>
+      <ul>
+      <li>Mängualal asub <strong>1 kütuse hankimise punkt</strong>.</li>
+      <li>Iga <strong>30 minuti</strong> järel ilmub sinna 1 kanister. (Näiteks kell 11:15 ja 11:45.)</li>
+      <li>
+      <strong>1 kanister = 1 tund sõiduki tööaega.</strong> (Alates tankimise hetkest.)</li>
+      <li>Mängu alguses saab kumbki pool <strong>2 kanistrit</strong>.</li>
+      <li>Kütus võidupunkte ei anna.</li>
+      </ul>
+      <h3>
+      <strong>Väärtuslik maavara</strong>
+      </h3>
+      <ul>
+      <li>Mängualal asub <strong>1 väärtusliku maavara kaevandamise punkt</strong>.</li>
+      <li>Elanikud kaevandavad ja säilitavad maavara.</li>
+      <li>Allianss vallutab selle ja veab ära.</li>
+      <li>
+      <strong>1 ühik = 2 punkti.</strong>
+      </li>
+      </ul>
+      <h3>
+      <strong>Mängupunktid</strong>
+      </h3>
+      <p>Mängualal on kokku <strong>6 peamist punkti</strong>:</p>
+      <ul>
+      <li>Sabahänna (Undertail) küla.</li>
+      <li>Detailide punkt nr 1.</li>
+      <li>Detailide punkt nr 2.</li>
+      <li>Tehnik.</li>
+      <li>Kütusepunkt.</li>
+      <li>Väärtusliku maavara leiukoht.</li>
+      </ul>
+      <h3>
+      <strong>Võit</strong>
+      </h3>
+      <p>Võidab pool, kellel on mängu lõpuks kõige rohkem võidupunkte.</p>
+    `,
+    "rules": `
+      <h3>
+      <strong>Põhireeglid</strong>
+      </h3>
+      <ul>
+      <li>Kasutada võib ainult <strong>BIO-kuule</strong>.</li>
+      <li>
+      <strong>Kõik relvad, mida plaanitakse mängul kasutada, peavad läbima kronograafikontrolli.</strong>
+      </li>
+      <li>Püstolid / haavlipüssid – <strong>≤ 1,2 J</strong>, minimaalset laskekaugust ei ole.</li>
+      <li>Automaadid (ründerelvad) – <strong>≤ 1,6 J</strong>. Sekundaarrelv on soovitatav.</li>
+      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.
+<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.
+*M4 trummelsalvega ei ole kuulipilduja.</strong>
+      </li>
+      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.
+<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.
+*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).
+*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.
+*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).
+*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).
+*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
+      </li>
+      <li>Poltlukuga snaiprirelvad – <strong>≤ 3,5 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.</li>
+      <li>Granaadid – sõltuvalt tuleohust võivad olla keelatud. Lubatud on ainult tehases toodetud granaadid, millel on tabav element (isetehtud granaadid on keelatud). Tabamus loetakse tabava elemendi järgi ning <strong>3 meetri raadiuses</strong>.</li>
+      <li>Suits – sõltuvalt tuleohust võib olla keelatud. Lubatud on ainult <strong>valge suits</strong>.</li>
+      <li>Pimetuli on keelatud.</li>
+      <li>
+      <strong>Binaarne päästik on keelatud.</strong>
+      </li>
+      <li>
+      <strong>Hoonetes on lubatud ainult üksiktuli.</strong> Relvi, mille energia ületab <strong>1,6 J</strong>, ei tohi hoonetes kasutada; sekundaarrelv on kohustuslik. Üle 1,6 J relvaga võib tulistada hoonest välja või väljast hoonesse, järgides kohustuslikku minimaalset laskekaugust.</li>
+      </ul>
+      <h3>
+      <strong>Poolte tähistus</strong>
+      </h3>
+      <p>
+      <strong>Allianss</strong> – mis tahes kamuflaaž. Lisaks võib kasutada sinist linti.</p>
+      <p>
+      <strong>Podhvostje küla</strong> – külastiilis tsiviilriietus (igasugune absurdne riietus – kasvõi vanaema öösärk, amišid, kauboid jne). Kui sobivat temaatilist riietust ei ole, seome teile külge <strong>VÄGA ERKSAD</strong> lindid.</p>
+      <p>Lintide laius peab olema <strong>5 cm</strong>. Lindid annavad korraldajad.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Sellel üritusel on keelatud kõik reaalselt eksisteerivate üksuste embleemid, kõik riigilipud ja riiklik sümboolika, välja arvatud <strong>Euroopa Liidu riikide riigilipud</strong>. Samuti on keelatud igasugused solvava sisuga embleemid.</p>
+      <h3>
+      <strong>Punased/oranžid vestid</strong>
+      </h3>
+      <p>End surnuks või haavatuks märkimiseks peab mängijal kaasas olema punane/oranž vest, mis katab keha ning on nähtav igast küljest. Surnud/haavatud mängija paneb vesti selga või katab sellega pea.</p>
+      <p>Veste saab osta korraldajatelt.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Tõstetud käsi loetakse samuti surnud/haavatud mängija märgiks, <strong>KUID ainult selleks ajaks, kui te vesti välja võtate</strong>. Kui kasutate tõstetud kätt pikemat aega surnuna märkimiseks, võib tekkida arusaamatus ja teie pihta võidakse uuesti tulistada. Sellises olukorras ärge solvake ega sõimake tulistajat – andke lihtsalt uuesti valjult teada, et olete surnud.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Ärge pange vesti relva peale, eriti kui ootate meedikut. Mõnes olukorras võidakse seda valesti mõista. Näide reaalsest olukorrast: mängija istus puu taga ja riputas vesti relvale; teisele mängijale tundus, et meedik ravib puu taga haavatut.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Surnualasse liikumine ainult tõstetud käega ja ilma vestita ei ole lubatud. Sellisel juhul ärge kurtke, kui surnud mängija pihta tulistatakse.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Polügoonil registreerimisel näidake korraldajatele poole tunnuslinte ja oranži vesti. Võtke kaasa ka relvad kronograafikontrolliks.</p>
+      <h3>
+      <strong>Haavatud</strong>
+      </h3>
+      <p>Esimese tabamuse korral hüüab mängija valjult <strong>„УБИТ“ / „HIT“ / „SURNUD“</strong>, märgib ennast punase (oranži) vestiga ning jääb <strong>5 minutiks</strong> oma kohale, hüüdes samal ajal valjult <strong>„MEEDIK!“</strong>. Selle aja jooksul võib talle osutada meditsiinilist abi.</p>
+      <p>Mängija võib kutsuda meedikut, kuid ei tohi edastada infot vastase liikumise ega positsioonide kohta. Ravi võib osutada ainult meedik, kuid haavatut võivad transportida kõik mängijad <strong>(see peab toimuma realistlikult; haavatuga joosta ei tohi).</strong>
+      </p>
+      <p>Ravi kestab <strong>2 minutit</strong>. Haavatule seotakse ümber käe side. Kasutada võib mängija isiklikku sidet või valget paela – nii saate olla kindlad, et teie jaoks jätkub sidemeid.</p>
+      <p>Kui mängijal on juba haavatusside käel, tähendab järgmine tabamus lõplikku surma ning mängija läheb surnualasse.</p>
+      <p>Kui olete kindel, et meedik ei jõua teid aidata, ei pea te 5 minutit ootama, kuigi see on soovitatav.</p>
+      <p>Meedikutel ja haavatut transportivatel mängijatel on keelatud kasutada haavatut varjena. Kui ravi või transportimise ajal saab haavatu uuesti tabamuse, loetakse ta surnuks.</p>
+      <h3>
+      <strong>Meedik</strong>
+      </h3>
+      <p>Ainult meedik võib osutada meditsiinilist abi. Meedikute arv määratakse suhtega <strong>1 meedik 10 mängija kohta</strong>.</p>
+      <p>Meedikul peab olema meediku embleem. Selle puudumisel pannakse meedikule käele, poole tunnuslindi kõrvale, punase ristiga valge teip.</p>
+      <p>Mängijatel, kes soovivad mängida meedikuna, palume hoolitseda sidemete olemasolu eest. Teatud koguse sidemeid annavad korraldajad.</p>
+      <p>Erandina täidavad meedikud sellel mängul ka <strong>mehaanikute rolli</strong>. Vaata sõidukite reegleid.</p>
+      <p>Meedikutel ja haavatut transportivatel mängijatel on keelatud kasutada haavatut varjena. Kui ravi või transportimise ajal saab haavatu uuesti tabamuse, loetakse ta surnuks.</p>
+      <h3>
+      <strong>Sõidukid</strong>
+      </h3>
+      <p>Mängul kasutatakse sõidukeid.</p>
+      <p>Sõidukid peavad olema tähistatud vastava poole värvi lintide ja poole lipuga.</p>
+      <p>Sõiduki kiirus ei tohi ületada <strong>20 km/h</strong>.</p>
+      <p>
+      <strong>Sõiduki meeskond koosneb 2 inimesest (juht ja laskur).</strong>
+      </p>
+      <p>Sõiduki akendest tulistamine on keelatud. Tulistada võib ainult sõiduki tornist.</p>
+      <p>Sõidukist väljuv mängija võib avada tule alles siis, kui <strong>mõlemad jalad puudutavad maad</strong>.</p>
+      <p>Igasugune sõidukiga suhtlemine (uste avamine, sõidukisse ronimine jne) toimub ainult sõiduki meeskonna loal.</p>
+      <p>Sõidukite hõivamist ei ole ette nähtud.</p>
+      <p>Kui sõiduk hävitatakse täielikult (<strong>2 tabamust</strong>), loetakse selle meeskond surnuks. Kõigil teistel sõidukis olevatel mängijatel on <strong>20 sekundit</strong> sõidukist väljumiseks, vastasel juhul loetakse ka nemad surnuks.</p>
+      <p>Iga otsene tabamus laskuri või juhi pihta loetakse tabamuseks ning mängija on haavatud/surnud vastavalt tavaliste mängijate reeglitele.</p>
+      <ol>
+      <li>Laskurit võib ravida meedik või teda võib asendada (ainult sõiduki meeskonna loal).</li>
+      <li>Surnud juht ja laskur peavad minema surnualasse.</li>
+      <li>Kui meeskond on surnud, kuid sõiduk ise on terve, kehtivad meeskonnale samad taassünnireeglid nagu tavalistele mängijatele.</li>
+      </ol>
+      <h3>
+      <strong>Sõiduki tabamine / remont</strong>
+      </h3>
+      <p>Sõidukite pihta on lubatud tulistada ainult <strong>märgistusgranaatidega (Paladin või analoogid)</strong>.</p>
+      <p>
+      <strong>Sõidukite pihta tulistamine mis tahes plahvatavate granaatidega on keelatud!</strong>
+      </p>
+      <p>Tabamus loetakse kehtivaks ainult juhul, kui märgistusgranaat puruneb ja jätab sõidukile nähtava jälje. Riivamisi tabamus ei lähe arvesse.</p>
+      <p>
+      <strong>Esimene tabamus</strong> – sõiduk kaotab liikumisvõime, peab peatuma ega tohi edasi sõita. Torn jääb töökorda. Sõidukit saab remontida.</p>
+      <p>
+      <strong>Teine tabamus</strong> – sõiduk loetakse hävitatuks. Hävitatud sõiduk annab pika helisignaali, lülitab sisse ohutuled, tõstab punase lipu või riidetüki ning sõidab surnualasse.</p>
+      <p>Erandina täidab sellel mängul mehaaniku rolli <strong>meedik</strong>.</p>
+      <p>Sõiduki remontimiseks peab meedik asetama käed sõiduki kapotile ja hoidma neid seal <strong>10 minutit</strong>. Meedikute arvu suurendamine kiirendab remonti:</p>
+      <p>
+      <strong>1 meedik – 10 min / 2 meedikut – 5 min / 3 meedikut – 3 min.</strong>
+      </p>
+      <p>Pärast hävitamist võib sõiduk mängu tagasi tulla <strong>30 minutit pärast surnualasse jõudmist</strong>.</p>
+      <p>Sõidukid võivad transportida surnud mängijaid surnualasse.</p>
+      <h3>
+      <strong>Droonid</strong>
+      </h3>
+      <p>Droonide kasutamine on esialgu lubatud.</p>
+      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> lehelt.</p>
+      <p>
+      <strong>Mängukoha koordinaadid:</strong> 59.181028, 26.378079</p>
+      <p>Õhuruumi kasutamise piirangud võivad muutuda, seetõttu avaldatakse ajakohane info droonide kasutamise võimaluse kohta vahetult enne mängu.</p>
+      <p>Droone on lubatud kasutada <strong>ainult luureks</strong>.</p>
+      <p>
+      <strong>Keelatud on:</strong>
+      </p>
+      <ul>
+      <li>droone alla tulistada, nende pihta tulistada või neid muul viisil tahtlikult kahjustada;</li>
+      <li>teha droonidele muudatusi, mis muudavad need lahinguvahendiks;</li>
+      <li>kasutada droone granaatide, pürotehnika või muude mängus kasutatavate tabamisvahendite heitmiseks.</li>
+      </ul>
+    `,
+    "news": `
+      <h3>22.09.2026 Reeglite muudatused</h3>
+      <p>Kallid sõbrad!</p>
+      <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
+      <p>Droonide kasutamine on esialgu lubatud.</p>
+      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> lehelt.</p>
+      <p>
+      <strong>Mängukoha koordinaadid:</strong> 59.181028, 26.378079</p>
+      <p>Õhuruumi kasutamise piirangud võivad muutuda, seetõttu avaldatakse ajakohane info droonide kasutamise võimaluse kohta vahetult enne mängu.</p>
+      <p>Droone on lubatud kasutada <strong>ainult luureks</strong>.</p>
+      <p>
+      <strong>Keelatud on:</strong>
+      </p>
+      <ul>
+      <li>droone alla tulistada, nende pihta tulistada või neid muul viisil tahtlikult kahjustada;</li>
+      <li>teha droonidele muudatusi, mis muudavad need lahinguvahendiks;</li>
+      <li>kasutada droone granaatide, pürotehnika või muude mängus kasutatavate tabamisvahendite heitmiseks.</li>
+      </ul>
+    `
   },
   "ru": {
-    "description": "<h2>Undertail</h2><h3>Вводная</h3><p>Альянс из разных государств решил захватить и поделить аппендикс на карте в виде маленькой деревни, имя этой деревни — Подхвостье (Undertail). Альянс ожидал увидеть сектантов и дикое общество аборигенов с палками. Но их ожидания оказались в корне неверны: когда Альянс решил войти в деревню, захватчики встретили дружелюбных местных и развитую инфраструктуру.</p><p>К пришедшим захватчикам вышел глава поселения и попросил перед тем, как жители добровольно «сдадутся», устроить праздник в честь Альянса, на который он и жители пригласили новоприбывших «гостей».</p><p>На празднике местные спаивают “чаем” и угощают кальянами войско Альянса, ну и пошло-поехало: вояки накидались как свиньи, так что деревенщины пошли разбирать танк Альянса, чтобы остановить его войска. Но местные тоже оказались не промах — нахрюкались в стельку, разобрали танк Альянса и попутно, теряя топливо и запчасти, зачем-то разобрали и свой танк. Сняли лишь навигационное устройства позволяющие наводить артиллерийские обстрелы, пропитанное чаем сознание тех кто этим занимался посчитало что этого достаточно </p><p>А собрать всё это дело в рабочее состояние может лишь техник, который обитает на нейтральных территориях.</p><p>Вот и закончился мой рассказ, друг, а дальше свидетелем и участником дальнейших событий будешь ты.</p><h2>Основные игровые механики</h2><p>Стороны: Альянс и жители Подхвостья.</p><h3>Деревня</h3><p>• Деревня является основной точкой захвата.</p><p>• Проверка контроля каждые 30 минут — 2 балла. (Должен быть установлен флаг стороны, флаги будут находиться на точке)</p><p>• Контроль деревни на момент окончания игры — дополнительно 5 баллов.</p><h3>Детали и техник</h3><p>• На полигоне находятся 2 точки добычи деталей.</p><p>• Компоненты необходимо доставить технику.</p><p>• Сборка одной готовой детали занимает 15 минут. (С момента доставки обоих деталей технику)</p><p>• Сторона должна контролировать техника во время сборки.</p><p>• При смене контроля прогресс не сбрасывается. Деталь получает сторона, контролирующая техника в момент завершения сборки.</p><p>• 10 готовых деталей = восстановленное навигационное устройство = 20 баллов.</p><p>• восстановленное навигационное устройство позволяет заказать арту раз в 30 мин.</p><h3>Топливо</h3><p>• На полигоне находится 1 точка добычи топлива.</p><p>• Каждые 30 минут появляется 1 канистра. (например 11:15 и 11:45)</p><p>• 1 канистра = 1 час работы машины.  (С момента заправки)</p><p>• На старте каждая сторона получает 2 канистры.</p><p>• Топливо победных баллов не даёт.</p><h3>Ценное ископаемое</h3><p>• На полигоне находится 1 точка добычи ценного ископаемого.</p><p>• Жители добывают и сохраняют ископаемое.</p><p>• Альянс захватывает и вывозит его.</p><p>• 1 единица = 2 балла.</p><h3>Игровые точки</h3><p>Всего на полигоне находится 6 основных точек:</p><p>• Деревня Подхвостье (Undertail).</p><p>• Точка деталей №1.</p><p>• Точка деталей №2.</p><p>• Техник.</p><p>• Топливная точка.</p><p>• Месторождение ценного ископаемого.</p><h3>Победа</h3><p>Побеждает сторона, набравшая больше победных баллов к окончанию игры.</p>",
-    "rules": "<h3>Основные правила</h3><p>-Можно использовать только БИО шары.</p><p>-Все привода, которые планируются использоваться должны быть отхронированны.</p><p>-Пистолеты/ Дробовики - &lt;= 1,2J, минимальной дистанции нет.</p><p>-Автоматы (Штурмовые винтовки) - &lt;= 1,6J. Вторичка желательна.</p><p>-Пулемёты - &lt;= 2,5J, минимальная дистанция 20м. Вторичка обязательна.</p><p>\t*Привод должен быть внешне похожим на реально существующий образец лёгкого или тяжёлого пулемёта.</p><p>\t*М4 с бубном не является пулемётом.</p><p>-Марксманки (DMR) (автоматический огонь отключен механически) - &lt;= 3,0J, минимальная дистанция 30м. Вторичка обязательна.  </p><p>*Привод должен выглядеть как реальный марксман: длина ствола - 16 дюймов (40 см), должен стоять оптический прицел и сошки.</p><p>\t*Привода слишком похожие на обычные штурмовые винтовки должны соответствовать всем требованиям (Длина ствола, Оптический прицел, сошки)</p><p>\t*Если длина ствола меньше 16 дюймов, его необходимо удлинить при помощи глушителя.</p><p>*Если реальный образец марксмана не имеет сошек, сошки не являются обязательными. (СВД, ВСС)</p><p>\t*Если реальный образец марксмана имеет длину ствола меньше 16 дюймов, НО считается снайперским оружием, правило минимальной длины ствола не учитывается и глушитель не требуется. (ВСС)</p><p>\t*ВСС является исключением из правил, если на нём установлен оптический прицел и автоматический огонь отключён механически, он может классифицироваться как марксман. Если любое из этих 2 правил нарушено, ВСС становится обычной штурмовой винтовкой (имеет вылет не более 1,6 J).</p><p>-Болтовки - 3,5J, минимальная дистанция 30м. Вторичка обязательна.</p><p>-Гранаты - согласно пожарной обстановке могут быть запрещены, только фабричное производство с поражающим элементом (никакого самопала), поражение - поражающим элементом и радиус 3 метра.</p><p>-Дымы - согласно пожарной обстановке могут быть запрещены, только белый дым.</p><p>-Слепой огонь запрещён.</p><p>-Бинарный спуск запрещён.</p><p>-Внутри зданий только одиночный огонь. Оружие с вылетом более 1,6 Дж. в зданиях использовать запрещено, обязательно использование вторички. Оружие с вылетом больше 1,6 Дж. можно использовать для стрельбы из здания или в здание с улицы, с обязательным соблюдением минимальной дистанции.</p><h3>Обозначение сторон.</h3><p>Альянс - любой камуфляж. Можно дополнительно обозначиться синей лентой.</p><p>Деревня Подхвостье - Гражданская одежда в деревенском стиле (любая нелепая одежда, хоть ночнушка бабушки, аимши, ковбои). Если антуража не будет повяжем ОООЧЕНЬ яркие ленты.</p><p>Ленты должны быть 5 см шириной. Предоставляем.</p><p>NB! На данном мероприятии запрещены любые эмблемы реально существующих в мире подразделений, любые государственные флаги и символика, кроме государственных флагов Евросоюза. Также запрещены любые эмблемы несущие оскорбительный характер.</p><h3>Красные/ оранжевые жилеты</h3><p>Для обозначения себя убитым/ раненым необходимо иметь при себе красный/ оранжевый жилет, он покрывает всё тело и виден со всех сторон. Убитый/ раненый надевает жилет или покрывает им голову.</p><p>Жилеты можно купить у организаторов. </p><p>NB! Поднятая рука также считается жестом убитого/ раненого, НО на время пока вы достаёте жилет. Продолжительное использование этого жеста для обозначения себя убитым может привести к недопониманию и по вам могут снова открыть огонь. Если возникла такая ситуация не надо оскорблять или как-то ещё ругаться на стреляющего, ещё раз громко обозначьте себя убитым.</p><p>NB! Не надевайте жилет на привод, особенно если вы ждёте медика. В некоторых случаях это может быть неправильно понято… Пример реальной ситуации: игрок сидит за деревом и повесил жилет на привод, со стороны другого игрока это выглядело как медик лечит раненого за деревом…</p><p>NB! Передвижение в мертвяк с поднятой рукой без жилета не допускается. В этих случаях не жалуйтесь что по убитым стреляют.</p><p>NB! При регистрации на полигоне, покажите организаторам повязки сторон и оранжевый жилет. Так же возьмите привода для прохождения контроля вылета.</p><h3>Раненые</h3><p>При первом попадании игрок громко говорит “УБИТ”/ “HIT”/ ”SURNUD”, обозначает себя красной (оранжевой) жилеткой и остаётся на месте 5 мин и при этом громко кричит МЕДИК. В это время ему может быть оказана медицинская помощь. Игрок может звать медика, но не может сообщать, о передвижениях и позициях противника. Помощь может оказывать только медик, перетаскивать раненого могут все (должно быть реалистично, перебегать с раненым запрещено). Помощь оказывается 2 минуты, раненому повязывается бинт (можно использовать личный бинт игрока или белую повязку (так вы будете уверены, что на вас хватит бинтов)). Если у игрока уже на руке есть бинт раненого, следующее  попадание приводит к окончательному поражению игрока, он отправляется в мертвяк. Если вы уверены, что медик не успеет вам помочь, сидеть 5 минут нет необходимости, но приветствуется.</p><p>Медикам и перетаскивающим раненого запрещено прятаться за раненым. Если во время лечения/ перетаскивания игрока по раненному попадают снова, игрок считается убитым.</p><h3>Медик</h3><p>Только медик может оказывать медицинскую помощь. Количество медиков определяется соотношением: 1 медик на 10 человек. </p><p>У медика должна быть нашивка медика, а при её отсутствии медикам на руку, рядом с лентой обозначающей сторону, будет повязан белый тейп с красным крестом.</p><p>Игрокам желающим играть за медика, просьба позаботиться о бинтах (какое то количество бинтов предоставят организаторы).</p><p>В виде исключения, на этой игре Медики выполняют роль механиков. Смотри правила по машинам.</p><p>Медикам и перетаскивающим раненого запрещено прятаться за раненым. Если во время перетаскивания игрока по нему попадают снова, медик/ перетаскивающий игрок считаются убитыми/ раненными.</p><h3>Техника (машины)</h3><p>На игре будут использоваться машины.</p><p>Машины должны быть помечены лентами соответствующего цвета и флагом стороны. </p><p>Скорость машины не должна превышать 20 км/ч.</p><p>Экипаж машины 2 человека (Водитель, Стрелок). </p><p>Стрельба из окон машины запрещена, разрешена стрельба только с башни машины. </p><p>Выходящие из машины игроки могут открыть огонь только тогда, когда обе ноги коснулись земли.</p><p>Любые взаимодействия с машиной (открывать двери, залезать в неё и т.д и т.п) происходят только с разрешения экипажа машины.</p><p>Захват машин не предусмотрен.</p><p>Если машина полностью подбита (получила 2 попадания), её экипаж считается погибшим, а все остальные игроки могут покинуть машину в течении 20 секунд, иначе они считаются погибшими. </p><p>Любое прямое попадание в стрелка или водителя или водителя засчитывается, и игрок считается поражённым. В этом случае на них распространяются правила обычных игроков.</p><p>• Стрелок может быть вылечен медиком или заменён (только с разрешения экипажа).</p><p>• Убитые водитель и стрелок должны проследовать в мертвяк.</p><p>• Если экипаж убит, а машина осталась целая, на экипаж распространяется правила возрождения как на обычных игроков.</p><h3>Подбитие / ремонт машины</h3><p>По машинам разрешено стрелять только маркировочными гранатами (Paladin или их аналоги)</p><p>Стрельба по машинам любыми взрывными гранатами запрещена!!!</p><p>Попадание засчитывается, если маркировочнaя граната разбилась и оставила след, касательное попадание не засчитывается.</p><p>Первое попадание - машина теряет подвижность, останавливается и не может никуда ехать. Башня работает. Машину можно починить.</p><p>Второе попадание - машина считается уничтоженной. Уничтоженная машина подаёт длинный гудок, включает аварийки, поднимает красный флаг или тряпку и уезжает в мертвяк.</p><p>В виде исключения, на этой игре, роль механика исполняет медик. </p><p>Для починки машины медик должен положить руки на капот машины и держать в течение 10 минут, увеличение числа медиков ускоряет процесс ремонта.</p><p>(1 медик - 10 мин./ 2 медика - 5 мин./ 3 медика - 3 мин) </p><p>После уничтожения, машина может вернутся в игру через 30 минут после прибытия в мертвяк.</p><p>Машины могут перевозить мёртвых игроков в мертвяк.</p>"
+    "description": `
+      <h2>
+      <strong>Undertail</strong>
+      </h2>
+      <h3>
+      <strong>Вводная</strong>
+      </h3>
+      <p>Альянс из разных государств решил захватить и поделить аппендикс на карте в виде маленькой деревни, имя этой деревни — Подхвостье (Undertail). Альянс ожидал увидеть сектантов и дикое общество аборигенов с палками. Но их ожидания оказались в корне неверны: когда Альянс решил войти в деревню, захватчики встретили дружелюбных местных и развитую инфраструктуру.</p>
+      <p>К пришедшим захватчикам вышел глава поселения и попросил перед тем, как жители добровольно «сдадутся», устроить праздник в честь Альянса, на который он и жители пригласили новоприбывших «гостей».</p>
+      <p>На празднике местные спаивают “чаем” и угощают кальянами войско Альянса, ну и пошло-поехало: вояки накидались как свиньи, так что деревенщины пошли разбирать танк Альянса, чтобы остановить его войска. Но местные тоже оказались не промах — нахрюкались в стельку, разобрали танк Альянса и попутно, теряя топливо и запчасти, зачем-то разобрали и свой танк. Сняли лишь навигационное устройства позволяющие наводить артиллерийские обстрелы, пропитанное чаем сознание тех кто этим занимался посчитало что этого достаточно </p>
+      <p>А собрать всё это дело в рабочее состояние может лишь техник, который обитает на нейтральных территориях.</p>
+      <p>Вот и закончился мой рассказ, друг, а дальше свидетелем и участником дальнейших событий будешь ты.</p>
+      <h2>
+      <strong>Основные игровые механики</strong>
+      </h2>
+      <p>
+      <strong>Стороны:</strong> Альянс и жители Подхвостья.</p>
+      <h3>
+      <strong>Деревня</strong>
+      </h3>
+      <ul>
+      <li>Деревня является основной точкой захвата.</li>
+      <li>Проверка контроля каждые <strong>30 минут</strong> — <strong>2 балла</strong>. (Должен быть установлен флаг стороны, флаги будут находиться на точке)</li>
+      <li>Контроль деревни на момент окончания игры — дополнительно <strong>5 баллов</strong>.</li>
+      </ul>
+      <h3>
+      <strong>Детали и техник</strong>
+      </h3>
+      <ul>
+      <li>На полигоне находятся <strong>2 точки добычи деталей</strong>.</li>
+      <li>Компоненты необходимо доставить технику.</li>
+      <li>Сборка одной готовой детали занимает <strong>15 минут</strong>. (С момента доставки обоих деталей технику)</li>
+      <li>Сторона должна контролировать техника во время сборки.</li>
+      <li>При смене контроля прогресс не сбрасывается. Деталь получает сторона, контролирующая техника в момент завершения сборки.</li>
+      <li>
+      <strong>10 готовых деталей = восстановленное навигационное устройство = 20 баллов.</strong>
+      </li>
+      <li>
+      <strong>восстановленное навигационное устройство позволяет заказать арту раз в 30 мин.</strong>
+      </li>
+      </ul>
+      <h3>
+      <strong>Топливо</strong>
+      </h3>
+      <ul>
+      <li>На полигоне находится <strong>1 точка добычи топлива</strong>.</li>
+      <li>Каждые <strong>30 минут</strong> появляется 1 канистра. (например 11:15 и 11:45)</li>
+      <li>
+      <strong>1 канистра = 1 час работы машины.  (С момента заправки)</strong>
+      </li>
+      <li>На старте каждая сторона получает <strong>2 канистры</strong>.</li>
+      <li>Топливо победных баллов не даёт.</li>
+      </ul>
+      <h3>
+      <strong>Ценное ископаемое</strong>
+      </h3>
+      <ul>
+      <li>На полигоне находится <strong>1 точка добычи ценного ископаемого</strong>.</li>
+      <li>Жители добывают и сохраняют ископаемое.</li>
+      <li>Альянс захватывает и вывозит его.</li>
+      <li>
+      <strong>1 единица = 2 балла.</strong>
+      </li>
+      </ul>
+      <h3>
+      <strong>Игровые точки</strong>
+      </h3>
+      <p>Всего на полигоне находится <strong>6 основных точек</strong>:</p>
+      <ul>
+      <li>Деревня Подхвостье (Undertail).</li>
+      <li>Точка деталей №1.</li>
+      <li>Точка деталей №2.</li>
+      <li>Техник.</li>
+      <li>Топливная точка.</li>
+      <li>Месторождение ценного ископаемого.</li>
+      </ul>
+      <h3>
+      <strong>Победа</strong>
+      </h3>
+      <p>Побеждает сторона, набравшая больше победных баллов к окончанию игры.</p>
+    `,
+    "rules": `
+      <h3>
+      <strong>Основные правила</strong>
+      </h3>
+      <p>-Можно использовать только БИО шары.</p>
+      <p>
+      <strong>-Все привода, которые планируются использоваться должны быть отхронированны.</strong>
+      </p>
+      <p>-Пистолеты/ Дробовики - <strong>&lt;= 1,2J</strong>, минимальной дистанции нет.</p>
+      <p>-Автоматы (Штурмовые винтовки) - <strong>&lt;= 1,6J</strong>. Вторичка желательна.</p>
+      <p>-Пулемёты - <strong>&lt;= 2,5J</strong>, минимальная дистанция <strong>20м</strong>. Вторичка обязательна.</p>
+      <p>	<strong>*Привод должен быть внешне похожим на реально существующий образец лёгкого или </strong>
+      <strong>тяжёлого</strong>
+      <strong> пулемёта.</strong>
+      </p>
+      <p>
+      <strong>	*М4 с бубном не является пулемётом.</strong>
+      </p>
+      <p>-Марксманки (DMR) (автоматический огонь отключен механически) -<strong> &lt;= 3,0J</strong>, минимальная дистанция <strong>30м</strong>. Вторичка обязательна.  </p>
+      <p>
+      <strong>*Привод должен выглядеть как реальный марксман: длина ствола - 16 дюймов (40 см), должен стоять оптический прицел и сошки.</strong>
+      </p>
+      <p>
+      <strong>	*Привода слишком похожие на обычные штурмовые винтовки должны соответствовать всем требованиям (Длина ствола, Оптический прицел, сошки)</strong>
+      </p>
+      <p>
+      <strong>	*Если длина ствола меньше 16 дюймов, его необходимо удлинить при помощи глушителя.</strong>
+      </p>
+      <p>
+      <strong>*Если реальный образец марксмана не имеет сошек, сошки не являются обязательными. (СВД, ВСС)</strong>
+      </p>
+      <p>
+      <strong>	*Если реальный образец марксмана имеет длину ствола меньше 16 дюймов, НО считается снайперским оружием, правило минимальной длины ствола не учитывается и глушитель не требуется. (ВСС)</strong>
+      </p>
+      <p>
+      <strong>	*ВСС является исключением из правил, если на нём установлен оптический прицел и автоматический огонь отключён механически, он может классифицироваться как марксман. Если любое из этих 2 правил нарушено, ВСС становится обычной штурмовой винтовкой (имеет вылет не более 1,6 J).</strong>
+      </p>
+      <p>-Болтовки - <strong>3,5J</strong>, минимальная дистанция <strong>30м</strong>. Вторичка обязательна.</p>
+      <p>-Гранаты - согласно пожарной обстановке могут быть запрещены, только фабричное производство с поражающим элементом (никакого самопала), поражение - поражающим элементом и радиус 3 метра.</p>
+      <p>-Дымы - согласно пожарной обстановке могут быть запрещены, только белый дым.</p>
+      <p>-Слепой огонь запрещён.</p>
+      <p>-<strong>Бинарный спуск </strong>
+      <strong>запрещён</strong>
+      <strong>.</strong>
+      </p>
+      <p>-<strong>Внутри зданий только одиночный огонь</strong>. Оружие с вылетом более 1,6 Дж. в зданиях использовать запрещено, обязательно использование вторички. Оружие с вылетом больше 1,6 Дж. можно использовать для стрельбы из здания или в здание с улицы, с обязательным соблюдением минимальной дистанции.</p>
+      <h3>
+      <strong>Обозначение сторон.</strong>
+      </h3>
+      <p>
+      <strong>Альянс - </strong>любой камуфляж. Можно дополнительно обозначиться синей лентой.</p>
+      <p>
+      <strong>Деревня Подхвостье - </strong>Гражданская одежда в деревенском стиле (любая нелепая одежда, хоть ночнушка бабушки, аимши, ковбои). Если антуража не будет повяжем <strong>ОООЧЕНЬ </strong>яркие ленты.</p>
+      <p>Ленты должны быть 5 см шириной. Предоставляем.</p>
+      <p>
+      <em>
+      <strong>NB! </strong>
+      </em>На данном мероприятии запрещены любые эмблемы реально существующих в мире подразделений, любые государственные флаги и символика, кроме государственных флагов <strong>Евросоюза. </strong>Также запрещены любые эмблемы несущие оскорбительный характер.</p>
+      <h3>
+      <strong>Красные/ оранжевые жилеты</strong>
+      </h3>
+      <p>Для обозначения себя убитым/ раненым необходимо иметь при себе красный/ оранжевый жилет, он покрывает всё тело и виден со всех сторон. Убитый/ раненый надевает жилет или покрывает им голову.</p>
+      <p>Жилеты можно купить у организаторов. </p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Поднятая рука также считается жестом убитого/ раненого, НО на время пока вы достаёте жилет. Продолжительное использование этого жеста для обозначения себя убитым может привести к недопониманию и по вам могут снова открыть огонь. Если возникла такая ситуация не надо оскорблять или как-то ещё ругаться на стреляющего, ещё раз громко обозначьте себя убитым.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Не надевайте жилет на привод, особенно если вы ждёте медика. В некоторых случаях это может быть неправильно понято… Пример реальной ситуации: игрок сидит за деревом и повесил жилет на привод, со стороны другого игрока это выглядело как медик лечит раненого за деревом…</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Передвижение в мертвяк с поднятой рукой без жилета не допускается. В этих случаях не жалуйтесь что по убитым стреляют.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> При регистрации на полигоне, покажите организаторам повязки сторон и оранжевый жилет. Так же возьмите привода для прохождения контроля вылета.</p>
+      <h3>
+      <strong>Раненые</strong>
+      </h3>
+      <p>При первом попадании игрок громко говорит “УБИТ”/ “HIT”/ ”SURNUD”, обозначает себя красной (оранжевой) жилеткой и остаётся на месте 5 мин и при этом громко кричит МЕДИК. В это время ему может быть оказана медицинская помощь. Игрок может звать медика, но не может сообщать, о передвижениях и позициях противника. Помощь может оказывать только медик, перетаскивать раненого могут все <strong>(должно быть реалистично, перебегать с раненым запрещено).</strong> Помощь оказывается 2 минуты, раненому повязывается бинт (можно использовать личный бинт игрока или белую повязку (так вы будете уверены, что на вас хватит бинтов)). Если у игрока уже на руке есть бинт раненого, следующее  попадание приводит к окончательному поражению игрока, он отправляется в мертвяк. Если вы уверены, что медик не успеет вам помочь, сидеть 5 минут нет необходимости, но приветствуется.</p>
+      <p>Медикам и перетаскивающим раненого запрещено прятаться за раненым. Если во время лечения/ перетаскивания игрока по раненому попадают снова, игрок считается убитым.</p>
+      <h3>
+      <strong>Медик</strong>
+      </h3>
+      <p>Только медик может оказывать медицинскую помощь. Количество медиков определяется соотношением: 1 медик на 10 человек. </p>
+      <p>У медика должна быть нашивка медика, а при её отсутствии медикам на руку, рядом с лентой обозначающей сторону, будет повязан белый тейп с красным крестом.</p>
+      <p>Игрокам желающим играть за медика, просьба позаботиться о бинтах (какое то количество бинтов предоставят организаторы).</p>
+      <p>В виде исключения, на этой игре Медики выполняют роль механиков. Смотри правила по машинам.</p>
+      <p>Медикам и перетаскивающим раненого запрещено прятаться за раненым. Если во время лечения/ перетаскивания игрока по раненому попадают снова, игрок считается убитым.</p>
+      <h3>
+      <strong>Техника (машины)</strong>
+      </h3>
+      <p>На игре будут использоваться машины.</p>
+      <p>Машины должны быть помечены лентами соответствующего цвета и флагом стороны. </p>
+      <p>Скорость машины не должна превышать 20 км/ч.</p>
+      <p>
+      <strong>Экипаж машины 2 человека (Водитель, Стрелок)</strong>. </p>
+      <p>Стрельба из окон машины запрещена, разрешена стрельба только с башни машины. </p>
+      <p>Выходящие из машины игроки могут открыть огонь только тогда, когда обе ноги коснулись земли.</p>
+      <p>Любые взаимодействия с машиной (открывать двери, залезать в неё и т.д и т.п) происходят только с разрешения экипажа машины.</p>
+      <p>Захват машин не предусмотрен.</p>
+      <p>Если машина полностью подбита (получила 2 попадания), её экипаж считается погибшим, а все остальные игроки могут покинуть машину в течении 20 секунд, иначе они считаются погибшими. </p>
+      <p>Любое прямое попадание в стрелка или водителя или водителя засчитывается, и игрок считается поражённым. В этом случае на них распространяются правила обычных игроков.</p>
+      <ol>
+      <li>Стрелок может быть вылечен медиком или заменён (только с разрешения экипажа).</li>
+      <li>Убитые водитель и стрелок должны проследовать в мертвяк.</li>
+      <li>Если экипаж убит, а машина осталась целая, на экипаж распространяется правила возрождения как на обычных игроков.</li>
+      </ol>
+      <h3>
+      <strong>Подбитие / ремонт машины</strong>
+      </h3>
+      <p>По машинам разрешено стрелять только маркировочными гранатами (Paladin или их аналоги)</p>
+      <p>Стрельба по машинам любыми взрывными гранатами запрещена!!!</p>
+      <p>Попадание засчитывается, если маркировочнaя граната разбилась и оставила след, касательное попадание не засчитывается.</p>
+      <p>
+      <strong>Первое попадание -</strong> машина теряет подвижность, останавливается и не может никуда ехать. Башня работает. Машину можно починить.</p>
+      <p>
+      <strong>Второе попадание</strong> - машина считается уничтоженной. Уничтоженная машина подаёт длинный гудок, включает аварийки, поднимает красный флаг или тряпку и уезжает в мертвяк.</p>
+      <p>В виде исключения, на этой игре, роль механика исполняет медик. </p>
+      <p>Для починки машины медик должен положить руки на капот машины и держать в течение 10 минут, увеличение числа медиков ускоряет процесс ремонта.</p>
+      <p>(1 медик - 10 мин./ 2 медика - 5 мин./ 3 медика - 3 мин) </p>
+      <p>После уничтожения, машина может вернутся в игру через 30 минут после прибытия в мертвяк.</p>
+      <p>Машины могут перевозить мёртвых игроков в мертвяк.</p>
+      <h3>
+      <strong>Дроны.</strong>
+      </h3>
+      <p>Использование дронов предварительно разрешено.</p>
+      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> </p>
+      <p>
+      <strong>Координаты места проведения игры:</strong> 59.181028, 26.378079 </p>
+      <p>Ограничения на использование воздушного пространства могут изменяться, поэтому актуальная информация о возможности использования дронов будет опубликована непосредственно перед игрой.  </p>
+      <p>Дроны разрешено использовать исключительно для разведки.</p>
+      <p>
+      <strong>Запрещается:</strong>
+      </p>
+      <ul>
+      <li>сбивать, обстреливать или иным образом намеренно повреждать дроны;</li>
+      <li>вносить любые изменения, превращающие дрон в боевую единицу;</li>
+      <li>использовать дроны для сброса гранат, пиротехники или любых других игровых средств поражения.</li>
+      </ul>
+    `,
+    "news": `
+      <h3>
+      <strong>22.09.2026 Изменения в правилах.</strong>
+      </h3>
+      <p>Дорогие друзья, мы внесли небольшие дополнения в правила, касаемые использование дронов.</p>
+      <p>Использование дронов предварительно разрешено.</p>
+      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> </p>
+      <p>
+      <strong>Координаты места проведения игры:</strong> 59.181028, 26.378079 </p>
+      <p>Ограничения на использование воздушного пространства могут изменяться, поэтому актуальная информация о возможности использования дронов будет опубликована непосредственно перед игрой.  </p>
+      <p>Дроны разрешено использовать исключительно для разведки.</p>
+      <p>
+      <strong>Запрещается:</strong>
+      </p>
+      <ul>
+      <li>сбивать, обстреливать или иным образом намеренно повреждать дроны;</li>
+      <li>вносить любые изменения, превращающие дрон в боевую единицу;</li>
+      <li>использовать дроны для сброса гранат, пиротехники или любых других игровых средств поражения.</li>
+      </ul>
+    `
   },
   "en": {
-    "description": "<h2>Undertail</h2><h3>Introduction</h3><p>An Alliance made up of several different nations decided to capture and divide among themselves a small village located on an appendix-shaped piece of land sticking out on the map. The name of this village is Undertail.</p><p>The Alliance expected to encounter cultists and a savage society of stick-wielding natives. Their expectations, however, turned out to be completely wrong. When the Alliance decided to enter the village, the invaders were met by friendly locals and well-developed infrastructure.</p><p>The head of the settlement came out to meet the newly arrived invaders and asked that, before the residents voluntarily “surrendered,” they hold a celebration in honor of the Alliance. He and the villagers invited their newly arrived “guests” to join the festivities.</p><p>During the celebration, the locals get the Alliance troops drunk on “tea” and treat them to hookahs — and from there, things quickly get out of hand. The soldiers get absolutely wasted, so the villagers decide to dismantle the Alliance tank in order to stop its forces.</p><p>But the locals are no amateurs either. They get completely hammered themselves, dismantle the Alliance tank and, somewhere along the way, while losing fuel and spare parts, somehow decide to dismantle their own tank as well. The only thing they remove intact is the navigation device used to call in artillery strikes. Their “tea”-soaked minds decide that this should be more than enough.</p><p>The only person capable of putting all this back together into working order is a technician who operates in neutral territory.</p><p>And this, my friend, is where my story ends. From this point on, you will become both a witness to and a participant in what happens next.</p><h2>Core Game Mechanics</h2><p>Factions: The Alliance and the residents of Undertail.</p><h3>The Village</h3><p>• The village is the main capture point.</p><p>• Control is checked every 30 minutes — 2 points. (The faction&#39;s flag must be raised at the point. The flags will be located at the point.)</p><p>• Controlling the village at the end of the game awards an additional 5 points.</p><h3>Parts and the Technician</h3><p>• There are 2 parts collection points in the game area.</p><p>• The components must be delivered to the technician.</p><p>• Assembling one completed part takes 15 minutes. (The timer starts when both required components have been delivered to the technician.)</p><p>• A faction must control the technician during assembly.</p><p>• If control changes, assembly progress is not reset. The completed part goes to whichever faction controls the technician when the assembly is finished.</p><p>• 10 completed parts = restored navigation device = 20 points.</p><p>• The restored navigation device allows the faction to call in an artillery strike once every 30 minutes.</p><h3>Fuel</h3><p>• There is 1 fuel collection point in the game area.</p><p>• 1 fuel canister appears every 30 minutes. (For example, at 11:15 and 11:45.)</p><p>• 1 canister = 1 hour of vehicle operation. (Starting from the moment the vehicle is refueled.)</p><p>• At the start of the game, each faction receives 2 canisters.</p><p>• Fuel does not award victory points.</p><h3>Valuable Resource</h3><p>• There is 1 valuable resource extraction point in the game area.</p><p>• The residents extract and store the resource.</p><p>• The Alliance captures and transports it away.</p><p>• 1 unit = 2 points.</p><h3>Game Points</h3><p>There are 6 main points in the game area:</p><p>• Undertail Village.</p><p>• Parts Collection Point No. 1.</p><p>• Parts Collection Point No. 2.</p><p>• The Technician.</p><p>• Fuel Collection Point.</p><p>• Valuable Resource Deposit.</p><h3>Victory</h3><p>The faction with the most victory points at the end of the game wins.</p>",
-    "rules": "<h3>Basic Rules</h3><p>• Only BIO BBs may be used.</p><p>• All weapons intended for use during the game must pass chronograph testing.</p><p>• Pistols / Shotguns – ≤ 1.2 J, no minimum engagement distance.</p><p>• Assault rifles – ≤ 1.6 J. A secondary weapon is recommended.</p><p>• Machine guns – ≤ 2.5 J, minimum engagement distance 20 m. A secondary weapon is mandatory.\r*The weapon must visually resemble a real-life light or heavy machine gun.\r*An M4 with a drum magazine is not considered a machine gun.</p><p>• Designated Marksman Rifles (DMR), with full-auto mechanically disabled – ≤ 3.0 J, minimum engagement distance 30 m. A secondary weapon is mandatory.\r*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.\r*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).\r*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.\r*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).\r*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).\r*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</p><p>• Bolt-action rifles – ≤ 3.5 J, minimum engagement distance 30 m. A secondary weapon is mandatory.</p><p>• Grenades – may be prohibited depending on fire conditions. Only factory-made grenades containing BBs or other approved projectiles are allowed (no homemade grenades). A hit is registered by the projectile and within a 3-meter radius.</p><p>• Smoke grenades – may be prohibited depending on fire conditions. White smoke only.</p><p>• Blind fire is prohibited.</p><p>• Binary triggers are prohibited.</p><p>• Semi-auto only inside buildings. Weapons exceeding 1.6 J may not be used inside buildings; a secondary weapon is mandatory. Weapons exceeding 1.6 J may be used to fire from inside a building to the outside or from outside into a building, provided the required minimum engagement distance is observed.</p><h3>Faction Identification</h3><p>Alliance – any camouflage pattern. A blue armband may additionally be used for identification.</p><p>Podhvostye Village – village-style civilian clothing (any ridiculous clothing is acceptable – even grandma’s nightgown, Amish outfits, cowboy outfits, etc.). If you do not have suitable themed clothing, we will give you VERY BRIGHT identification armbands.</p><p>Armbands must be 5 cm wide. Provided by the organizers.</p><p>NB! At this event, all insignia of real-world military or other units, all national flags and state symbols are prohibited, except for the national flags of European Union countries. Any offensive insignia or symbols are also prohibited.</p><h3>Red / Orange Vests</h3><p>To identify yourself as dead/wounded, you must carry a red/orange vest. It must cover the body and be clearly visible from all directions. A dead/wounded player must put on the vest or cover their head with it.</p><p>Vests can be purchased from the organizers.</p><p>NB! A raised hand is also considered a dead/wounded signal, BUT only while you are taking out your vest. Using a raised hand for an extended period instead of a vest may cause misunderstandings, and other players may shoot at you again. If this happens, do not insult or argue with the shooter. Simply announce loudly once again that you are dead.</p><p>NB! Do not put the vest on your weapon, especially while waiting for a medic. In some situations, this can be misunderstood. A real example: a player was sitting behind a tree with their vest hanging on their weapon. From another player&#39;s perspective, it looked like a medic was treating a wounded player behind the tree.</p><p>NB! Moving to the respawn area with only a raised hand and without a vest is not allowed. In such cases, do not complain if you are shot while dead.</p><p>NB! When registering at the game site, show the organizers your faction armbands and orange vest. Also bring your weapons for chronograph testing.</p><h3>Wounded Players</h3><p>When hit for the first time, the player must loudly call “УБИТ” / “HIT” / “SURNUD”, identify themselves with a red (orange) vest, and remain in place for 5 minutes, loudly calling “MEDIC!” During this time, medical assistance may be provided.</p><p>The player may call for a medic but may not communicate information about enemy movements or positions. Only a medic may provide medical treatment, but any player may move a wounded player (this must be done realistically; running while carrying/moving a wounded player is prohibited).</p><p>Treatment takes 2 minutes. A bandage is tied around the wounded player&#39;s arm. The player&#39;s own bandage or a white armband may be used (this way you can be sure there will be enough bandages for you).</p><p>If a player already has a wounded-player bandage on their arm, the next hit results in final elimination and the player must proceed to the respawn area.</p><p>If you are certain that a medic will not be able to reach you in time, you do not have to remain there for the full 5 minutes, although doing so is encouraged.</p><p>Medics and players moving a wounded player may not use the wounded player as cover. If the wounded player is hit again during treatment or transportation, the wounded player is considered dead.</p><h3>Medic</h3><p>Only a medic may provide medical treatment. The number of medics is determined at a ratio of 1 medic per 10 players.</p><p>A medic must wear a medic patch. If no patch is available, a piece of white tape with a red cross will be placed on the medic&#39;s arm next to the faction identification armband.</p><p>Players wishing to play as medics are asked to bring their own bandages. A limited number of bandages will be provided by the organizers.</p><p>As an exception for this game, medics also act as mechanics. See the vehicle rules.</p><p>Medics and players moving wounded players may not use the wounded player as cover. If the player is hit again while being moved, the medic / player transporting them is considered dead/wounded.</p><h3>Vehicles</h3><p>Vehicles will be used during the game.</p><p>Vehicles must be marked with armbands/tape of the appropriate faction color and the faction flag.</p><p>Vehicle speed must not exceed 20 km/h.</p><p>A vehicle crew consists of 2 people (Driver and Gunner).</p><p>Shooting through vehicle windows is prohibited. Shooting is allowed only from the vehicle turret.</p><p>Players exiting a vehicle may open fire only after both feet have touched the ground.</p><p>Any interaction with a vehicle (opening doors, climbing into it, etc.) is permitted only with the vehicle crew&#39;s permission.</p><p>Vehicles cannot be captured.</p><p>If a vehicle is completely destroyed (2 hits), its crew is considered dead. All other players inside the vehicle have 20 seconds to exit; otherwise, they are also considered dead.</p><p>Any direct hit on the gunner or driver counts as a hit, and the player is considered hit. Normal player rules apply to them.</p><p>• The gunner may be treated by a medic or replaced (only with the crew&#39;s permission).</p><p>• A dead driver or gunner must proceed to the respawn area.</p><p>• If the crew is dead but the vehicle itself remains operational, normal player respawn rules apply to the crew.</p><h3>Vehicle Hits / Repairs</h3><p>Vehicles may only be fired upon with marking projectiles/grenades (Paladin or equivalent).</p><p>Firing any explosive grenades at vehicles is strictly prohibited!</p><p>A hit counts only if the marking projectile breaks and leaves a visible mark on the vehicle. A glancing hit does not count.</p><p>First hit – the vehicle becomes immobilized. It must stop and may not move. The turret remains operational. The vehicle can be repaired.</p><p>Second hit – the vehicle is considered destroyed. A destroyed vehicle must sound one long horn blast, switch on its hazard lights, raise a red flag or red cloth, and proceed to the respawn area.</p><p>As an exception for this game, the medic acts as the mechanic.</p><p>To repair a vehicle, the medic must place both hands on the vehicle&#39;s hood and keep them there for 10 minutes. Additional medics reduce the repair time:</p><p>1 medic – 10 min / 2 medics – 5 min / 3 medics – 3 min.</p><p>After being destroyed, a vehicle may return to the game 30 minutes after arriving at the respawn area.</p><p>Vehicles may transport dead players to the respawn area.</p>"
+    "description": `
+      <h2>
+      <strong>Undertail</strong>
+      </h2>
+      <h3>
+      <strong>Introduction</strong>
+      </h3>
+      <p>An Alliance made up of several different nations decided to capture and divide among themselves a small village located on an appendix-shaped piece of land sticking out on the map. The name of this village is Undertail.</p>
+      <p>The Alliance expected to encounter cultists and a savage society of stick-wielding natives. Their expectations, however, turned out to be completely wrong. When the Alliance decided to enter the village, the invaders were met by friendly locals and well-developed infrastructure.</p>
+      <p>The head of the settlement came out to meet the newly arrived invaders and asked that, before the residents voluntarily “surrendered,” they hold a celebration in honor of the Alliance. He and the villagers invited their newly arrived “guests” to join the festivities.</p>
+      <p>During the celebration, the locals get the Alliance troops drunk on “tea” and treat them to hookahs — and from there, things quickly get out of hand. The soldiers get absolutely wasted, so the villagers decide to dismantle the Alliance tank in order to stop its forces.</p>
+      <p>But the locals are no amateurs either. They get completely hammered themselves, dismantle the Alliance tank and, somewhere along the way, while losing fuel and spare parts, somehow decide to dismantle their own tank as well. The only thing they remove intact is the navigation device used to call in artillery strikes. Their “tea”-soaked minds decide that this should be more than enough.</p>
+      <p>The only person capable of putting all this back together into working order is a technician who operates in neutral territory.</p>
+      <p>And this, my friend, is where my story ends. From this point on, you will become both a witness to and a participant in what happens next.</p>
+      <h2>
+      <strong>Core Game Mechanics</strong>
+      </h2>
+      <p>
+      <strong>Factions:</strong> The Alliance and the residents of Undertail.</p>
+      <h3>
+      <strong>The Village</strong>
+      </h3>
+      <ul>
+      <li>The village is the main capture point.</li>
+      <li>Control is checked every <strong>30 minutes</strong> — <strong>2 points</strong>. (The faction&#39;s flag must be raised at the point. The flags will be located at the point.)</li>
+      <li>Controlling the village at the end of the game awards an additional <strong>5 points</strong>.</li>
+      </ul>
+      <h3>
+      <strong>Parts and the Technician</strong>
+      </h3>
+      <ul>
+      <li>There are <strong>2 parts collection points</strong> in the game area.</li>
+      <li>The components must be delivered to the technician.</li>
+      <li>Assembling one completed part takes <strong>15 minutes</strong>. (The timer starts when both required components have been delivered to the technician.)</li>
+      <li>A faction must control the technician during assembly.</li>
+      <li>If control changes, assembly progress is not reset. The completed part goes to whichever faction controls the technician when the assembly is finished.</li>
+      <li>
+      <strong>10 completed parts = restored navigation device = 20 points.</strong>
+      </li>
+      <li>
+      <strong>The restored navigation device allows the faction to call in an artillery strike once every 30 minutes.</strong>
+      </li>
+      </ul>
+      <h3>
+      <strong>Fuel</strong>
+      </h3>
+      <ul>
+      <li>There is <strong>1 fuel collection point</strong> in the game area.</li>
+      <li>
+      <strong>1 fuel canister</strong> appears every <strong>30 minutes</strong>. (For example, at 11:15 and 11:45.)</li>
+      <li>
+      <strong>1 canister = 1 hour of vehicle operation.</strong> (Starting from the moment the vehicle is refueled.)</li>
+      <li>At the start of the game, each faction receives <strong>2 canisters</strong>.</li>
+      <li>Fuel does not award victory points.</li>
+      </ul>
+      <h3>
+      <strong>Valuable Resource</strong>
+      </h3>
+      <ul>
+      <li>There is <strong>1 valuable resource extraction point</strong> in the game area.</li>
+      <li>The residents extract and store the resource.</li>
+      <li>The Alliance captures and transports it away.</li>
+      <li>
+      <strong>1 unit = 2 points.</strong>
+      </li>
+      </ul>
+      <h3>
+      <strong>Game Points</strong>
+      </h3>
+      <p>There are <strong>6 main points</strong> in the game area:</p>
+      <ul>
+      <li>Undertail Village.</li>
+      <li>Parts Collection Point No. 1.</li>
+      <li>Parts Collection Point No. 2.</li>
+      <li>The Technician.</li>
+      <li>Fuel Collection Point.</li>
+      <li>Valuable Resource Deposit.</li>
+      </ul>
+      <h3>
+      <strong>Victory</strong>
+      </h3>
+      <p>The faction with the most victory points at the end of the game wins.</p>
+    `,
+    "rules": `
+      <h3>
+      <strong>Basic Rules</strong>
+      </h3>
+      <ul>
+      <li>Only <strong>BIO BBs</strong> may be used.</li>
+      <li>
+      <strong>All weapons intended for use during the game must pass chronograph testing.</strong>
+      </li>
+      <li>Pistols / Shotguns – <strong>≤ 1.2 J</strong>, no minimum engagement distance.</li>
+      <li>Assault rifles – <strong>≤ 1.6 J</strong>. A secondary weapon is recommended.</li>
+      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.
+<strong>*The weapon must visually resemble a real-life light or heavy machine gun.
+*An M4 with a drum magazine is not considered a machine gun.</strong>
+      </li>
+      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.
+<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.
+*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).
+*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.
+*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).
+*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).
+*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
+      </li>
+      <li>Bolt-action rifles – <strong>≤ 3.5 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.</li>
+      <li>Grenades – may be prohibited depending on fire conditions. Only factory-made grenades containing a projectile/hit element are allowed (no homemade grenades). A hit is registered by the projectile and within a <strong>3-meter radius</strong>.</li>
+      <li>Smoke grenades – may be prohibited depending on fire conditions. <strong>White smoke only.</strong>
+      </li>
+      <li>Blind fire is prohibited.</li>
+      <li>
+      <strong>Binary triggers are prohibited.</strong>
+      </li>
+      <li>
+      <strong>Semi-auto only inside buildings.</strong> Weapons exceeding <strong>1.6 J</strong> may not be used inside buildings; a secondary weapon is mandatory. Weapons exceeding 1.6 J may be used to fire from inside a building to the outside or from outside into a building, provided the required minimum engagement distance is observed.</li>
+      </ul>
+      <h3>
+      <strong>Faction Identification</strong>
+      </h3>
+      <p>
+      <strong>Alliance</strong> – any camouflage pattern. A blue armband may additionally be used for identification.</p>
+      <p>
+      <strong>Podhvostye Village</strong> – village-style civilian clothing (any ridiculous clothing is acceptable – even grandma’s nightgown, Amish outfits, cowboy outfits, etc.). If you do not have suitable themed clothing, we will give you <strong>VERY BRIGHT</strong> identification armbands.</p>
+      <p>Armbands must be <strong>5 cm wide</strong>. Provided by the organizers.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> At this event, all insignia of real-world units, all national flags and state symbols are prohibited, except for the <strong>national flags of European Union countries</strong>. Any offensive insignia or symbols are also prohibited.</p>
+      <h3>
+      <strong>Red / Orange Vests</strong>
+      </h3>
+      <p>To identify yourself as dead/wounded, you must carry a red/orange vest. It must cover the body and be clearly visible from all directions. A dead/wounded player must put on the vest or cover their head with it.</p>
+      <p>Vests can be purchased from the organizers.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> A raised hand is also considered a dead/wounded signal, <strong>BUT only while you are taking out your vest</strong>. Using a raised hand for an extended period instead of a vest may cause misunderstandings, and other players may shoot at you again. If this happens, do not insult or argue with the shooter. Simply announce loudly once again that you are dead.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Do not put the vest on your weapon, especially while waiting for a medic. In some situations, this can be misunderstood. A real example: a player was sitting behind a tree with their vest hanging on their weapon. From another player&#39;s perspective, it looked like a medic was treating a wounded player behind the tree.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> Moving to the respawn area with only a raised hand and without a vest is not allowed. In such cases, do not complain if you are shot while dead.</p>
+      <p>
+      <em>
+      <strong>NB!</strong>
+      </em> When registering at the game site, show the organizers your faction armbands and orange vest. Also bring your weapons for chronograph testing.</p>
+      <h3>
+      <strong>Wounded Players</strong>
+      </h3>
+      <p>When hit for the first time, the player must loudly call <strong>“УБИТ” / “HIT” / “SURNUD”</strong>, identify themselves with a red (orange) vest, and remain in place for <strong>5 minutes</strong>, loudly calling <strong>“MEDIC!”</strong> During this time, medical assistance may be provided.</p>
+      <p>The player may call for a medic but may not communicate information about enemy movements or positions. Only a medic may provide medical treatment, but any player may move a wounded player <strong>(this must be done realistically; running while carrying/moving a wounded player is prohibited).</strong>
+      </p>
+      <p>Treatment takes <strong>2 minutes</strong>. A bandage is tied around the wounded player&#39;s arm. The player&#39;s own bandage or a white armband may be used, so you can be sure there will be enough bandages for you.</p>
+      <p>If a player already has a wounded-player bandage on their arm, the next hit results in final elimination and the player must proceed to the respawn area.</p>
+      <p>If you are certain that a medic will not be able to reach you in time, you do not have to remain there for the full 5 minutes, although doing so is encouraged.</p>
+      <p>Medics and players moving a wounded player may not use the wounded player as cover. If the wounded player is hit again during treatment or transportation, the wounded player is considered dead.</p>
+      <h3>
+      <strong>Medic</strong>
+      </h3>
+      <p>Only a medic may provide medical treatment. The number of medics is determined at a ratio of <strong>1 medic per 10 players</strong>.</p>
+      <p>A medic must wear a medic patch. If no patch is available, a piece of white tape with a red cross will be placed on the medic&#39;s arm next to the faction identification armband.</p>
+      <p>Players wishing to play as medics are asked to bring their own bandages. A limited number of bandages will be provided by the organizers.</p>
+      <p>As an exception for this game, <strong>medics also act as mechanics</strong>. See the vehicle rules.</p>
+      <p>Medics and players moving wounded players may not use the wounded player as cover. If the wounded player is hit again during treatment or transportation, the wounded player is considered dead.</p>
+      <h3>
+      <strong>Vehicles</strong>
+      </h3>
+      <p>Vehicles will be used during the game.</p>
+      <p>Vehicles must be marked with tape/armbands of the appropriate faction color and the faction flag.</p>
+      <p>Vehicle speed must not exceed <strong>20 km/h</strong>.</p>
+      <p>
+      <strong>A vehicle crew consists of 2 people (Driver and Gunner).</strong>
+      </p>
+      <p>Shooting through vehicle windows is prohibited. Shooting is allowed only from the vehicle turret.</p>
+      <p>Players exiting a vehicle may open fire only after <strong>both feet have touched the ground</strong>.</p>
+      <p>Any interaction with a vehicle (opening doors, climbing into it, etc.) is permitted only with the vehicle crew&#39;s permission.</p>
+      <p>Vehicles cannot be captured.</p>
+      <p>If a vehicle is completely destroyed (<strong>2 hits</strong>), its crew is considered dead. All other players inside the vehicle have <strong>20 seconds</strong> to exit; otherwise, they are also considered dead.</p>
+      <p>Any direct hit on the gunner or driver counts as a hit, and normal player hit rules apply.</p>
+      <ol>
+      <li>The gunner may be treated by a medic or replaced (only with the crew&#39;s permission).</li>
+      <li>A dead driver or gunner must proceed to the respawn area.</li>
+      <li>If the crew is dead but the vehicle itself remains operational, normal player respawn rules apply to the crew.</li>
+      </ol>
+      <h3>
+      <strong>Vehicle Hits / Repairs</strong>
+      </h3>
+      <p>Vehicles may only be fired upon with <strong>marking grenades (Paladin or equivalent)</strong>.</p>
+      <p>
+      <strong>Firing any explosive grenades at vehicles is strictly prohibited!</strong>
+      </p>
+      <p>A hit counts only if the marking grenade breaks and leaves a visible mark on the vehicle. A glancing hit does not count.</p>
+      <p>
+      <strong>First hit</strong> – the vehicle becomes immobilized. It must stop and may not move. The turret remains operational. The vehicle can be repaired.</p>
+      <p>
+      <strong>Second hit</strong> – the vehicle is considered destroyed. A destroyed vehicle must sound one long horn blast, switch on its hazard lights, raise a red flag or red cloth, and proceed to the respawn area.</p>
+      <p>As an exception for this game, <strong>the medic acts as the mechanic</strong>.</p>
+      <p>To repair a vehicle, the medic must place both hands on the vehicle&#39;s hood and keep them there for <strong>10 minutes</strong>. Additional medics reduce the repair time:</p>
+      <p>
+      <strong>1 medic – 10 min / 2 medics – 5 min / 3 medics – 3 min.</strong>
+      </p>
+      <p>After being destroyed, a vehicle may return to the game <strong>30 minutes after arriving at the respawn area</strong>.</p>
+      <p>Vehicles may transport dead players to the respawn area.</p>
+      <h3>
+      <strong>Drones</strong>
+      </h3>
+      <p>The use of drones is <strong>provisionally permitted</strong>.</p>
+      <p>Current information and restrictions can be found on the official <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong>.</p>
+      <p>
+      <strong>Game location coordinates:</strong> 59.181028, 26.378079</p>
+      <p>Airspace restrictions may change, so up-to-date information regarding whether drones may be used will be published immediately before the game.</p>
+      <p>Drones may be used <strong>exclusively for reconnaissance</strong>.</p>
+      <p>
+      <strong>It is prohibited to:</strong>
+      </p>
+      <ul>
+      <li>shoot down, fire at, or otherwise intentionally damage drones;</li>
+      <li>make any modifications that turn a drone into a combat unit;</li>
+      <li>use drones to drop grenades, pyrotechnics, or any other in-game means of causing hits.</li>
+      </ul>
+    `,
+    "news": `
+      <h3>
+      <strong>22.09.2026 Rules Update</strong>
+      </h3>
+      <p>Dear friends!</p>
+      <p>We have made a few small additions to the rules regarding <strong>the use of drones</strong>.</p>
+      <p>The use of drones is <strong>provisionally permitted</strong>.</p>
+      <p>Current information and restrictions can be found on the official <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong>.</p>
+      <p>
+      <strong>Game location coordinates:</strong> 59.181028, 26.378079</p>
+      <p>Airspace restrictions may change, so up-to-date information regarding whether drones may be used will be published immediately before the game.</p>
+      <p>Drones may be used <strong>exclusively for reconnaissance</strong>.</p>
+      <p>
+      <strong>It is prohibited to:</strong>
+      </p>
+      <ul>
+      <li>shoot down, fire at, or otherwise intentionally damage drones;</li>
+      <li>make any modifications that turn a drone into a combat unit;</li>
+      <li>use drones to drop grenades, pyrotechnics, or any other in-game means of causing hits.</li>
+      </ul>
+    `
   }
 };

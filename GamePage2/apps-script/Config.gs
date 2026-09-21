@@ -15,6 +15,12 @@ const CONFIG = {
     en: '',
   },
 
+  NEWS_DOCS: {
+    et: '',
+    ru: '',
+    en: '',
+  },
+
   SCHEDULE_SHEET_ID: '',
   SCHEDULE_SHEET_NAME: 'Schedule',
   REGISTRATION_SHEET_NAME: 'Registrations',

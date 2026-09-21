@@ -126,6 +126,10 @@ button {
   text-decoration: none;
 }
 
+.navigation > a.active:not(.button) {
+  color: var(--signal);
+}
+
 .language-switcher {
   display: flex;
   padding-left: 1rem;
@@ -389,6 +393,11 @@ h2 {
 .section {
   padding-block: 7rem;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 5rem;
+}
+
+.section[hidden] {
+  display: none;
 }
 
 .split-layout {
@@ -410,6 +419,20 @@ h2 {
 .about-layout {
   grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.news-layout {
+  grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.news-layout > * {
+  min-width: 0;
+}
+
+.news-layout h2 {
+  font-size: clamp(2.5rem, 3.5vw, 3.25rem);
+  overflow-wrap: anywhere;
 }
 
 .about-layout > * {

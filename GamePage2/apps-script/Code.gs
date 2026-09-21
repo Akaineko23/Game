@@ -16,6 +16,10 @@ function doGet(event) {
       return jsonResponse_(getContent_(language));
     }
 
+    if (action === 'news') {
+      return jsonResponse_(getNews_(language));
+    }
+
     if (action === 'schedule') {
       return jsonResponse_(getSchedule_(language));
     }

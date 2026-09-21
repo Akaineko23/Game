@@ -11,7 +11,8 @@
 
 ## Local Google content and schedule
 
-- Run `node scripts/sync-content.mjs`, then test the local description and rules separately for ET, RU and EN with the Apps Script endpoint unavailable.
+- Run `node scripts/sync-content.mjs`, then test the local description, rules and news separately for ET, RU and EN with the Apps Script endpoint unavailable.
+- Run `node scripts/sync-content.mjs --news-only` and confirm that all three news languages update together while description and rules remain byte-for-byte unchanged.
 - Simulate one empty or failed language response and confirm the command preserves the existing generated content.
 - Confirm headings create the rules contents.
 - Confirm `VISIBLE = FALSE` rows are omitted.

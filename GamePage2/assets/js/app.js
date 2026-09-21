@@ -1,9 +1,44 @@
 import { config } from './config.js';
-import { configureFienta, renderFientaStatus } from './fienta.js?v=0.2.9';
-import { messages } from './i18n.js?v=0.2.9';
-import { localContent } from './local-content.js?v=0.2.9';
+import { configureFienta, renderFientaStatus } from './fienta.js?v=0.2.10';
+import { messages } from './i18n.js?v=0.2.11';
+import { localContent } from './local-content.js?v=0.2.11';
 
 let language = chooseInitialLanguage();
+let contentMode = getModeForHash(window.location.hash);
+
+function getModeForHash(hash) {
+  return hash === '#news' ? 'news' : 'details';
+}
+
+function setContentMode(mode) {
+  contentMode = mode;
+
+  document.querySelectorAll('[data-content-mode-panel]').forEach((panel) => {
+    panel.hidden = panel.dataset.contentModePanel !== contentMode;
+  });
+
+  const newsNavigation = document.querySelector('[data-news-navigation]');
+  const newsIsActive = contentMode === 'news';
+  newsNavigation.classList.toggle('active', newsIsActive);
+
+  if (newsIsActive) {
+    newsNavigation.setAttribute('aria-current', 'page');
+  } else {
+    newsNavigation.removeAttribute('aria-current');
+  }
+}
+
+function navigateToSection(hash, mode) {
+  setContentMode(mode);
+
+  if (window.location.hash !== hash) {
+    window.history.pushState(null, '', hash);
+  }
+
+  window.requestAnimationFrame(() => {
+    document.querySelector(hash)?.scrollIntoView();
+  });
+}
 
 function chooseInitialLanguage() {
   const saved = localStorage.getItem('game-language');
@@ -62,6 +97,7 @@ function renderLanguage() {
   document.querySelector('[data-map-link]').href = config.game.mapUrl;
   renderContactEmail();
   renderLocalContent();
+  setContentMode(contentMode);
 
   document.title = `${config.game.name} — ${translate('eventType')}`;
   renderFientaStatus(translate);
@@ -123,6 +159,15 @@ function renderLocalContent() {
     container.setAttribute('aria-busy', 'false');
   });
 
+  const newsContainer = document.querySelector('[data-local-content="news"]');
+  const newsHtml = content && content.news;
+
+  if (typeof newsHtml === 'string' && newsHtml.trim()) {
+    newsContainer.innerHTML = newsHtml;
+  } else {
+    newsContainer.textContent = translate('newsUnavailable');
+  }
+
   buildRulesContents();
 }
 
@@ -151,6 +196,33 @@ menu.querySelectorAll('a').forEach((link) => {
   });
 });
 
+document.querySelector('[data-news-navigation]').addEventListener('click', (event) => {
+  event.preventDefault();
+
+  if (contentMode === 'news') {
+    navigateToSection('#about', 'details');
+  } else {
+    navigateToSection('#news', 'news');
+  }
+});
+
+document.querySelectorAll('a[href="#about"], a[href="#rules"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    navigateToSection(link.hash, 'details');
+  });
+});
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash;
+
+  if (hash === '#news') {
+    setContentMode('news');
+  } else if (hash === '#about' || hash === '#rules') {
+    setContentMode('details');
+  }
+});
+
 window.addEventListener('scroll', () => {
   document.querySelector('[data-header]').classList.toggle('scrolled', window.scrollY > 30);
 }, { passive: true });
@@ -159,3 +231,9 @@ document.querySelector('[data-year]').textContent = new Date().getFullYear();
 
 renderLanguage();
 configureFienta(translate);
+
+if (window.location.hash) {
+  window.requestAnimationFrame(() => {
+    document.querySelector(window.location.hash)?.scrollIntoView();
+  });
+}

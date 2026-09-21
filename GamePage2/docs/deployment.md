@@ -4,7 +4,7 @@
 
 1. Open `script.google.com` and create a project owned by the organiser account.
 2. Add one Apps Script file for every `.gs` file from `apps-script/` and copy the contents.
-3. Fill only the real Google document and schedule IDs in `Config.gs` and save.
+3. Fill only the real description, rules, news and schedule IDs in `Config.gs` and save.
 4. Add the registration and Fienta values listed in `docs/fienta-setup.md` to **Project Settings → Script Properties**. Do not put secrets in `.gs` files.
 5. Open **Deploy → New deployment** (or verify the current equivalent).
 6. Select **Web app**.
@@ -25,4 +25,4 @@ Run `syncFientaRegistrations` once from the Apps Script editor to perform the in
 
 Upload `index.html` and `assets/` to an HTTPS static host. Keep the directory structure unchanged. Test the deployed site again because cross-origin behaviour can differ from Live Server.
 
-Run `node scripts/sync-content.mjs` before publishing whenever the Google Docs content changes. See `docs/content-sync.md`.
+Run `node scripts/sync-content.mjs` before publishing whenever the Google Docs description, rules or news changes. The public page reads the generated local module and does not contact Google while visitors switch languages or navigate between sections. See `docs/content-sync.md`.

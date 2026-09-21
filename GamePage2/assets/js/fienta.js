@@ -46,10 +46,25 @@ export function configureFienta(translate) {
   });
   warning.hidden = true;
 
-  const source = createStatusSource(eventUrl);
+  const source = document.querySelector('[data-fienta-status-source]');
+
+  if (source) {
+    source.href = eventUrl;
+  }
+
   const requestId = statusRequestId + 1;
   statusRequestId = requestId;
   let requestFinished = false;
+
+  const finishRequest = (count) => {
+    if (requestFinished || requestId !== statusRequestId) {
+      return;
+    }
+
+    requestFinished = true;
+    clearTimeout(timeoutId);
+    setAvailability(normalizeAvailability(count));
+  };
 
   const timeoutId = window.setTimeout(() => {
     if (requestFinished || requestId !== statusRequestId) {
@@ -62,37 +77,15 @@ export function configureFienta(translate) {
     });
   }, statusTimeout);
 
-  window.fientaSettings = {
-    link_selector: 'a[data-fienta-status-source]',
-    onTicketsAvailableReady(element, count) {
-      if (requestFinished || requestId !== statusRequestId) {
-        return;
-      }
-
-      requestFinished = true;
-      clearTimeout(timeoutId);
-      setAvailability(normalizeAvailability(count));
-    },
-  };
-
-  const script = document.createElement('script');
-  script.src = 'https://fienta.com/embed.js';
-  script.async = true;
-  script.addEventListener('error', () => {
-    if (requestFinished || requestId !== statusRequestId) {
-      return;
-    }
-
-    requestFinished = true;
-    clearTimeout(timeoutId);
-    setAvailability({
-      type: 'error',
-    });
+  window.addEventListener('fienta:tickets-available', (event) => {
+    finishRequest(event.detail);
   }, {
     once: true,
   });
 
-  source.after(script);
+  if (window.fientaAvailabilityState?.received) {
+    finishRequest(window.fientaAvailabilityState.value);
+  }
 }
 
 export function renderFientaStatus(translate = translateStatus) {
@@ -120,24 +113,6 @@ export function renderFientaStatus(translate = translateStatus) {
 
   status.textContent = message;
   status.setAttribute('aria-busy', String(availability.type === 'loading'));
-}
-
-function createStatusSource(eventUrl) {
-  const existingSource = document.querySelector('[data-fienta-status-source]');
-
-  if (existingSource) {
-    existingSource.href = eventUrl;
-    return existingSource;
-  }
-
-  const source = document.createElement('a');
-  source.href = eventUrl;
-  source.hidden = true;
-  source.tabIndex = -1;
-  source.setAttribute('aria-hidden', 'true');
-  source.setAttribute('data-fienta-status-source', '');
-  document.body.append(source);
-  return source;
 }
 
 function normalizeAvailability(count) {
