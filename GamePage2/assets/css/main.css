@@ -655,6 +655,11 @@ h2 {
     min-height: 4.125rem;
   }
 
+  body.menu-open .site-header {
+    background: var(--ink);
+    backdrop-filter: none;
+  }
+
   .menu-toggle {
     display: block;
   }
