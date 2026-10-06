@@ -44,11 +44,13 @@ function syncFientaRegistrations() {
         id: ticket.order_id,
         buyer: {
           email: ticket.order_email,
+          phone: ticket.order_phone,
         },
       },
       ticketStatus: ticket.status,
       checkedIn: ticket.status === 'USED',
       checkedInAt: ticket.used_at,
+      preserveMissingAttendee: true,
     });
     const existing = registrations[normalized.ticketId] || {};
 
@@ -56,9 +58,17 @@ function syncFientaRegistrations() {
   });
 
   const ticketIds = Object.keys(registrations);
+  let deletedTickets = 0;
 
   ticketIds.forEach(function (ticketId) {
-    upsertRegistration_(registrations[ticketId], 'api-sync');
+    const ticket = registrations[ticketId];
+
+    if (isCancelledFientaTicket_(ticket)) {
+      deletedTickets += deleteRegistration_(ticketId) ? 1 : 0;
+      return;
+    }
+
+    upsertRegistration_(ticket, 'api-sync');
   });
 
   PropertiesService
@@ -68,7 +78,25 @@ function syncFientaRegistrations() {
   return {
     success: true,
     processedTickets: ticketIds.length,
+    deletedTickets: deletedTickets,
   };
+}
+
+function isCancelledFientaTicket_(ticket) {
+  const statuses = [
+    ticket.paymentStatus,
+    ticket.ticketStatus,
+    ticket.fientaStatus,
+  ].map(function (status) {
+    return String(status || '').toUpperCase();
+  });
+
+  return statuses.some(function (status) {
+    return status === 'CANCELLED'
+      || status === 'CANCELED'
+      || status === 'REFUNDED'
+      || status === 'VOID';
+  });
 }
 
 function installFientaSyncTrigger() {

@@ -44,15 +44,20 @@ Create these Script Properties:
 - `FIENTA_ORGANIZER_ID`: numeric organiser ID.
 - `FIENTA_EVENT_ID`: numeric event ID.
 - `FIENTA_WEBHOOK_SECRET`: the random webhook URL secret described above.
-- `FIENTA_TICKET_TYPE_SIDE_MAP`: JSON object mapping ticket-type IDs or exact titles to game sides, for example `{"142835":"Alliance","142836":"Undertail"}`. Unmapped ticket types remain blank.
+- `FIENTA_TICKET_TYPE_SIDE_MAP`: JSON object mapping real ticket-type IDs to game sides. Do not use guessed IDs or ticket titles. Unmapped ticket types remain blank.
 
-Optional attendee-field mappings are `FIENTA_FIRST_NAME_FIELD`, `FIENTA_LAST_NAME_FIELD`, `FIENTA_CALLSIGN_FIELD`, and `FIENTA_EMAIL_FIELD`. Their defaults are `first_name`, `last_name`, `callsign`, and `email`. Change them only when the custom-field names shown by Fienta differ.
+The public registration columns are a fixed server-side allowlist: Player Number, Permanent Registration Number, First Name, Callsign, Side and the translated public Payment Status. They are not configured through Script Properties. The local synchronization rejects any different set of columns as a second privacy boundary.
+
+Optional attendee-field mappings are `FIENTA_FIRST_NAME_FIELD`, `FIENTA_LAST_NAME_FIELD`, `FIENTA_CALLSIGN_FIELD`, `FIENTA_EMAIL_FIELD`, `FIENTA_PHONE_FIELD`, `FIENTA_TEAM_FIELD`, and `FIENTA_PERMANENT_REGISTRATION_NUMBER_FIELD`. Change them only after the real keys have been observed in the production event API or webhook payload.
 
 After adding all Apps Script files and properties:
 
-1. Run `syncFientaRegistrations` manually from the Apps Script editor and approve Spreadsheet and external-request permissions. This imports existing orders and tickets using the documented paginated API.
-2. Verify several rows, including an order containing multiple tickets. The unique Fienta ticket code is used for updates, so repeated imports do not create duplicates.
+1. Run `syncFientaRegistrations` manually from the Apps Script editor and approve Spreadsheet and external-request permissions. This imports paid and unpaid existing orders and tickets using the paginated API.
+2. Verify several rows in both `Registrations` (Technical) and `Game Registrations` (Working), including an order containing multiple tickets. The unique Fienta ticket code is used for updates, so repeated imports do not create duplicates.
 3. Run `installFientaSyncTrigger` once to create a single hourly synchronization trigger.
+4. Run `rebuildGameSheet` whenever the Working sheet must be restored entirely from the Technical sheet. This function does not request Fienta.
+
+New player numbers start at `2000`, as configured by `CONFIG.PLAYER_NUMBER_START`. The last issued number is retained in `LAST_PLAYER_NUMBER`; do not create or edit that property manually. Explicit `CANCELLED`, `CANCELED`, `REFUNDED` and `VOID` statuses remove the matching ticket row. A missing ticket in a collection response is not used as a deletion signal.
 4. Deploy a new web-app version and configure the three webhook types.
 
 Until `REGISTRATIONS_SPREADSHEET_ID` is set, synchronization stops with `REGISTRATIONS_SPREADSHEET_NOT_CONFIGURED` and does not open or write any spreadsheet. API tokens and attendee data are never returned by the public site API.

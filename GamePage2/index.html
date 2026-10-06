@@ -8,7 +8,7 @@
     <meta property="og:description" content="Official information and registration for the game.">
     <meta property="og:type" content="website">
     <title>Undertale - Airsoft Game</title>
-    <link rel="stylesheet" href="assets/css/main.css?v=0.2.13">
+    <link rel="stylesheet" href="assets/css/main.css?v=0.5.2">
     <script>
       window.fientaAvailabilityState = {
         received: false,
@@ -28,7 +28,7 @@
       };
     </script>
     <script defer src="https://fienta.com/embed.js"></script>
-    <script type="module" src="assets/js/app.js?v=0.2.12"></script>
+    <script type="module" src="assets/js/app.js?v=0.5.2"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -47,10 +47,23 @@
       </button>
 
       <nav id="main-navigation" class="navigation" aria-label="Main navigation" data-navigation>
-        <a href="#news" data-news-navigation data-i18n="navNews">News</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#information" data-i18n="navInformation">Information</a>
-        <a href="#rules" data-i18n="navRules">Rules</a>
+        <a href="#news" data-navigation-target="#news" data-news-navigation data-i18n="navNews">News</a>
+        <div class="navigation-dropdown" data-navigation-dropdown>
+          <div class="navigation-dropdown-trigger">
+            <a href="#about" data-navigation-target="#about" data-navigation-group="about" data-i18n="navAbout">About</a>
+            <button type="button" aria-expanded="false" data-navigation-dropdown-toggle>
+              <span aria-hidden="true">▾</span>
+              <span class="sr-only" data-i18n="aboutMenuToggle">Open the about menu</span>
+            </button>
+          </div>
+          <div class="navigation-dropdown-menu">
+            <a href="#information" data-navigation-target="#information" data-i18n="navInformation">Information</a>
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#rules" data-navigation-target="#rules" data-i18n="navRules">Rules</a>
+          </div>
+        </div>
+        <a href="#registered" data-navigation-target="#registered" data-registered-navigation data-i18n="navRegistered">Registered players</a>
+        <a href="#map" data-navigation-target="#map" data-map-navigation data-i18n="navMap">Map</a>
         <div class="language-switcher" aria-label="Language">
           <button type="button" data-language="et">ET</button>
           <button type="button" data-language="ru">RU</button>
@@ -135,6 +148,13 @@
         </div>
       </section>
 
+      <div class="mobile-content-switch shell" data-mobile-content-switch aria-label="Content">
+        <button type="button" data-content-mode="news" data-i18n="navNews">News</button>
+        <button type="button" data-content-mode="details" data-i18n="navAbout">About</button>
+        <button type="button" data-content-mode="registered" data-i18n="navRegistered">Registered players</button>
+        <button type="button" data-content-mode="map" data-i18n="navMap">Map</button>
+      </div>
+
       <section class="section news-section" id="news" data-content-mode-panel="news" hidden>
         <div class="shell split-layout news-layout">
           <div>
@@ -161,6 +181,38 @@
             </ul>
             <!-- LOCAL_NEWS_ET_END -->
           </div>
+        </div>
+      </section>
+
+      <section class="section registered-section" id="registered" data-content-mode-panel="registered" hidden>
+        <div class="shell registered-layout">
+          <div>
+            <h2 data-i18n="registeredTitle">Registered players</h2>
+            <div class="side-balance" data-side-balance hidden>
+              <h3 data-i18n="sideBalanceTitle">Side balance</h3>
+              <div class="side-balance-chart" data-side-balance-chart role="img"></div>
+              <div class="side-balance-legend" data-side-balance-legend></div>
+            </div>
+          </div>
+          <div class="registered-list">
+            <p class="registration-refresh-notice">
+              <strong data-i18n="registeredRefreshQuestion">Can't find yourself on the list?</strong>
+              <span data-i18n="registeredRefreshText">The registration list is updated once an hour. Please wait a little and check again.</span>
+            </p>
+            <div data-registered-content aria-live="polite">
+              <p class="empty-state" data-i18n="registeredColumnsPending">The public list will appear after its columns are approved.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section map-section" id="map" data-content-mode-panel="map" hidden>
+        <div class="shell map-layout">
+          <h2 data-i18n="mapTitle">Map</h2>
+          <button class="map-preview" type="button" data-map-open>
+            <img src="Pics/Map/Kadila_aerial_preview.png" alt="" data-map-image>
+            <span class="sr-only" data-i18n="mapOpen">Open the large map</span>
+          </button>
         </div>
       </section>
 
@@ -400,6 +452,13 @@
         </div>
       </section>
 
+      <section class="section friends-section" id="friends">
+        <div class="shell">
+          <h2 data-i18n="friendsTitle">Our friends</h2>
+          <div class="friends-list" data-friends-list></div>
+        </div>
+      </section>
+
       <section class="section registration-section" id="registration">
         <div class="shell registration-layout">
           <div><h2 data-i18n="registrationTitle">Choose your ticket in Fienta</h2></div>
@@ -416,7 +475,13 @@
       <section class="section" id="contacts">
         <div class="shell split-layout">
           <div><h2 data-i18n="contactsTitle">Contact</h2></div>
-          <div class="contact-card"><a data-contact-email hidden></a></div>
+          <div class="contact-card">
+            <a data-contact-email hidden></a>
+            <div class="contact-links">
+              <a href="https://t.me/c/2189111370/4295" target="_blank" rel="noopener noreferrer" data-i18n="gameTelegram">Game Telegram</a>
+              <a href="https://t.me/AirSoftEstonia/34073" target="_blank" rel="noopener noreferrer" data-i18n="airsoftEstoniaTelegram">AirSoft Estonia Telegram</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -430,6 +495,21 @@
     </footer>
 
     <a href="https://fienta.com/et/undertail" hidden tabindex="-1" aria-hidden="true" data-fienta-status-source></a>
+
+    <dialog class="map-lightbox" data-map-dialog aria-labelledby="map-dialog-title">
+      <div class="map-lightbox-header">
+        <h2 id="map-dialog-title" data-i18n="mapTitle">Map</h2>
+        <div class="map-lightbox-controls">
+          <button type="button" data-map-zoom-out aria-label="Zoom out" data-i18n-aria-label="mapZoomOut">−</button>
+          <button type="button" data-map-zoom-reset aria-label="Reset zoom" data-i18n-aria-label="mapZoomReset">1:1</button>
+          <button type="button" data-map-zoom-in aria-label="Zoom in" data-i18n-aria-label="mapZoomIn">+</button>
+          <button type="button" data-map-close data-i18n="mapClose">Close</button>
+        </div>
+      </div>
+      <div class="map-lightbox-viewport">
+        <img src="Pics/Map/Kadila_aerial_preview.png" alt="" data-map-dialog-image>
+      </div>
+    </dialog>
   </body>
 </html>
 

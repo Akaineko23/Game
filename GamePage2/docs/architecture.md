@@ -4,10 +4,10 @@
 
 ```text
 Publishing command ──GET──> Apps Script ──> private Google Docs
-Browser ──local files──────────> description and rules
-Browser ──GET──> Apps Script ──> private Google Sheet (schedule)
+Browser ──local files──────────> description, rules, news and public registrations
 Browser ──new-tab link──────────> Fienta checkout
-Fienta  ──webhook/API──> Apps Script ──> private Google Sheet (registrations)
+Fienta ──webhook/API──> Apps Script ──> Technical sheet ──> Working sheet
+Working sheet ──public filter──> local-registrations.js ──> Browser
 ```
 
 The browser receives only public content. Document and spreadsheet IDs stay in `apps-script/Config.gs`. Secrets belong in Apps Script Script Properties.
@@ -20,7 +20,8 @@ The browser receives only public content. Document and spreadsheet IDs stay in `
 - `apps-script/Code.gs`: small request router and safe errors.
 - `ContentService.gs` and `ScheduleService.gs`: cached public reads.
 - `FientaWebhookService.gs`: webhook verification and payload adapter boundary.
-- `RegistrationRepository.gs`: idempotent ticket upsert.
+- `RegistrationRepository.gs`: header-based Technical/Working sheet upsert and rebuild.
+- `RegistrationPublicService.gs`: fixed public allowlist and privacy filtering.
 - `PlayerNumberService.gs`: sequential four-digit numbers.
 - `FientaApiService.gs`: paginated initial and periodic imports from the authenticated Fienta API.
 

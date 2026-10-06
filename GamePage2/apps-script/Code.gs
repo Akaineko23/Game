@@ -24,6 +24,10 @@ function doGet(event) {
       return jsonResponse_(getSchedule_(language));
     }
 
+    if (action === 'registrations') {
+      return jsonResponse_(getPublicRegistrations_(language));
+    }
+
     return jsonResponse_({ success: false, code: 'NOT_FOUND' });
   } catch (error) {
     console.error(error);
@@ -64,6 +68,7 @@ function publicErrorCode_(error) {
     'PLAYER_NUMBER_LIMIT_REACHED',
     'REGISTRATIONS_SPREADSHEET_NOT_CONFIGURED',
     'FIENTA_API_NOT_CONFIGURED',
+    'REGISTRATION_COLUMN_MISSING',
   ];
 
   return allowedCodes.indexOf(error.message) >= 0 ? error.message : 'SERVER_ERROR';

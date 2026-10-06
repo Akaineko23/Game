@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
@@ -6,12 +7,21 @@ import { fileURLToPath } from 'node:url';
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const projectDirectory = path.resolve(scriptDirectory, '..');
 const languages = ['et', 'ru', 'en'];
+const publicRegistrationKeys = [
+  'Player Number',
+  'Permanent Registration Number',
+  'First Name',
+  'Callsign',
+  'Side',
+  'Payment Status',
+];
 const allowedTags = new Set([
   'a',
   'br',
   'em',
   'h2',
   'h3',
+  'img',
   'li',
   'ol',
   'p',
@@ -23,41 +33,87 @@ async function main() {
   const configSource = await fs.readFile(path.join(projectDirectory, 'assets/js/config.js'), 'utf8');
   const apiUrl = process.env.GAME_CONTENT_API_URL || readApiUrl(configSource);
   const newsOnly = process.argv.includes('--news-only');
-  const content = {};
+  const registrationsOnly = process.argv.includes('--registrations-only');
 
-  for (const language of languages) {
-    if (newsOnly) {
-      content[language] = {
-        news: await fetchNews(apiUrl, language),
-      };
-    } else {
-      content[language] = await fetchLanguage(apiUrl, language);
+  if (newsOnly && registrationsOnly) {
+    throw new Error('Use only one partial synchronization option at a time.');
+  }
+
+  const content = {};
+  const registrations = {};
+
+  if (registrationsOnly) {
+    for (const language of languages) {
+      registrations[language] = await fetchRegistrations(apiUrl, language);
+    }
+  } else {
+    for (const language of languages) {
+      if (newsOnly) {
+        content[language] = {
+          news: await fetchNews(apiUrl, language),
+        };
+      } else {
+        content[language] = await fetchLanguage(apiUrl, language);
+      }
+    }
+
+    if (!newsOnly) {
+      for (const language of languages) {
+        registrations[language] = await fetchRegistrations(apiUrl, language);
+      }
     }
   }
 
+  const imageFiles = registrationsOnly ? [] : localizeContentImages(content);
+
   const localContentPath = path.join(projectDirectory, 'assets/js/local-content.js');
   const currentModule = await fs.readFile(localContentPath, 'utf8');
-  const generatedModule = newsOnly
-    ? updateNewsModule(currentModule, content)
-    : createContentModule(content);
+  const generatedModule = registrationsOnly
+    ? currentModule
+    : newsOnly
+      ? updateNewsModule(currentModule, content)
+      : createContentModule(content);
+  const registrationsModule = createRegistrationsModule(registrations);
   const indexPath = path.join(projectDirectory, 'index.html');
   const currentIndex = await fs.readFile(indexPath, 'utf8');
-  const updatedIndex = newsOnly
+  const updatedIndex = registrationsOnly
+    ? currentIndex
+    : newsOnly
     ? updateInitialNewsHtml(currentIndex, content.et.news)
     : updateInitialHtml(currentIndex, content.et);
 
-  await writeValidatedFiles([
-    {
-      targetPath: localContentPath,
-      contents: generatedModule,
-    },
-    {
-      targetPath: indexPath,
-      contents: updatedIndex,
-    },
-  ]);
+  const files = registrationsOnly
+    ? []
+    : [
+        ...imageFiles,
+        {
+          targetPath: localContentPath,
+          contents: generatedModule,
+        },
+        {
+          targetPath: indexPath,
+          contents: updatedIndex,
+        },
+      ];
 
-  if (newsOnly) {
+  if (!newsOnly) {
+    files.push({
+      targetPath: path.join(projectDirectory, 'assets/js/local-registrations.js'),
+      contents: registrationsModule,
+    });
+  }
+
+  const changedFiles = await writeValidatedFiles(files);
+
+  if (!registrationsOnly && !newsOnly) {
+    await removeUnusedSyncedImages(imageFiles);
+  }
+
+  if (!changedFiles.length) {
+    console.log('Local content already matches the source; no files were changed.');
+  } else if (registrationsOnly) {
+    console.log('Local ET/RU/EN registrations were updated successfully.');
+  } else if (newsOnly) {
     console.log('Local ET/RU/EN news were updated successfully. Description and rules were unchanged.');
   } else {
     console.log('Local ET/RU/EN description, rules and news were updated successfully.');
@@ -75,10 +131,8 @@ function readApiUrl(configSource) {
 }
 
 async function fetchLanguage(apiUrl, language) {
-  const [contentPayload, newsPayload] = await Promise.all([
-    fetchAction(apiUrl, 'content', language),
-    fetchAction(apiUrl, 'news', language),
-  ]);
+  const contentPayload = await fetchAction(apiUrl, 'content', language);
+  const newsPayload = await fetchAction(apiUrl, 'news', language);
 
   const description = sanitizeHtml(contentPayload.description);
   const rules = sanitizeHtml(contentPayload.rules);
@@ -102,6 +156,44 @@ async function fetchNews(apiUrl, language) {
   }
 
   return news;
+}
+
+async function fetchRegistrations(apiUrl, language) {
+  const payload = await fetchAction(apiUrl, 'registrations', language);
+  const columns = Array.isArray(payload.columns) ? payload.columns : null;
+  const rows = Array.isArray(payload.rows) ? payload.rows : null;
+
+  if (!columns || !rows) {
+    throw new Error(`Registrations for ${language} are invalid; existing local files were not changed.`);
+  }
+
+  const normalizedColumns = columns.map((column) => ({
+    key: String(column.key || ''),
+    label: String(column.label || ''),
+  }));
+  const receivedKeys = normalizedColumns.map((column) => column.key);
+
+  if (
+    receivedKeys.length !== publicRegistrationKeys.length
+    || receivedKeys.some((key, index) => key !== publicRegistrationKeys[index])
+  ) {
+    throw new Error(
+      `Registrations for ${language} contain unapproved columns; existing local files were not changed.`,
+    );
+  }
+
+  const normalizedRows = rows.map((row) => {
+    if (!Array.isArray(row) || row.length !== normalizedColumns.length) {
+      throw new Error(`Registrations for ${language} have an invalid row; existing local files were not changed.`);
+    }
+
+    return row.map((value) => String(value ?? ''));
+  });
+
+  return {
+    columns: normalizedColumns,
+    rows: normalizedRows,
+  };
 }
 
 async function fetchAction(apiUrl, action, language) {
@@ -129,6 +221,12 @@ async function fetchAction(apiUrl, action, language) {
       return payload;
     } catch (error) {
       lastError = error;
+
+      if (attempt < 3) {
+        await new Promise((resolve) => {
+          setTimeout(resolve, attempt * 5_000);
+        });
+      }
     }
   }
 
@@ -165,6 +263,17 @@ function sanitizeHtml(value) {
       return '<br>';
     }
 
+    if (tagName === 'img') {
+      const srcMatch = attributes.match(/\bsrc\s*=\s*(['"])(data:image\/(?:png|jpeg|gif|webp);base64,[a-z0-9+/=]+)\1/i);
+      const altMatch = attributes.match(/\balt\s*=\s*(['"])(.*?)\1/i);
+
+      if (!srcMatch) {
+        throw new Error('Document image is invalid; existing local files were not changed.');
+      }
+
+      return `<img src="${escapeAttribute(srcMatch[2])}" alt="${escapeAttribute(altMatch ? altMatch[2] : '')}">`;
+    }
+
     if (tagName !== 'a') {
       return `<${tagName}>`;
     }
@@ -178,6 +287,67 @@ function sanitizeHtml(value) {
     const href = escapeAttribute(hrefMatch[2]);
     return `<a href="${href}" target="_blank" rel="noopener noreferrer">`;
   });
+}
+
+function localizeContentImages(content) {
+  const filesByName = new Map();
+
+  Object.values(content).forEach((languageContent) => {
+    Object.keys(languageContent).forEach((key) => {
+      languageContent[key] = languageContent[key].replace(
+        /src="data:(image\/(?:png|jpeg|gif|webp));base64,([a-z0-9+/=]+)"/gi,
+        (match, contentType, base64) => {
+          const contents = Buffer.from(base64, 'base64');
+
+          if (!contents.length) {
+            throw new Error('Document image is empty; existing local files were not changed.');
+          }
+
+          const extension = contentType.toLowerCase() === 'image/jpeg'
+            ? 'jpg'
+            : contentType.split('/')[1].toLowerCase();
+          const digest = crypto.createHash('sha256').update(contents).digest('hex');
+          const fileName = `${digest}.${extension}`;
+          filesByName.set(fileName, contents);
+          return `src="Pics/Synced/${fileName}"`;
+        },
+      );
+
+      if (/src="data:image\//i.test(languageContent[key])) {
+        throw new Error('Document image could not be localized; existing local files were not changed.');
+      }
+    });
+  });
+
+  return Array.from(filesByName, ([fileName, contents]) => ({
+    targetPath: path.join(projectDirectory, 'Pics', 'Synced', fileName),
+    contents,
+  }));
+}
+
+async function removeUnusedSyncedImages(imageFiles) {
+  const directory = path.join(projectDirectory, 'Pics', 'Synced');
+  const activeNames = new Set(imageFiles.map((file) => path.basename(file.targetPath)));
+  let existingNames = [];
+
+  try {
+    existingNames = await fs.readdir(directory);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return;
+    }
+
+    throw error;
+  }
+
+  const unusedNames = existingNames.filter((name) => (
+    /^[a-f0-9]{64}\.(png|jpg|gif|webp)$/.test(name)
+    && !activeNames.has(name)
+  ));
+
+  await Promise.all(unusedNames.map((name) => (
+    fs.unlink(path.join(directory, name))
+  )));
 }
 
 function isSafeLink(value) {
@@ -230,6 +400,15 @@ function createContentModule(content) {
 
   lines.push('};', '');
   return lines.join('\n');
+}
+
+function createRegistrationsModule(registrations) {
+  return [
+    '// Generated by scripts/sync-content.mjs. Do not edit manually.',
+    '',
+    `export const localRegistrations = ${JSON.stringify(registrations, null, 2)};`,
+    '',
+  ].join('\n');
 }
 
 function updateNewsModule(source, content) {
@@ -330,18 +509,49 @@ function formatInitialHtml(html) {
 
 async function writeValidatedFiles(files) {
   files.forEach(({ targetPath, contents }) => {
-    if (!contents.trim()) {
+    const size = Buffer.isBuffer(contents)
+      ? contents.length
+      : Buffer.byteLength(String(contents));
+
+    if (!size) {
       throw new Error(`Refusing to overwrite ${targetPath} with empty content.`);
     }
   });
 
-  await Promise.all(files.map(({ targetPath, contents }) => (
-    fs.writeFile(`${targetPath}.tmp`, contents, 'utf8')
-  )));
+  const changedFiles = [];
 
-  for (const { targetPath } of files) {
+  for (const file of files) {
+    let currentContents = Buffer.alloc(0);
+    const nextContents = Buffer.isBuffer(file.contents)
+      ? file.contents
+      : Buffer.from(file.contents, 'utf8');
+
+    try {
+      currentContents = await fs.readFile(file.targetPath);
+    } catch (error) {
+      if (error.code !== 'ENOENT') {
+        throw error;
+      }
+    }
+
+    if (!currentContents.equals(nextContents)) {
+      changedFiles.push({
+        ...file,
+        contents: nextContents,
+      });
+    }
+  }
+
+  await Promise.all(changedFiles.map(async ({ targetPath, contents }) => {
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    await fs.writeFile(`${targetPath}.tmp`, contents);
+  }));
+
+  for (const { targetPath } of changedFiles) {
     await fs.rename(`${targetPath}.tmp`, targetPath);
   }
+
+  return changedFiles.map(({ targetPath }) => path.relative(projectDirectory, targetPath));
 }
 
 main().catch((error) => {

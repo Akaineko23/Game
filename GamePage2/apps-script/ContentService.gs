@@ -29,7 +29,7 @@ function getDocumentHtml_(documentId) {
   }
 
   const cache = CacheService.getScriptCache();
-  const cacheKey = 'document-' + documentId;
+  const cacheKey = 'document-with-images-' + documentId;
   const cached = cache.get(cacheKey);
 
   if (cached) {
@@ -64,7 +64,7 @@ function getDocumentHtml_(documentId) {
         openListTag = listTag;
       }
 
-      html.push('<li>' + textElementToHtml_(listItem.editAsText()) + '</li>');
+      html.push('<li>' + containerElementToHtml_(listItem) + '</li>');
     }
   }
 
@@ -73,12 +73,17 @@ function getDocumentHtml_(documentId) {
   }
 
   const result = html.join('');
-  cache.put(cacheKey, result, CONFIG.CACHE_SECONDS);
+  try {
+    cache.put(cacheKey, result, CONFIG.CACHE_SECONDS);
+  } catch (error) {
+    console.warn('Document HTML is too large for cache', documentId);
+  }
+
   return result;
 }
 
 function paragraphToHtml_(paragraph) {
-  const text = textElementToHtml_(paragraph.editAsText());
+  const text = containerElementToHtml_(paragraph);
 
   if (!text) {
     return '';
@@ -95,6 +100,42 @@ function paragraphToHtml_(paragraph) {
   }
 
   return '<p>' + text + '</p>';
+}
+
+function containerElementToHtml_(container) {
+  const html = [];
+
+  for (let index = 0; index < container.getNumChildren(); index += 1) {
+    const child = container.getChild(index);
+    const type = child.getType();
+
+    if (type === DocumentApp.ElementType.TEXT) {
+      html.push(textElementToHtml_(child.asText()));
+    } else if (type === DocumentApp.ElementType.INLINE_IMAGE) {
+      html.push(inlineImageToHtml_(child.asInlineImage()));
+    }
+  }
+
+  return html.join('');
+}
+
+function inlineImageToHtml_(image) {
+  const blob = image.getBlob();
+  const contentType = String(blob.getContentType() || 'image/png');
+  const base64 = Utilities.base64Encode(blob.getBytes());
+  const alt = image.getAltDescription() || image.getAltTitle() || '';
+
+  if (!/^image\/(png|jpeg|gif|webp)$/i.test(contentType)) {
+    throw new Error('CONTENT_UNAVAILABLE');
+  }
+
+  return '<img src="data:'
+    + escapeHtml_(contentType)
+    + ';base64,'
+    + base64
+    + '" alt="'
+    + escapeHtml_(alt)
+    + '">';
 }
 
 function listTag_(listItem) {

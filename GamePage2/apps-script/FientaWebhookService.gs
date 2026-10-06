@@ -6,6 +6,11 @@ function handleFientaWebhook_(event) {
   const webhook = normalizeFientaWebhook_(payload);
 
   webhook.tickets.forEach(function (ticket) {
+    if (isCancelledFientaTicket_(ticket)) {
+      deleteRegistration_(ticket.ticketId);
+      return;
+    }
+
     upsertRegistration_(ticket, webhook.eventType);
   });
 
@@ -93,6 +98,7 @@ function normalizeFientaTicket_(ticket, context) {
   const order = context.order || {};
   const event = context.event || {};
   const missingAttendeeValue = context.preserveMissingAttendee ? undefined : '';
+  const hasTicketType = ticketType.id !== undefined || ticketType.title !== undefined;
 
   if (!ticket.code) {
     throw new Error('WEBHOOK_REJECTED');
@@ -102,13 +108,23 @@ function normalizeFientaTicket_(ticket, context) {
     eventId: event.id,
     orderId: order.id,
     ticketId: ticket.code,
-    ticketType: ticketType.title,
-    side: getFientaSide_(ticketType),
+    ticketTypeId: hasTicketType ? ticketType.id : undefined,
+    ticketType: hasTicketType ? ticketType.title : undefined,
+    side: hasTicketType ? getFientaSide_(ticketType) : undefined,
     firstName: getFientaAttendeeField_(attendee, 'FIENTA_FIRST_NAME_FIELD', 'first_name', missingAttendeeValue),
     lastName: getFientaAttendeeField_(attendee, 'FIENTA_LAST_NAME_FIELD', 'last_name', missingAttendeeValue),
     callsign: getFientaAttendeeField_(attendee, 'FIENTA_CALLSIGN_FIELD', 'callsign', missingAttendeeValue),
     email: getFientaAttendeeField_(attendee, 'FIENTA_EMAIL_FIELD', 'email', missingAttendeeValue),
+    phone: getFientaAttendeeField_(attendee, 'FIENTA_PHONE_FIELD', 'phone', missingAttendeeValue),
+    team: getFientaAttendeeField_(attendee, 'FIENTA_TEAM_FIELD', 'team', missingAttendeeValue),
+    permanentRegistrationNumber: getFientaAttendeeField_(
+      attendee,
+      'FIENTA_PERMANENT_REGISTRATION_NUMBER_FIELD',
+      'permanent_registration_number',
+      missingAttendeeValue,
+    ),
     buyerEmail: order.buyer && order.buyer.email,
+    buyerPhone: order.buyer && order.buyer.phone,
     paymentStatus: order.status,
     ticketStatus: context.ticketStatus,
     fientaStatus: context.ticketStatus || order.status,
@@ -139,5 +155,5 @@ function getFientaSide_(ticketType) {
     throw new Error('FIENTA_API_NOT_CONFIGURED');
   }
 
-  return sideMap[String(ticketType.id)] || sideMap[String(ticketType.title)] || '';
+  return sideMap[String(ticketType.id)] || '';
 }
