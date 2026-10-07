@@ -524,6 +524,14 @@ export const localRegistrations = {
         "Kask",
         "Alliance",
         "Makstud"
+      ],
+      [
+        "2063",
+        "",
+        "Dmitri",
+        "OZZI",
+        "Alliance",
+        "Makstud"
       ]
     ]
   },
@@ -1050,6 +1058,14 @@ export const localRegistrations = {
         "Kask",
         "Alliance",
         "Оплачен"
+      ],
+      [
+        "2063",
+        "",
+        "Dmitri",
+        "OZZI",
+        "Alliance",
+        "Оплачен"
       ]
     ]
   },
@@ -1574,6 +1590,14 @@ export const localRegistrations = {
         "906",
         "Rasmus",
         "Kask",
+        "Alliance",
+        "Paid"
+      ],
+      [
+        "2063",
+        "",
+        "Dmitri",
+        "OZZI",
         "Alliance",
         "Paid"
       ]
