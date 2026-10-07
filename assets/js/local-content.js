@@ -95,9 +95,17 @@ export const localContent = {
       </li>
       <li>Püstolid / haavlipüssid – <strong>≤ 1,2 J</strong>, minimaalset laskekaugust ei ole.</li>
       <li>Automaadid (ründerelvad) – <strong>≤ 1,6 J</strong>. Sekundaarrelv on soovitatav.</li>
-      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.*M4 trummelsalvega ei ole kuulipilduja.</strong>
+      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.
+<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.
+*M4 trummelsalvega ei ole kuulipilduja.</strong>
       </li>
-      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
+      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.
+<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.
+*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).
+*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.
+*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).
+*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).
+*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
       </li>
       <li>Poltlukuga snaiprirelvad – <strong>≤ 3,5 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.</li>
       <li>Granaadid – sõltuvalt tuleohust võivad olla keelatud. Lubatud on ainult tehases toodetud granaadid, millel on tabav element (isetehtud granaadid on keelatud). Tabamus loetakse tabava elemendi järgi ning <strong>3 meetri raadiuses</strong>.</li>
@@ -320,12 +328,6 @@ export const localContent = {
       <p>Побеждает сторона, набравшая больше победных баллов к окончанию игры.</p>
     `,
     "rules": `
-      <h3>
-      <strong>ghjcnj [htyjntym не забудь убрать это для теста</strong>
-      </h3>
-      <p>
-      <strong>Spürst du Schmerz? Dann lebst du noch. Steh auf und töte – oder genieße, wie man dich zerreißt, mit einem Lächeln auf deinem blutverschmierten Gesicht.</strong>
-      </p>
       <h3>
       <strong>Основные правила</strong>
       </h3>
@@ -585,9 +587,17 @@ export const localContent = {
       </li>
       <li>Pistols / Shotguns – <strong>≤ 1.2 J</strong>, no minimum engagement distance.</li>
       <li>Assault rifles – <strong>≤ 1.6 J</strong>. A secondary weapon is recommended.</li>
-      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.<strong>*The weapon must visually resemble a real-life light or heavy machine gun.*An M4 with a drum magazine is not considered a machine gun.</strong>
+      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.
+<strong>*The weapon must visually resemble a real-life light or heavy machine gun.
+*An M4 with a drum magazine is not considered a machine gun.</strong>
       </li>
-      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
+      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.
+<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.
+*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).
+*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.
+*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).
+*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).
+*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
       </li>
       <li>Bolt-action rifles – <strong>≤ 3.5 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.</li>
       <li>Grenades – may be prohibited depending on fire conditions. Only factory-made grenades containing a projectile/hit element are allowed (no homemade grenades). A hit is registered by the projectile and within a <strong>3-meter radius</strong>.</li>
