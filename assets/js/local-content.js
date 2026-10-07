@@ -95,17 +95,9 @@ export const localContent = {
       </li>
       <li>Püstolid / haavlipüssid – <strong>≤ 1,2 J</strong>, minimaalset laskekaugust ei ole.</li>
       <li>Automaadid (ründerelvad) – <strong>≤ 1,6 J</strong>. Sekundaarrelv on soovitatav.</li>
-      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.
-<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.
-*M4 trummelsalvega ei ole kuulipilduja.</strong>
+      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.*M4 trummelsalvega ei ole kuulipilduja.</strong>
       </li>
-      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.
-<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.
-*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).
-*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.
-*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).
-*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).
-*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
+      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
       </li>
       <li>Poltlukuga snaiprirelvad – <strong>≤ 3,5 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.</li>
       <li>Granaadid – sõltuvalt tuleohust võivad olla keelatud. Lubatud on ainult tehases toodetud granaadid, millel on tabav element (isetehtud granaadid on keelatud). Tabamus loetakse tabava elemendi järgi ning <strong>3 meetri raadiuses</strong>.</li>
@@ -211,9 +203,9 @@ export const localContent = {
       <strong>Droonid</strong>
       </h3>
       <p>Droonide kasutamine on esialgu lubatud.</p>
-      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> lehelt.</p>
+      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> lehelt.</p>
       <p>
-      <strong>Mängukoha koordinaadid:</strong> 59.181028, 26.378079</p>
+      <strong>Mängukoha koordinaadid:</strong> 59.1877944, 26.3567422 </p>
       <p>Õhuruumi kasutamise piirangud võivad muutuda, seetõttu avaldatakse ajakohane info droonide kasutamise võimaluse kohta vahetult enne mängu.</p>
       <p>Droone on lubatud kasutada <strong>ainult luureks</strong>.</p>
       <p>
@@ -230,7 +222,7 @@ export const localContent = {
       <p>Kallid sõbrad!</p>
       <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
       <p>Droonide kasutamine on esialgu lubatud.</p>
-      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> lehelt.</p>
+      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> lehelt.</p>
       <p>
       <strong>Mängukoha koordinaadid:</strong> 59.181028, 26.378079</p>
       <p>Õhuruumi kasutamise piirangud võivad muutuda, seetõttu avaldatakse ajakohane info droonide kasutamise võimaluse kohta vahetult enne mängu.</p>
@@ -328,6 +320,12 @@ export const localContent = {
       <p>Побеждает сторона, набравшая больше победных баллов к окончанию игры.</p>
     `,
     "rules": `
+      <h3>
+      <strong>ghjcnj [htyjntym не забудь убрать это для теста</strong>
+      </h3>
+      <p>
+      <strong>Spürst du Schmerz? Dann lebst du noch. Steh auf und töte – oder genieße, wie man dich zerreißt, mit einem Lächeln auf deinem blutverschmierten Gesicht.</strong>
+      </p>
       <h3>
       <strong>Основные правила</strong>
       </h3>
@@ -457,9 +455,9 @@ export const localContent = {
       <strong>Дроны.</strong>
       </h3>
       <p>Использование дронов предварительно разрешено.</p>
-      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> </p>
+      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> </p>
       <p>
-      <strong>Координаты места проведения игры:</strong> 59.181028, 26.378079 </p>
+      <strong>Координаты места проведения игры:</strong> 59.1877944, 26.3567422  </p>
       <p>Ограничения на использование воздушного пространства могут изменяться, поэтому актуальная информация о возможности использования дронов будет опубликована непосредственно перед игрой.  </p>
       <p>Дроны разрешено использовать исключительно для разведки.</p>
       <p>
@@ -477,7 +475,7 @@ export const localContent = {
       </h3>
       <p>Дорогие друзья, мы внесли небольшие дополнения в правила, касаемые использование дронов.</p>
       <p>Использование дронов предварительно разрешено.</p>
-      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> </p>
+      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> </p>
       <p>
       <strong>Координаты места проведения игры:</strong> 59.181028, 26.378079 </p>
       <p>Ограничения на использование воздушного пространства могут изменяться, поэтому актуальная информация о возможности использования дронов будет опубликована непосредственно перед игрой.  </p>
@@ -587,17 +585,9 @@ export const localContent = {
       </li>
       <li>Pistols / Shotguns – <strong>≤ 1.2 J</strong>, no minimum engagement distance.</li>
       <li>Assault rifles – <strong>≤ 1.6 J</strong>. A secondary weapon is recommended.</li>
-      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.
-<strong>*The weapon must visually resemble a real-life light or heavy machine gun.
-*An M4 with a drum magazine is not considered a machine gun.</strong>
+      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.<strong>*The weapon must visually resemble a real-life light or heavy machine gun.*An M4 with a drum magazine is not considered a machine gun.</strong>
       </li>
-      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.
-<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.
-*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).
-*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.
-*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).
-*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).
-*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
+      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
       </li>
       <li>Bolt-action rifles – <strong>≤ 3.5 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.</li>
       <li>Grenades – may be prohibited depending on fire conditions. Only factory-made grenades containing a projectile/hit element are allowed (no homemade grenades). A hit is registered by the projectile and within a <strong>3-meter radius</strong>.</li>
@@ -704,9 +694,9 @@ export const localContent = {
       <strong>Drones</strong>
       </h3>
       <p>The use of drones is <strong>provisionally permitted</strong>.</p>
-      <p>Current information and restrictions can be found on the official <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong>.</p>
+      <p>Current information and restrictions can be found on the official <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a>.</p>
       <p>
-      <strong>Game location coordinates:</strong> 59.181028, 26.378079</p>
+      <strong>Game location coordinates:</strong> 59.1877944, 26.3567422 </p>
       <p>Airspace restrictions may change, so up-to-date information regarding whether drones may be used will be published immediately before the game.</p>
       <p>Drones may be used <strong>exclusively for reconnaissance</strong>.</p>
       <p>
@@ -725,7 +715,7 @@ export const localContent = {
       <p>Dear friends!</p>
       <p>We have made a few small additions to the rules regarding <strong>the use of drones</strong>.</p>
       <p>The use of drones is <strong>provisionally permitted</strong>.</p>
-      <p>Current information and restrictions can be found on the official <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong>.</p>
+      <p>Current information and restrictions can be found on the official <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a>.</p>
       <p>
       <strong>Game location coordinates:</strong> 59.181028, 26.378079</p>
       <p>Airspace restrictions may change, so up-to-date information regarding whether drones may be used will be published immediately before the game.</p>
