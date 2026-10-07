@@ -33,7 +33,7 @@ export const localRegistrations = {
         "2001",
         "",
         "Kirill",
-        "",
+        "BlackHawk",
         "Alliance",
         "Makstud"
       ],
@@ -559,7 +559,7 @@ export const localRegistrations = {
         "2001",
         "",
         "Kirill",
-        "",
+        "BlackHawk",
         "Alliance",
         "Оплачен"
       ],
@@ -1085,7 +1085,7 @@ export const localRegistrations = {
         "2001",
         "",
         "Kirill",
-        "",
+        "BlackHawk",
         "Alliance",
         "Paid"
       ],
