@@ -70,6 +70,11 @@ export const config = {
         image: 'Pics/Icons/XForceisp.png',
       },
       {
+        name: 'AirSoft Estonia Telegram',
+        url: 'https://t.me/AirSoftEstonia',
+        image: 'Pics/Icons/AirSoft_Estonia.png',
+      },
+      {
         name: 'Lahingurada Pood',
         url: 'https://lahingupood.ee',
         image: 'Pics/Icons/Lahingurada.png',
