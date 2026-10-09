@@ -540,6 +540,22 @@ export const localRegistrations = {
         "VENTIIL",
         "Villagers",
         "Makstud"
+      ],
+      [
+        "2065",
+        "320",
+        "Jekaterina",
+        "Snake",
+        "Villagers",
+        "Makstud"
+      ],
+      [
+        "2066",
+        "",
+        "Aleksei",
+        "Iceberg",
+        "Villagers",
+        "Makstud"
       ]
     ]
   },
@@ -1082,6 +1098,22 @@ export const localRegistrations = {
         "VENTIIL",
         "Villagers",
         "Оплачен"
+      ],
+      [
+        "2065",
+        "320",
+        "Jekaterina",
+        "Snake",
+        "Villagers",
+        "Оплачен"
+      ],
+      [
+        "2066",
+        "",
+        "Aleksei",
+        "Iceberg",
+        "Villagers",
+        "Оплачен"
       ]
     ]
   },
@@ -1622,6 +1654,22 @@ export const localRegistrations = {
         "",
         "Valter",
         "VENTIIL",
+        "Villagers",
+        "Paid"
+      ],
+      [
+        "2065",
+        "320",
+        "Jekaterina",
+        "Snake",
+        "Villagers",
+        "Paid"
+      ],
+      [
+        "2066",
+        "",
+        "Aleksei",
+        "Iceberg",
         "Villagers",
         "Paid"
       ]
