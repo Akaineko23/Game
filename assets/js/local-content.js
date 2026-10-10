@@ -218,6 +218,19 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <h3>10.10.2026</h3>
+      <p>🚙 UNDERTAIL — SÕIDUKID MÄNGUS!</p>
+      <p>Sõbrad, tuletame meelde, et Undertaili mängul kasutatakse ka sõidukeid!</p>
+      <p>💥 Kuidas sõidukit hävitada?</p>
+      <p>Sõidukite tabamiseks on lubatud kasutada ainult Paladini märgistusgranaate või nende analooge.</p>
+      <p>Ja nüüd Paladinidest.</p>
+      <p>Teame, et Paladini granaatidega on praegu keeruline olukord ning neid pole poodidest lihtne leida.</p>
+      <p>Siiski leidsime Prantsuse veebipoe, kus need on müügil. Tundub, et tarne Eestisse võib olla võimalik, kuid seda tuleb müüjalt täpsustada.</p>
+      <p>🔗<a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer"> https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html</a>
+      </p>
+      <p>Kohtumiseni Undertailil!</p>
+      <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
+      <p>A SMALL VILLAGE. A BIG STORY.</p>
       <h3>22.09.2026 Reeglite muudatused</h3>
       <p>Kallid sõbrad!</p>
       <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
@@ -465,6 +478,21 @@ export const localContent = {
     `,
     "news": `
       <h3>
+      <strong>10.10.2026</strong>
+      </h3>
+      <p>🚙 UNDERTAIL — ТЕХНИКА НА ИГРЕ!</p>
+      <p>Друзья, напоминаем, что на Undertail будет использоваться игровая техника!</p>
+      <p>💥 Как подбить машину?</p>
+      <p>Для поражения техники разрешены только маркировочные гранаты Paladin или их аналоги.</p>
+      <p>А теперь о Paladin.</p>
+      <p>Мы знаем, что с паладинами сейчас напряжёнка и найти их в магазинах непросто.</p>
+      <p>Однако обнаружился французский интернет-магазин, где они представлены в продаже. Судя по всему, возможна доставка в Эстонию, но это необходимо уточнить у продавца.</p>
+      <p>🔗<a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer"> https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html</a>
+      </p>
+      <p>До встречи на Undertail!</p>
+      <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
+      <p>A SMALL VILLAGE. A BIG STORY.</p>
+      <h3>
       <strong>22.09.2026 Изменения в правилах.</strong>
       </h3>
       <p>Дорогие друзья, мы внесли небольшие дополнения в правила, касаемые использование дронов.</p>
@@ -703,6 +731,30 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <h3>
+      <strong>10.10.2026</strong>
+      </h3>
+      <p>🚙 <strong>UNDERTAIL — VEHICLES IN THE GAME!</strong>
+      </p>
+      <p>Friends, here&#39;s a reminder that vehicles will be used during Undertail!</p>
+      <p>💥 <strong>How do you disable a vehicle?</strong>
+      </p>
+      <p>Only <strong>Paladin marking grenades or their equivalents</strong> are allowed for disabling vehicles.</p>
+      <p>
+      <strong>Now, about Paladin grenades.</strong>
+      </p>
+      <p>We know that Paladin grenades are currently hard to find and aren&#39;t readily available in stores.</p>
+      <p>However, we&#39;ve found a French online store where they are listed for sale. It looks like shipping to Estonia may be possible, but this needs to be confirmed with the seller.</p>
+      <p>🔗<a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer"> </a>
+      <a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer">https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html</a>
+      </p>
+      <p>See you at Undertail!</p>
+      <p>
+      <strong>Undertail Airsoft Game &amp; Airsoft Wars</strong>
+      </p>
+      <p>
+      <strong>A SMALL VILLAGE. A BIG STORY.</strong>
+      </p>
       <h3>
       <strong>22.09.2026 Rules Update</strong>
       </h3>
