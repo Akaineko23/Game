@@ -33,7 +33,7 @@ export const localContent = {
       <strong>Detailid ja tehnik</strong>
       </h3>
       <ul>
-      <li>Mängualal asub <strong>2 detailide hankimise punkti</strong>.</li>
+      <li>Mängualal asub <strong>2 komponentide hankimise punkti</strong>.</li>
       <li>Komponendid tuleb toimetada tehnikule.</li>
       <li>Ühe valmis detaili kokkupanek võtab <strong>15 minutit</strong>. (Aega hakatakse arvestama hetkest, mil mõlemad detailid on tehnikule toimetatud.)</li>
       <li>Pool peab kokkupaneku ajal tehnikut kontrollima.</li>
@@ -280,7 +280,7 @@ export const localContent = {
       <strong>Детали и техник</strong>
       </h3>
       <ul>
-      <li>На полигоне находятся <strong>2 точки добычи деталей</strong>.</li>
+      <li>На полигоне находятся <strong>2 точки добычи компонентов</strong>.</li>
       <li>Компоненты необходимо доставить технику.</li>
       <li>Сборка одной готовой детали занимает <strong>15 минут</strong>. (С момента доставки обоих деталей технику)</li>
       <li>Сторона должна контролировать техника во время сборки.</li>
@@ -544,7 +544,7 @@ export const localContent = {
       <strong>Parts and the Technician</strong>
       </h3>
       <ul>
-      <li>There are <strong>2 parts collection points</strong> in the game area.</li>
+      <li>There are <strong>2 component collection points</strong> in the game area.</li>
       <li>The components must be delivered to the technician.</li>
       <li>Assembling one completed part takes <strong>15 minutes</strong>. (The timer starts when both required components have been delivered to the technician.)</li>
       <li>A faction must control the technician during assembly.</li>
