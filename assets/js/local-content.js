@@ -231,6 +231,7 @@ export const localContent = {
       <p>Kohtumiseni Undertailil!</p>
       <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
       <p>A SMALL VILLAGE. A BIG STORY.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>22.09.2026 Reeglite muudatused</h3>
       <p>Kallid sõbrad!</p>
       <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
@@ -492,6 +493,7 @@ export const localContent = {
       <p>До встречи на Undertail!</p>
       <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
       <p>A SMALL VILLAGE. A BIG STORY.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>22.09.2026 Изменения в правилах.</strong>
       </h3>
@@ -755,6 +757,7 @@ export const localContent = {
       <p>
       <strong>A SMALL VILLAGE. A BIG STORY.</strong>
       </p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>22.09.2026 Rules Update</strong>
       </h3>
