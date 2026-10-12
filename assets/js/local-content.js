@@ -16,6 +16,7 @@ export const localContent = {
       <p>Kuid ka kohalikud ei jää maha — nad joovad end samuti täiesti täis, võtavad Alliansi tanki juppideks ning selle käigus, kaotades kütust ja varuosi, võtavad mingil põhjusel lahti ka omaenda tanki. Alles jäetakse ainult navigatsiooniseade, mis võimaldab suunata suurtükiväe tulelööke. „Teest“ läbi imbunud teadvus ütles asjaosalistele, et sellest täiesti piisab.</p>
       <p>Kõik selle uuesti töökorda kokku panna suudab ainult tehnik, kes tegutseb neutraalsel territooriumil.</p>
       <p>Siin lõpeb minu lugu, sõber. Edasiste sündmuste tunnistajaks ja osaliseks saad juba sina.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h2>
       <strong>Peamised mängumehaanikad</strong>
       </h2>
@@ -231,6 +232,7 @@ export const localContent = {
       <p>Kohtumiseni Undertailil!</p>
       <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
       <p>A SMALL VILLAGE. A BIG STORY.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>22.09.2026 Reeglite muudatused</h3>
       <p>Kallid sõbrad!</p>
       <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
@@ -263,6 +265,7 @@ export const localContent = {
       <p>На празднике местные спаивают “чаем” и угощают кальянами войско Альянса, ну и пошло-поехало: вояки накидались как свиньи, так что деревенщины пошли разбирать танк Альянса, чтобы остановить его войска. Но местные тоже оказались не промах — нахрюкались в стельку, разобрали танк Альянса и попутно, теряя топливо и запчасти, зачем-то разобрали и свой танк. Сняли лишь навигационное устройства позволяющие наводить артиллерийские обстрелы, пропитанное чаем сознание тех кто этим занимался посчитало что этого достаточно </p>
       <p>А собрать всё это дело в рабочее состояние может лишь техник, который обитает на нейтральных территориях.</p>
       <p>Вот и закончился мой рассказ, друг, а дальше свидетелем и участником дальнейших событий будешь ты.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h2>
       <strong>Основные игровые механики</strong>
       </h2>
@@ -492,6 +495,7 @@ export const localContent = {
       <p>До встречи на Undertail!</p>
       <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
       <p>A SMALL VILLAGE. A BIG STORY.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>22.09.2026 Изменения в правилах.</strong>
       </h3>
@@ -527,6 +531,7 @@ export const localContent = {
       <p>But the locals are no amateurs either. They get completely hammered themselves, dismantle the Alliance tank and, somewhere along the way, while losing fuel and spare parts, somehow decide to dismantle their own tank as well. The only thing they remove intact is the navigation device used to call in artillery strikes. Their “tea”-soaked minds decide that this should be more than enough.</p>
       <p>The only person capable of putting all this back together into working order is a technician who operates in neutral territory.</p>
       <p>And this, my friend, is where my story ends. From this point on, you will become both a witness to and a participant in what happens next.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h2>
       <strong>Core Game Mechanics</strong>
       </h2>
@@ -755,6 +760,7 @@ export const localContent = {
       <p>
       <strong>A SMALL VILLAGE. A BIG STORY.</strong>
       </p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>22.09.2026 Rules Update</strong>
       </h3>
