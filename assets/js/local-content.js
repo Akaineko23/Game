@@ -26,8 +26,8 @@ export const localContent = {
       </h3>
       <ul>
       <li>Küla on peamine vallutuspunkt.</li>
-      <li>Kontrolli kontrollitakse iga <strong>30 minuti</strong> järel — <strong>2 punkti</strong>. (Punktis peab olema üles pandud poole lipp. Lipud asuvad punktis.)</li>
-      <li>Küla kontrollimine mängu lõppemise hetkel annab lisaks <strong>5 punkti</strong>.</li>
+      <li>Kontrolli kontrollitakse iga <strong>30 minuti</strong> järel — <strong>10 punkti</strong>. (Punktis peab olema üles pandud poole lipp. Lipud asuvad punktis.)</li>
+      <li>Küla kontrollimine mängu lõppemise hetkel annab lisaks <strong>50 punkti</strong>.</li>
       </ul>
       <h3>
       <strong>Detailid ja tehnik</strong>
@@ -64,7 +64,7 @@ export const localContent = {
       <li>Elanikud kaevandavad ja säilitavad maavara.</li>
       <li>Allianss vallutab selle ja veab ära.</li>
       <li>
-      <strong>1 ühik = 2 punkti.</strong>
+      <strong>1 ühik = 1 punkti.</strong>
       </li>
       </ul>
       <h3>
@@ -231,7 +231,6 @@ export const localContent = {
       <p>Kohtumiseni Undertailil!</p>
       <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
       <p>A SMALL VILLAGE. A BIG STORY.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>22.09.2026 Reeglite muudatused</h3>
       <p>Kallid sõbrad!</p>
       <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
@@ -274,8 +273,8 @@ export const localContent = {
       </h3>
       <ul>
       <li>Деревня является основной точкой захвата.</li>
-      <li>Проверка контроля каждые <strong>30 минут</strong> — <strong>2 балла</strong>. (Должен быть установлен флаг стороны, флаги будут находиться на точке)</li>
-      <li>Контроль деревни на момент окончания игры — дополнительно <strong>5 баллов</strong>.</li>
+      <li>Проверка контроля каждые <strong>30 минут</strong> — <strong>10 баллов</strong>. (Должен быть установлен флаг стороны, флаги будут находиться на точке)</li>
+      <li>Контроль деревни на момент окончания игры — дополнительно <strong>50 баллов</strong>.</li>
       </ul>
       <h3>
       <strong>Детали и техник</strong>
@@ -313,7 +312,7 @@ export const localContent = {
       <li>Жители добывают и сохраняют ископаемое.</li>
       <li>Альянс захватывает и вывозит его.</li>
       <li>
-      <strong>1 единица = 2 балла.</strong>
+      <strong>1 единица = 1 балла.</strong>
       </li>
       </ul>
       <h3>
@@ -493,7 +492,6 @@ export const localContent = {
       <p>До встречи на Undertail!</p>
       <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
       <p>A SMALL VILLAGE. A BIG STORY.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>22.09.2026 Изменения в правилах.</strong>
       </h3>
@@ -539,8 +537,8 @@ export const localContent = {
       </h3>
       <ul>
       <li>The village is the main capture point.</li>
-      <li>Control is checked every <strong>30 minutes</strong> — <strong>2 points</strong>. (The faction&#39;s flag must be raised at the point. The flags will be located at the point.)</li>
-      <li>Controlling the village at the end of the game awards an additional <strong>5 points</strong>.</li>
+      <li>Control is checked every <strong>30 minutes</strong> — <strong>10 points</strong>. (The faction&#39;s flag must be raised at the point. The flags will be located at the point.)</li>
+      <li>Controlling the village at the end of the game awards an additional <strong>50 points</strong>.</li>
       </ul>
       <h3>
       <strong>Parts and the Technician</strong>
@@ -578,7 +576,7 @@ export const localContent = {
       <li>The residents extract and store the resource.</li>
       <li>The Alliance captures and transports it away.</li>
       <li>
-      <strong>1 unit = 2 points.</strong>
+      <strong>1 unit = 1 points.</strong>
       </li>
       </ul>
       <h3>
@@ -757,7 +755,6 @@ export const localContent = {
       <p>
       <strong>A SMALL VILLAGE. A BIG STORY.</strong>
       </p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>22.09.2026 Rules Update</strong>
       </h3>
