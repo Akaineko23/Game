@@ -74,7 +74,7 @@ export const localRegistrations = {
         "525",
         "Aleksande",
         "xakkep",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -656,7 +656,7 @@ export const localRegistrations = {
         "525",
         "Aleksande",
         "xakkep",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1238,7 +1238,7 @@ export const localRegistrations = {
         "525",
         "Aleksande",
         "xakkep",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
