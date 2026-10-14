@@ -34,7 +34,7 @@ export const localRegistrations = {
         "",
         "Kirill",
         "BlackHawk",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -50,7 +50,7 @@ export const localRegistrations = {
         "",
         "Oleg",
         "",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -234,7 +234,7 @@ export const localRegistrations = {
         "336",
         "Oleg",
         "kamikadze",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -370,7 +370,7 @@ export const localRegistrations = {
         "",
         "Roman",
         "Boba",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -378,7 +378,7 @@ export const localRegistrations = {
         "",
         "Bohdan",
         "Biba",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -410,7 +410,7 @@ export const localRegistrations = {
         "",
         "Artur",
         "",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -418,7 +418,7 @@ export const localRegistrations = {
         "",
         "Nikolai",
         "Nikruspro",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -426,7 +426,7 @@ export const localRegistrations = {
         "",
         "Konstantin",
         "",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -616,7 +616,7 @@ export const localRegistrations = {
         "",
         "Kirill",
         "BlackHawk",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -632,7 +632,7 @@ export const localRegistrations = {
         "",
         "Oleg",
         "",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -816,7 +816,7 @@ export const localRegistrations = {
         "336",
         "Oleg",
         "kamikadze",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -952,7 +952,7 @@ export const localRegistrations = {
         "",
         "Roman",
         "Boba",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -960,7 +960,7 @@ export const localRegistrations = {
         "",
         "Bohdan",
         "Biba",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -992,7 +992,7 @@ export const localRegistrations = {
         "",
         "Artur",
         "",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -1000,7 +1000,7 @@ export const localRegistrations = {
         "",
         "Nikolai",
         "Nikruspro",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -1008,7 +1008,7 @@ export const localRegistrations = {
         "",
         "Konstantin",
         "",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -1198,7 +1198,7 @@ export const localRegistrations = {
         "",
         "Kirill",
         "BlackHawk",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1214,7 +1214,7 @@ export const localRegistrations = {
         "",
         "Oleg",
         "",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1398,7 +1398,7 @@ export const localRegistrations = {
         "336",
         "Oleg",
         "kamikadze",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1534,7 +1534,7 @@ export const localRegistrations = {
         "",
         "Roman",
         "Boba",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1542,7 +1542,7 @@ export const localRegistrations = {
         "",
         "Bohdan",
         "Biba",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1574,7 +1574,7 @@ export const localRegistrations = {
         "",
         "Artur",
         "",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1582,7 +1582,7 @@ export const localRegistrations = {
         "",
         "Nikolai",
         "Nikruspro",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
@@ -1590,7 +1590,7 @@ export const localRegistrations = {
         "",
         "Konstantin",
         "",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
