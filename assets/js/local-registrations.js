@@ -636,6 +636,22 @@ export const localRegistrations = {
         "",
         "Alliance",
         "Makstud"
+      ],
+      [
+        "2079",
+        "",
+        "Oleg",
+        "Kuba",
+        "Villagers",
+        "Makstud"
+      ],
+      [
+        "2080",
+        "",
+        "Bogdan",
+        "",
+        "Villagers",
+        "Maksmata"
       ]
     ]
   },
@@ -1274,6 +1290,22 @@ export const localRegistrations = {
         "",
         "Alliance",
         "Оплачен"
+      ],
+      [
+        "2079",
+        "",
+        "Oleg",
+        "Kuba",
+        "Villagers",
+        "Оплачен"
+      ],
+      [
+        "2080",
+        "",
+        "Bogdan",
+        "",
+        "Villagers",
+        "Не оплачен"
       ]
     ]
   },
@@ -1912,6 +1944,22 @@ export const localRegistrations = {
         "",
         "Alliance",
         "Paid"
+      ],
+      [
+        "2079",
+        "",
+        "Oleg",
+        "Kuba",
+        "Villagers",
+        "Paid"
+      ],
+      [
+        "2080",
+        "",
+        "Bogdan",
+        "",
+        "Villagers",
+        "Unpaid"
       ]
     ]
   }
