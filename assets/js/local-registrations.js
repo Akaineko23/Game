@@ -652,6 +652,14 @@ export const localRegistrations = {
         "",
         "Villagers",
         "Maksmata"
+      ],
+      [
+        "2081",
+        "501",
+        "Vitali",
+        "Kamikadze",
+        "Alliance",
+        "Makstud"
       ]
     ]
   },
@@ -1306,6 +1314,14 @@ export const localRegistrations = {
         "",
         "Villagers",
         "Не оплачен"
+      ],
+      [
+        "2081",
+        "501",
+        "Vitali",
+        "Kamikadze",
+        "Alliance",
+        "Оплачен"
       ]
     ]
   },
@@ -1960,6 +1976,14 @@ export const localRegistrations = {
         "",
         "Villagers",
         "Unpaid"
+      ],
+      [
+        "2081",
+        "501",
+        "Vitali",
+        "Kamikadze",
+        "Alliance",
+        "Paid"
       ]
     ]
   }
