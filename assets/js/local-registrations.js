@@ -646,14 +646,6 @@ export const localRegistrations = {
         "Makstud"
       ],
       [
-        "2080",
-        "",
-        "Bogdan",
-        "",
-        "Villagers",
-        "Maksmata"
-      ],
-      [
         "2081",
         "501",
         "Vitali",
@@ -1308,14 +1300,6 @@ export const localRegistrations = {
         "Оплачен"
       ],
       [
-        "2080",
-        "",
-        "Bogdan",
-        "",
-        "Villagers",
-        "Не оплачен"
-      ],
-      [
         "2081",
         "501",
         "Vitali",
@@ -1968,14 +1952,6 @@ export const localRegistrations = {
         "Kuba",
         "Villagers",
         "Paid"
-      ],
-      [
-        "2080",
-        "",
-        "Bogdan",
-        "",
-        "Villagers",
-        "Unpaid"
       ],
       [
         "2081",
