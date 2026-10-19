@@ -13,7 +13,7 @@ export const config = {
     location: 'Kadila raketibaas',
 
     mapUrl: 'https://maps.app.goo.gl/6uLXVncmYRrDBbps5',
-    mapImage: 'Pics/Map/Kadila_aerial_preview.png',
+    mapImage: 'Pics/Map/Kadila_Final_Alt2.png',
 
     times: {
       arrival: '8.00',
