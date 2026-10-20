@@ -660,6 +660,14 @@ export const localRegistrations = {
         "Joni",
         "Villagers",
         "Makstud"
+      ],
+      [
+        "2083",
+        "",
+        "Sadullo",
+        "Bazuka",
+        "Villagers",
+        "Makstud"
       ]
     ]
   },
@@ -1322,6 +1330,14 @@ export const localRegistrations = {
         "Joni",
         "Villagers",
         "Оплачен"
+      ],
+      [
+        "2083",
+        "",
+        "Sadullo",
+        "Bazuka",
+        "Villagers",
+        "Оплачен"
       ]
     ]
   },
@@ -1982,6 +1998,14 @@ export const localRegistrations = {
         "",
         "Joni",
         "Joni",
+        "Villagers",
+        "Paid"
+      ],
+      [
+        "2083",
+        "",
+        "Sadullo",
+        "Bazuka",
         "Villagers",
         "Paid"
       ]
