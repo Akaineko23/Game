@@ -578,7 +578,7 @@ export const localRegistrations = {
         "",
         "Artjom",
         "",
-        "Alliance",
+        "Villagers",
         "Makstud"
       ],
       [
@@ -1232,7 +1232,7 @@ export const localRegistrations = {
         "",
         "Artjom",
         "",
-        "Alliance",
+        "Villagers",
         "Оплачен"
       ],
       [
@@ -1886,7 +1886,7 @@ export const localRegistrations = {
         "",
         "Artjom",
         "",
-        "Alliance",
+        "Villagers",
         "Paid"
       ],
       [
