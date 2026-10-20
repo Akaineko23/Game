@@ -219,6 +219,10 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <h3>20.10.26</h3>
+      <p>Kaardi jaotist on uuendatud. Nüüd on kaardile märgitud huvipunktid ning kaardi all on kirjeldatud ülesanded, mida mängu jooksul tuleb täita.</p>
+      <p>Pange tähele, et <strong>ülesannete eest antavaid punkte on korrigeeritud</strong>.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>12.10.26</h3>
       <p>🌿 Sõbrad, palume teil mängule kaasa võtta oma kruus või termos, et vähendada ühekordsete topside kasutamist.</p>
       <p>Aitäh, et hoolite koos meiega loodusest! 💚</p>
@@ -484,9 +488,11 @@ export const localContent = {
       </ul>
     `,
     "news": `
-      <h3>
-      <strong>12.10.26</strong>
-      </h3>
+      <h3>20.10.26</h3>
+      <p>Обновлён раздел «Карта». Теперь на карте отмечены точки интереса, а ниже описаны задания, которые необходимо будет выполнять.</p>
+      <p>Обратите внимание, что <strong>количество баллов, начисляемых за выполнение заданий, было скорректировано</strong>.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
+      <h3>12.10.26</h3>
       <p>🌿 Друзья, просим взять с собой кружки или термосы для чая, чтобы сократить использование одноразовых стаканчиков.</p>
       <p>Спасибо, что заботитесь о природе вместе с нами! 💚</p>
       <p>—------------------------------------------------------------------------------------------------------------------------</p>
@@ -746,6 +752,12 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <h3>
+      <strong>20.10.26</strong>
+      </h3>
+      <p>The Map section has been updated. Points of interest are now marked on the map, and the objectives to be completed during the game are described below.</p>
+      <p>Please note that <strong>the number of points awarded for completing objectives has been adjusted</strong>.</p>
+      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>
       <strong>12.10.26</strong>
       </h3>
