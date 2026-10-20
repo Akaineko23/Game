@@ -1,4 +1,7 @@
+let fientaPropertyCache_ = null;
+
 function handleFientaWebhook_(event) {
+  resetFientaPropertyCache_();
   verifyFientaWebhook_(event);
   getRegistrationsSpreadsheetId_();
 
@@ -134,9 +137,7 @@ function normalizeFientaTicket_(ticket, context) {
 }
 
 function getFientaAttendeeField_(attendee, propertyName, defaultName, missingValue) {
-  const configuredName = PropertiesService
-    .getScriptProperties()
-    .getProperty(propertyName);
+  const configuredName = getFientaProperty_(propertyName);
   const fieldName = configuredName || defaultName;
   return Object.prototype.hasOwnProperty.call(attendee, fieldName)
     ? attendee[fieldName]
@@ -144,9 +145,7 @@ function getFientaAttendeeField_(attendee, propertyName, defaultName, missingVal
 }
 
 function getFientaSide_(ticketType) {
-  const rawMap = PropertiesService
-    .getScriptProperties()
-    .getProperty('FIENTA_TICKET_TYPE_SIDE_MAP') || '{}';
+  const rawMap = getFientaProperty_('FIENTA_TICKET_TYPE_SIDE_MAP') || '{}';
   let sideMap;
 
   try {
@@ -156,4 +155,16 @@ function getFientaSide_(ticketType) {
   }
 
   return sideMap[String(ticketType.id)] || '';
+}
+
+function resetFientaPropertyCache_() {
+  fientaPropertyCache_ = null;
+}
+
+function getFientaProperty_(name) {
+  if (fientaPropertyCache_ === null) {
+    fientaPropertyCache_ = PropertiesService.getScriptProperties().getProperties();
+  }
+
+  return fientaPropertyCache_[name] || null;
 }

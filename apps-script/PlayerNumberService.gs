@@ -32,3 +32,35 @@ function getHighestPlayerNumber_(sheet) {
     return Number.isFinite(value) ? Math.max(highest, value) : highest;
   }, 0);
 }
+
+function createPlayerNumberState_(records) {
+  const properties = PropertiesService.getScriptProperties();
+  const storedNumber = Number(properties.getProperty('LAST_PLAYER_NUMBER') || '0');
+  const sheetNumber = records.reduce(function (highest, record) {
+    const value = Number(record[REGISTRATION_COLUMNS.PLAYER_NUMBER]);
+    return Number.isFinite(value) ? Math.max(highest, value) : highest;
+  }, 0);
+
+  return {
+    properties: properties,
+    initial: Math.max(storedNumber, sheetNumber, CONFIG.PLAYER_NUMBER_START - 1),
+    current: Math.max(storedNumber, sheetNumber, CONFIG.PLAYER_NUMBER_START - 1),
+  };
+}
+
+function nextPlayerNumberFromState_(state) {
+  const next = state.current + 1;
+
+  if (next > CONFIG.MAX_PLAYER_NUMBER) {
+    throw new Error('PLAYER_NUMBER_LIMIT_REACHED');
+  }
+
+  state.current = next;
+  return String(next).padStart(4, '0');
+}
+
+function savePlayerNumberState_(state) {
+  if (state.current !== state.initial) {
+    state.properties.setProperty('LAST_PLAYER_NUMBER', String(state.current));
+  }
+}

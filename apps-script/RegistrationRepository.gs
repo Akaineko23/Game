@@ -27,6 +27,109 @@ function upsertRegistration_(ticket, eventType) {
   }
 }
 
+function syncRegistrationsBatch_(tickets, eventType, existingSpreadsheet) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(15000);
+
+  try {
+    const spreadsheet = existingSpreadsheet || getRegistrationsSpreadsheet_();
+    const technicalSheet = spreadsheet.getSheetByName(CONFIG.REGISTRATION_SHEET_NAME);
+
+    if (!technicalSheet) {
+      throw new Error('Missing Registrations sheet');
+    }
+
+    let gameSheet = spreadsheet.getSheetByName(CONFIG.GAME_REGISTRATION_SHEET_NAME);
+
+    if (!gameSheet) {
+      gameSheet = spreadsheet.insertSheet(CONFIG.GAME_REGISTRATION_SHEET_NAME);
+    }
+
+    const technicalHeaders = ensureSheetHeaders_(technicalSheet, REGISTRATION_HEADERS);
+    const gameHeaders = ensureSheetHeaders_(gameSheet, GAME_REGISTRATION_HEADERS);
+    const technicalRows = technicalSheet.getLastRow() < 2
+      ? []
+      : technicalSheet.getRange(2, 1, technicalSheet.getLastRow() - 1, technicalHeaders.length).getValues();
+    const records = technicalRows.map(function (row) {
+      return rowToRecord_(technicalHeaders, row);
+    });
+    const ticketIndexes = {};
+
+    records.forEach(function (record, index) {
+      const ticketId = String(record[REGISTRATION_COLUMNS.TICKET_ID] || '');
+
+      if (ticketId && !Object.prototype.hasOwnProperty.call(ticketIndexes, ticketId)) {
+        ticketIndexes[ticketId] = index;
+      }
+    });
+
+    const playerNumberState = createPlayerNumberState_(records);
+    let deletedTickets = 0;
+
+    tickets.forEach(function (ticket) {
+      const ticketId = String(ticket.ticketId);
+      const hasExisting = Object.prototype.hasOwnProperty.call(ticketIndexes, ticketId);
+
+      if (isCancelledFientaTicket_(ticket)) {
+        if (hasExisting) {
+          records[ticketIndexes[ticketId]] = null;
+          delete ticketIndexes[ticketId];
+          deletedTickets += 1;
+        }
+
+        return;
+      }
+
+      if (hasExisting) {
+        const index = ticketIndexes[ticketId];
+        const previous = records[index];
+        const playerNumber = String(previous[REGISTRATION_COLUMNS.PLAYER_NUMBER] || '');
+
+        records[index] = registrationRecord_(ticket, eventType, playerNumber, previous);
+        return;
+      }
+
+      const playerNumber = nextPlayerNumberFromState_(playerNumberState);
+      const record = registrationRecord_(ticket, eventType, playerNumber, {});
+
+      ticketIndexes[ticketId] = records.length;
+      records.push(record);
+    });
+
+    const activeRecords = records.filter(function (record) {
+      return record !== null;
+    });
+    const updatedTechnicalRows = activeRecords.map(function (record) {
+      return recordToRow_(technicalHeaders, record);
+    });
+    const updatedGameRows = activeRecords.map(function (record) {
+      return recordToRow_(gameHeaders, record);
+    });
+
+    replaceSheetRows_(technicalSheet, technicalHeaders, updatedTechnicalRows);
+    replaceSheetRows_(gameSheet, gameHeaders, updatedGameRows);
+    savePlayerNumberState_(playerNumberState);
+
+    return {
+      deletedTickets: deletedTickets,
+    };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function replaceSheetRows_(sheet, headers, rows) {
+  const existingRowCount = Math.max(sheet.getLastRow() - 1, 0);
+
+  if (rows.length) {
+    sheet.getRange(2, 1, rows.length, headers.length).setValues(rows);
+  }
+
+  if (existingRowCount > rows.length) {
+    sheet.deleteRows(rows.length + 2, existingRowCount - rows.length);
+  }
+}
+
 function getRegistrationsSpreadsheet_() {
   return SpreadsheetApp.openById(getRegistrationsSpreadsheetId_());
 }

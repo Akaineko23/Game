@@ -1,6 +1,6 @@
 import { config } from './config.js';
 import { configureFienta, renderFientaStatus } from './fienta.js?v=0.2.10';
-import { messages } from './i18n.js?v=0.3.1';
+import { messages } from './i18n.js?v=0.3.2';
 import { localContent } from './local-content.js?v=0.3.0';
 import { localRegistrations } from './local-registrations.js?v=0.4.0';
 

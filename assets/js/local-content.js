@@ -16,7 +16,6 @@ export const localContent = {
       <p>Kuid ka kohalikud ei jää maha — nad joovad end samuti täiesti täis, võtavad Alliansi tanki juppideks ning selle käigus, kaotades kütust ja varuosi, võtavad mingil põhjusel lahti ka omaenda tanki. Alles jäetakse ainult navigatsiooniseade, mis võimaldab suunata suurtükiväe tulelööke. „Teest“ läbi imbunud teadvus ütles asjaosalistele, et sellest täiesti piisab.</p>
       <p>Kõik selle uuesti töökorda kokku panna suudab ainult tehnik, kes tegutseb neutraalsel territooriumil.</p>
       <p>Siin lõpeb minu lugu, sõber. Edasiste sündmuste tunnistajaks ja osaliseks saad juba sina.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h2>
       <strong>Peamised mängumehaanikad</strong>
       </h2>
@@ -27,14 +26,14 @@ export const localContent = {
       </h3>
       <ul>
       <li>Küla on peamine vallutuspunkt.</li>
-      <li>Kontrolli kontrollitakse iga <strong>30 minuti</strong> järel — <strong>10 punkti</strong>. (Punktis peab olema üles pandud poole lipp. Lipud asuvad punktis.)</li>
-      <li>Küla kontrollimine mängu lõppemise hetkel annab lisaks <strong>50 punkti</strong>.</li>
+      <li>Kontrolli kontrollitakse iga <strong>30 minuti</strong> järel — <strong>2 punkti</strong>. (Punktis peab olema üles pandud poole lipp. Lipud asuvad punktis.)</li>
+      <li>Küla kontrollimine mängu lõppemise hetkel annab lisaks <strong>5 punkti</strong>.</li>
       </ul>
       <h3>
       <strong>Detailid ja tehnik</strong>
       </h3>
       <ul>
-      <li>Mängualal asub <strong>2 komponentide hankimise punkti</strong>.</li>
+      <li>Mängualal asub <strong>2 detailide hankimise punkti</strong>.</li>
       <li>Komponendid tuleb toimetada tehnikule.</li>
       <li>Ühe valmis detaili kokkupanek võtab <strong>15 minutit</strong>. (Aega hakatakse arvestama hetkest, mil mõlemad detailid on tehnikule toimetatud.)</li>
       <li>Pool peab kokkupaneku ajal tehnikut kontrollima.</li>
@@ -51,7 +50,7 @@ export const localContent = {
       </h3>
       <ul>
       <li>Mängualal asub <strong>1 kütuse hankimise punkt</strong>.</li>
-      <li>Iga <strong>30 minuti</strong> järel ilmub sinna 1 kanister. (Näiteks kell хх:15 ja хх:45.)</li>
+      <li>Iga <strong>30 minuti</strong> järel ilmub sinna 1 kanister. (Näiteks kell 11:15 ja 11:45.)</li>
       <li>
       <strong>1 kanister = 1 tund sõiduki tööaega.</strong> (Alates tankimise hetkest.)</li>
       <li>Mängu alguses saab kumbki pool <strong>2 kanistrit</strong>.</li>
@@ -65,7 +64,7 @@ export const localContent = {
       <li>Elanikud kaevandavad ja säilitavad maavara.</li>
       <li>Allianss vallutab selle ja veab ära.</li>
       <li>
-      <strong>1 ühik = 1 punkti.</strong>
+      <strong>1 ühik = 2 punkti.</strong>
       </li>
       </ul>
       <h3>
@@ -96,9 +95,17 @@ export const localContent = {
       </li>
       <li>Püstolid / haavlipüssid – <strong>≤ 1,2 J</strong>, minimaalset laskekaugust ei ole.</li>
       <li>Automaadid (ründerelvad) – <strong>≤ 1,6 J</strong>. Sekundaarrelv on soovitatav.</li>
-      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.*M4 trummelsalvega ei ole kuulipilduja.</strong>
+      <li>Kuulipildujad – <strong>≤ 2,5 J</strong>, minimaalne laskekaugus <strong>20 m</strong>. Sekundaarrelv on kohustuslik.
+<strong>*Relv peab väliselt sarnanema reaalselt eksisteeriva kerge- või raskekuulipildujaga.
+*M4 trummelsalvega ei ole kuulipilduja.</strong>
       </li>
-      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
+      <li>Marksman-relvad (DMR), mille automaattuli on mehaaniliselt välja lülitatud – <strong>≤ 3,0 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.
+<strong>*Relv peab välja nägema nagu reaalne marksman-relv: raua pikkus vähemalt 16 tolli (40 cm), paigaldatud peab olema optiline sihik ja harkjalg.
+*Relvad, mis sarnanevad liiga palju tavaliste ründerelvadega, peavad vastama kõigile nõuetele (raua pikkus, optiline sihik, harkjalg).
+*Kui raua pikkus on alla 16 tolli, tuleb seda visuaalselt pikendada summuti abil.
+*Kui reaalsel marksman-relval ei ole harkjalga, ei ole harkjalg kohustuslik (SVD, VSS).
+*Kui reaalse marksman-relva raua pikkus on alla 16 tolli, KUID seda klassifitseeritakse snaiprirelvana, ei kohaldata minimaalse rauapikkuse nõuet ja summutit ei ole vaja (VSS).
+*VSS on erand. Kui sellele on paigaldatud optiline sihik ja automaattuli on mehaaniliselt välja lülitatud, võib seda klassifitseerida marksman-relvaks. Kui üks neist kahest tingimusest ei ole täidetud, käsitletakse VSS-i tavalise ründerelvana (≤ 1,6 J).</strong>
       </li>
       <li>Poltlukuga snaiprirelvad – <strong>≤ 3,5 J</strong>, minimaalne laskekaugus <strong>30 m</strong>. Sekundaarrelv on kohustuslik.</li>
       <li>Granaadid – sõltuvalt tuleohust võivad olla keelatud. Lubatud on ainult tehases toodetud granaadid, millel on tabav element (isetehtud granaadid on keelatud). Tabamus loetakse tabava elemendi järgi ning <strong>3 meetri raadiuses</strong>.</li>
@@ -204,9 +211,9 @@ export const localContent = {
       <strong>Droonid</strong>
       </h3>
       <p>Droonide kasutamine on esialgu lubatud.</p>
-      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> lehelt.</p>
+      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> lehelt.</p>
       <p>
-      <strong>Mängukoha koordinaadid:</strong> 59.1877944, 26.3567422 </p>
+      <strong>Mängukoha koordinaadid:</strong> 59.181028, 26.378079</p>
       <p>Õhuruumi kasutamise piirangud võivad muutuda, seetõttu avaldatakse ajakohane info droonide kasutamise võimaluse kohta vahetult enne mängu.</p>
       <p>Droone on lubatud kasutada <strong>ainult luureks</strong>.</p>
       <p>
@@ -219,29 +226,11 @@ export const localContent = {
       </ul>
     `,
     "news": `
-      <h3>12.10.26</h3>
-      <p>🌿 Sõbrad, palume teil mängule kaasa võtta oma kruus või termos, et vähendada ühekordsete topside kasutamist.</p>
-      <p>Aitäh, et hoolite koos meiega loodusest! 💚</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
-      <h3>10.10.2026</h3>
-      <p>🚙 UNDERTAIL — SÕIDUKID MÄNGUS!</p>
-      <p>Sõbrad, tuletame meelde, et Undertaili mängul kasutatakse ka sõidukeid!</p>
-      <p>💥 Kuidas sõidukit hävitada?</p>
-      <p>Sõidukite tabamiseks on lubatud kasutada ainult Paladini märgistusgranaate või nende analooge.</p>
-      <p>Ja nüüd Paladinidest.</p>
-      <p>Teame, et Paladini granaatidega on praegu keeruline olukord ning neid pole poodidest lihtne leida.</p>
-      <p>Siiski leidsime Prantsuse veebipoe, kus need on müügil. Tundub, et tarne Eestisse võib olla võimalik, kuid seda tuleb müüjalt täpsustada.</p>
-      <p>🔗<a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer"> https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html</a>
-      </p>
-      <p>Kohtumiseni Undertailil!</p>
-      <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
-      <p>A SMALL VILLAGE. A BIG STORY.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h3>22.09.2026 Reeglite muudatused</h3>
       <p>Kallid sõbrad!</p>
       <p>Oleme teinud reeglitesse mõned väikesed täiendused, mis puudutavad <strong>droonide kasutamist</strong>.</p>
       <p>Droonide kasutamine on esialgu lubatud.</p>
-      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> lehelt.</p>
+      <p>Kehtivat infot ja piiranguid saab vaadata ametlikult <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> lehelt.</p>
       <p>
       <strong>Mängukoha koordinaadid:</strong> 59.181028, 26.378079</p>
       <p>Õhuruumi kasutamise piirangud võivad muutuda, seetõttu avaldatakse ajakohane info droonide kasutamise võimaluse kohta vahetult enne mängu.</p>
@@ -269,7 +258,6 @@ export const localContent = {
       <p>На празднике местные спаивают “чаем” и угощают кальянами войско Альянса, ну и пошло-поехало: вояки накидались как свиньи, так что деревенщины пошли разбирать танк Альянса, чтобы остановить его войска. Но местные тоже оказались не промах — нахрюкались в стельку, разобрали танк Альянса и попутно, теряя топливо и запчасти, зачем-то разобрали и свой танк. Сняли лишь навигационное устройства позволяющие наводить артиллерийские обстрелы, пропитанное чаем сознание тех кто этим занимался посчитало что этого достаточно </p>
       <p>А собрать всё это дело в рабочее состояние может лишь техник, который обитает на нейтральных территориях.</p>
       <p>Вот и закончился мой рассказ, друг, а дальше свидетелем и участником дальнейших событий будешь ты.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h2>
       <strong>Основные игровые механики</strong>
       </h2>
@@ -280,14 +268,14 @@ export const localContent = {
       </h3>
       <ul>
       <li>Деревня является основной точкой захвата.</li>
-      <li>Проверка контроля каждые <strong>30 минут</strong> — <strong>10 баллов</strong>. (Должен быть установлен флаг стороны, флаги будут находиться на точке)</li>
-      <li>Контроль деревни на момент окончания игры — дополнительно <strong>50 баллов</strong>.</li>
+      <li>Проверка контроля каждые <strong>30 минут</strong> — <strong>2 балла</strong>. (Должен быть установлен флаг стороны, флаги будут находиться на точке)</li>
+      <li>Контроль деревни на момент окончания игры — дополнительно <strong>5 баллов</strong>.</li>
       </ul>
       <h3>
       <strong>Детали и техник</strong>
       </h3>
       <ul>
-      <li>На полигоне находятся <strong>2 точки добычи компонентов</strong>.</li>
+      <li>На полигоне находятся <strong>2 точки добычи деталей</strong>.</li>
       <li>Компоненты необходимо доставить технику.</li>
       <li>Сборка одной готовой детали занимает <strong>15 минут</strong>. (С момента доставки обоих деталей технику)</li>
       <li>Сторона должна контролировать техника во время сборки.</li>
@@ -304,7 +292,7 @@ export const localContent = {
       </h3>
       <ul>
       <li>На полигоне находится <strong>1 точка добычи топлива</strong>.</li>
-      <li>Каждые <strong>30 минут</strong> появляется 1 канистра. (например хх:15 и хх:45)</li>
+      <li>Каждые <strong>30 минут</strong> появляется 1 канистра. (например 11:15 и 11:45)</li>
       <li>
       <strong>1 канистра = 1 час работы машины.  (С момента заправки)</strong>
       </li>
@@ -319,7 +307,7 @@ export const localContent = {
       <li>Жители добывают и сохраняют ископаемое.</li>
       <li>Альянс захватывает и вывозит его.</li>
       <li>
-      <strong>1 единица = 1 балла.</strong>
+      <strong>1 единица = 2 балла.</strong>
       </li>
       </ul>
       <h3>
@@ -469,9 +457,9 @@ export const localContent = {
       <strong>Дроны.</strong>
       </h3>
       <p>Использование дронов предварительно разрешено.</p>
-      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> </p>
+      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> </p>
       <p>
-      <strong>Координаты места проведения игры:</strong> 59.1877944, 26.3567422  </p>
+      <strong>Координаты места проведения игры:</strong> 59.181028, 26.378079 </p>
       <p>Ограничения на использование воздушного пространства могут изменяться, поэтому актуальная информация о возможности использования дронов будет опубликована непосредственно перед игрой.  </p>
       <p>Дроны разрешено использовать исключительно для разведки.</p>
       <p>
@@ -485,33 +473,11 @@ export const localContent = {
     `,
     "news": `
       <h3>
-      <strong>12.10.26</strong>
-      </h3>
-      <p>🌿 Друзья, просим взять с собой кружки или термосы для чая, чтобы сократить использование одноразовых стаканчиков.</p>
-      <p>Спасибо, что заботитесь о природе вместе с нами! 💚</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
-      <h3>
-      <strong>10.10.2026</strong>
-      </h3>
-      <p>🚙 UNDERTAIL — ТЕХНИКА НА ИГРЕ!</p>
-      <p>Друзья, напоминаем, что на Undertail будет использоваться игровая техника!</p>
-      <p>💥 Как подбить машину?</p>
-      <p>Для поражения техники разрешены только маркировочные гранаты Paladin или их аналоги.</p>
-      <p>А теперь о Paladin.</p>
-      <p>Мы знаем, что с паладинами сейчас напряжёнка и найти их в магазинах непросто.</p>
-      <p>Однако обнаружился французский интернет-магазин, где они представлены в продаже. Судя по всему, возможна доставка в Эстонию, но это необходимо уточнить у продавца.</p>
-      <p>🔗<a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer"> https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html</a>
-      </p>
-      <p>До встречи на Undertail!</p>
-      <p>Undertail Airsoft Game &amp; Airsoft Wars</p>
-      <p>A SMALL VILLAGE. A BIG STORY.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
-      <h3>
       <strong>22.09.2026 Изменения в правилах.</strong>
       </h3>
       <p>Дорогие друзья, мы внесли небольшие дополнения в правила, касаемые использование дронов.</p>
       <p>Использование дронов предварительно разрешено.</p>
-      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a> </p>
+      <p>Актуальную информацию и ограничения можно посмотреть на официальной странице <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong> </p>
       <p>
       <strong>Координаты места проведения игры:</strong> 59.181028, 26.378079 </p>
       <p>Ограничения на использование воздушного пространства могут изменяться, поэтому актуальная информация о возможности использования дронов будет опубликована непосредственно перед игрой.  </p>
@@ -541,7 +507,6 @@ export const localContent = {
       <p>But the locals are no amateurs either. They get completely hammered themselves, dismantle the Alliance tank and, somewhere along the way, while losing fuel and spare parts, somehow decide to dismantle their own tank as well. The only thing they remove intact is the navigation device used to call in artillery strikes. Their “tea”-soaked minds decide that this should be more than enough.</p>
       <p>The only person capable of putting all this back together into working order is a technician who operates in neutral territory.</p>
       <p>And this, my friend, is where my story ends. From this point on, you will become both a witness to and a participant in what happens next.</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
       <h2>
       <strong>Core Game Mechanics</strong>
       </h2>
@@ -552,14 +517,14 @@ export const localContent = {
       </h3>
       <ul>
       <li>The village is the main capture point.</li>
-      <li>Control is checked every <strong>30 minutes</strong> — <strong>10 points</strong>. (The faction&#39;s flag must be raised at the point. The flags will be located at the point.)</li>
-      <li>Controlling the village at the end of the game awards an additional <strong>50 points</strong>.</li>
+      <li>Control is checked every <strong>30 minutes</strong> — <strong>2 points</strong>. (The faction&#39;s flag must be raised at the point. The flags will be located at the point.)</li>
+      <li>Controlling the village at the end of the game awards an additional <strong>5 points</strong>.</li>
       </ul>
       <h3>
       <strong>Parts and the Technician</strong>
       </h3>
       <ul>
-      <li>There are <strong>2 component collection points</strong> in the game area.</li>
+      <li>There are <strong>2 parts collection points</strong> in the game area.</li>
       <li>The components must be delivered to the technician.</li>
       <li>Assembling one completed part takes <strong>15 minutes</strong>. (The timer starts when both required components have been delivered to the technician.)</li>
       <li>A faction must control the technician during assembly.</li>
@@ -577,7 +542,7 @@ export const localContent = {
       <ul>
       <li>There is <strong>1 fuel collection point</strong> in the game area.</li>
       <li>
-      <strong>1 fuel canister</strong> appears every <strong>30 minutes</strong>. (For example, at хх:15 and хх:45.)</li>
+      <strong>1 fuel canister</strong> appears every <strong>30 minutes</strong>. (For example, at 11:15 and 11:45.)</li>
       <li>
       <strong>1 canister = 1 hour of vehicle operation.</strong> (Starting from the moment the vehicle is refueled.)</li>
       <li>At the start of the game, each faction receives <strong>2 canisters</strong>.</li>
@@ -591,7 +556,7 @@ export const localContent = {
       <li>The residents extract and store the resource.</li>
       <li>The Alliance captures and transports it away.</li>
       <li>
-      <strong>1 unit = 1 points.</strong>
+      <strong>1 unit = 2 points.</strong>
       </li>
       </ul>
       <h3>
@@ -622,9 +587,17 @@ export const localContent = {
       </li>
       <li>Pistols / Shotguns – <strong>≤ 1.2 J</strong>, no minimum engagement distance.</li>
       <li>Assault rifles – <strong>≤ 1.6 J</strong>. A secondary weapon is recommended.</li>
-      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.<strong>*The weapon must visually resemble a real-life light or heavy machine gun.*An M4 with a drum magazine is not considered a machine gun.</strong>
+      <li>Machine guns – <strong>≤ 2.5 J</strong>, minimum engagement distance <strong>20 m</strong>. A secondary weapon is mandatory.
+<strong>*The weapon must visually resemble a real-life light or heavy machine gun.
+*An M4 with a drum magazine is not considered a machine gun.</strong>
       </li>
-      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
+      <li>Designated Marksman Rifles (DMR), with full-auto mechanically disabled – <strong>≤ 3.0 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.
+<strong>*The weapon must resemble a real designated marksman rifle: barrel length at least 16 inches (40 cm), and it must be equipped with an optical sight and bipod.
+*Weapons that look too similar to standard assault rifles must meet all requirements (barrel length, optical sight, bipod).
+*If the barrel is shorter than 16 inches, it must be visually extended using a suppressor.
+*If the real-life marksman rifle does not have a bipod, a bipod is not mandatory (SVD, VSS).
+*If the real-life marksman rifle has a barrel shorter than 16 inches BUT is classified as a sniper weapon, the minimum barrel-length requirement does not apply and a suppressor is not required (VSS).
+*The VSS is an exception to the rules. If it is equipped with an optical sight and full-auto fire is mechanically disabled, it may be classified as a DMR. If either of these two requirements is not met, the VSS is considered a standard assault rifle (maximum 1.6 J).</strong>
       </li>
       <li>Bolt-action rifles – <strong>≤ 3.5 J</strong>, minimum engagement distance <strong>30 m</strong>. A secondary weapon is mandatory.</li>
       <li>Grenades – may be prohibited depending on fire conditions. Only factory-made grenades containing a projectile/hit element are allowed (no homemade grenades). A hit is registered by the projectile and within a <strong>3-meter radius</strong>.</li>
@@ -731,9 +704,9 @@ export const localContent = {
       <strong>Drones</strong>
       </h3>
       <p>The use of drones is <strong>provisionally permitted</strong>.</p>
-      <p>Current information and restrictions can be found on the official <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a>.</p>
+      <p>Current information and restrictions can be found on the official <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong>.</p>
       <p>
-      <strong>Game location coordinates:</strong> 59.1877944, 26.3567422 </p>
+      <strong>Game location coordinates:</strong> 59.181028, 26.378079</p>
       <p>Airspace restrictions may change, so up-to-date information regarding whether drones may be used will be published immediately before the game.</p>
       <p>Drones may be used <strong>exclusively for reconnaissance</strong>.</p>
       <p>
@@ -747,43 +720,12 @@ export const localContent = {
     `,
     "news": `
       <h3>
-      <strong>12.10.26</strong>
-      </h3>
-      <p>🌿 Friends, please bring your own mug or thermos for tea to help reduce the use of disposable cups.</p>
-      <p>Thank you for helping us protect nature! 💚</p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
-      <h3>
-      <strong>10.10.2026</strong>
-      </h3>
-      <p>🚙 <strong>UNDERTAIL — VEHICLES IN THE GAME!</strong>
-      </p>
-      <p>Friends, here&#39;s a reminder that vehicles will be used during Undertail!</p>
-      <p>💥 <strong>How do you disable a vehicle?</strong>
-      </p>
-      <p>Only <strong>Paladin marking grenades or their equivalents</strong> are allowed for disabling vehicles.</p>
-      <p>
-      <strong>Now, about Paladin grenades.</strong>
-      </p>
-      <p>We know that Paladin grenades are currently hard to find and aren&#39;t readily available in stores.</p>
-      <p>However, we&#39;ve found a French online store where they are listed for sale. It looks like shipping to Estonia may be possible, but this needs to be confirmed with the seller.</p>
-      <p>🔗<a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer"> </a>
-      <a href="https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html" target="_blank" rel="noopener noreferrer">https://www.toro-distribution.com/839-grenade-ogive-poudre-paladin-mk2-tag-innovation-x10.html</a>
-      </p>
-      <p>See you at Undertail!</p>
-      <p>
-      <strong>Undertail Airsoft Game &amp; Airsoft Wars</strong>
-      </p>
-      <p>
-      <strong>A SMALL VILLAGE. A BIG STORY.</strong>
-      </p>
-      <p>—------------------------------------------------------------------------------------------------------------------------</p>
-      <h3>
       <strong>22.09.2026 Rules Update</strong>
       </h3>
       <p>Dear friends!</p>
       <p>We have made a few small additions to the rules regarding <strong>the use of drones</strong>.</p>
       <p>The use of drones is <strong>provisionally permitted</strong>.</p>
-      <p>Current information and restrictions can be found on the official <a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a>.</p>
+      <p>Current information and restrictions can be found on the official <strong><a href="https://utm.eans.ee/avm/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Estonian Drone Map (EANS)</a></strong>.</p>
       <p>
       <strong>Game location coordinates:</strong> 59.181028, 26.378079</p>
       <p>Airspace restrictions may change, so up-to-date information regarding whether drones may be used will be published immediately before the game.</p>

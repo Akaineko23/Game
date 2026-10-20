@@ -4,7 +4,13 @@ const FIENTA_MAX_PAGES = 100;
 const FIENTA_MAX_ATTEMPTS = 3;
 
 function syncFientaRegistrations() {
-  getRegistrationSheet_();
+  const spreadsheet = getRegistrationsSpreadsheet_();
+
+  if (!spreadsheet.getSheetByName(CONFIG.REGISTRATION_SHEET_NAME)) {
+    throw new Error('Missing Registrations sheet');
+  }
+
+  resetFientaPropertyCache_();
 
   const settings = getFientaApiSettings_();
   const orderPath = '/organizers/' + encodeURIComponent(settings.organizerId) + '/orders';
@@ -14,8 +20,9 @@ function syncFientaRegistrations() {
   }, settings.apiToken);
   const apiTickets = fetchFientaCollection_(ticketPath, 'tickets', {}, settings.apiToken);
   const registrations = {};
+  const ticketIds = [];
 
-  orders.forEach(function (order) {
+  sortFientaOrders_(orders).forEach(function (order) {
     (order.tickets || []).forEach(function (ticket) {
       const normalized = normalizeFientaTicket_(ticket, {
         event: order.event || {
@@ -26,6 +33,10 @@ function syncFientaRegistrations() {
         checkedIn: undefined,
         checkedInAt: undefined,
       });
+
+      if (!Object.prototype.hasOwnProperty.call(registrations, normalized.ticketId)) {
+        ticketIds.push(normalized.ticketId);
+      }
 
       registrations[normalized.ticketId] = normalized;
     });
@@ -54,22 +65,16 @@ function syncFientaRegistrations() {
     });
     const existing = registrations[normalized.ticketId] || {};
 
+    if (!Object.prototype.hasOwnProperty.call(registrations, normalized.ticketId)) {
+      ticketIds.push(normalized.ticketId);
+    }
+
     registrations[normalized.ticketId] = mergeDefinedValues_(existing, normalized);
   });
 
-  const ticketIds = Object.keys(registrations);
-  let deletedTickets = 0;
-
-  ticketIds.forEach(function (ticketId) {
-    const ticket = registrations[ticketId];
-
-    if (isCancelledFientaTicket_(ticket)) {
-      deletedTickets += deleteRegistration_(ticketId) ? 1 : 0;
-      return;
-    }
-
-    upsertRegistration_(ticket, 'api-sync');
-  });
+  const result = syncRegistrationsBatch_(ticketIds.map(function (ticketId) {
+    return registrations[ticketId];
+  }), 'api-sync', spreadsheet);
 
   PropertiesService
     .getScriptProperties()
@@ -78,8 +83,28 @@ function syncFientaRegistrations() {
   return {
     success: true,
     processedTickets: ticketIds.length,
-    deletedTickets: deletedTickets,
+    deletedTickets: result.deletedTickets,
   };
+}
+
+function sortFientaOrders_(orders) {
+  return orders.map(function (order, index) {
+    return {
+      order: order,
+      index: index,
+    };
+  }).sort(function (left, right) {
+    const leftId = Number(left.order.id);
+    const rightId = Number(right.order.id);
+
+    if (Number.isFinite(leftId) && Number.isFinite(rightId) && leftId !== rightId) {
+      return leftId - rightId;
+    }
+
+    return left.index - right.index;
+  }).map(function (entry) {
+    return entry.order;
+  });
 }
 
 function isCancelledFientaTicket_(ticket) {

@@ -7,8 +7,13 @@ const propertyValues = new Map();
 const sheets = new Map();
 let spreadsheetOpenCount = 0;
 let apiCallCount = 0;
+let rangeCallCount = 0;
+let setValuesCallCount = 0;
+let appendRowCallCount = 0;
+let propertyReadCount = 0;
 let orderStatus = 'COMPLETED';
 let includedCodes = ['A'];
+let orderFixtures = null;
 const ticketStatuses = new Map();
 const firstNames = new Map();
 
@@ -19,6 +24,7 @@ function createSheet(name) {
     name,
     rows,
     appendRow(values) {
+      appendRowCallCount += 1;
       rows.push(values.slice());
     },
     getLastRow() {
@@ -28,6 +34,8 @@ function createSheet(name) {
       return rows.reduce((width, row) => Math.max(width, row.length), 0);
     },
     getRange(row, column, rowCount = 1, columnCount = 1) {
+      rangeCallCount += 1;
+
       return {
         getDisplayValue() {
           return String(rows[row - 1]?.[column - 1] ?? '');
@@ -47,6 +55,8 @@ function createSheet(name) {
           ));
         },
         setValues(values) {
+          setValuesCallCount += 1;
+
           values.forEach((sourceRow, rowOffset) => {
             const targetRow = row - 1 + rowOffset;
             rows[targetRow] ||= [];
@@ -90,7 +100,7 @@ function response(payload, statusCode = 200) {
   };
 }
 
-function ticket(code, includeAttendee = true) {
+function ticket(code, includeAttendee = true, orderId = 200) {
   const index = code.charCodeAt(0) - 65;
   const permanentNumbers = ['123', '01234', '99999', '123456', 'ABC123', '123-45'];
   const attendee = {
@@ -106,7 +116,7 @@ function ticket(code, includeAttendee = true) {
   return {
     id: 101 + index,
     event_id: 300,
-    order_id: 200,
+    order_id: orderId,
     code,
     status: ticketStatuses.get(code) || 'UNUSED',
     used_at: ticketStatuses.get(code) === 'USED' ? '2026-10-24 08:05:00' : null,
@@ -143,7 +153,12 @@ const context = vm.createContext({
     getScriptProperties() {
       return {
         getProperty(name) {
+          propertyReadCount += 1;
           return propertyValues.get(name) || null;
+        },
+        getProperties() {
+          propertyReadCount += 1;
+          return Object.fromEntries(propertyValues);
         },
         setProperty(name, value) {
           propertyValues.set(name, String(value));
@@ -163,7 +178,7 @@ const context = vm.createContext({
 
       if (url.includes('/orders')) {
         return response({
-          orders: [{
+          orders: orderFixtures || [{
             id: 200,
             status: orderStatus,
             buyer: {
@@ -182,7 +197,15 @@ const context = vm.createContext({
       }
 
       return response({
-        tickets: includedCodes.map((code) => ticket(code, false)),
+        tickets: orderFixtures
+          ? orderFixtures.flatMap((order) => order.tickets.map((item) => ({
+            ...item,
+            order_id: order.id,
+            order_email: order.buyer.email,
+            order_phone: order.buyer.phone,
+            rows: [],
+          })))
+          : includedCodes.map((code) => ticket(code, false)),
         pagination: {
           last_page: 1,
         },
@@ -351,5 +374,135 @@ const rebuildResult = vm.runInContext('rebuildGameSheet()', context);
 assert.equal(rebuildResult.rebuiltRows, 6);
 assert.equal(sheets.get('Game Registrations').rows.length, 7);
 assert.equal(apiCallCount, apiCallsBeforeRebuild);
+
+// A first import sorts purchases by their real numeric order ID while preserving
+// the ticket order supplied inside each purchase.
+for (const sheet of sheets.values()) {
+  sheet.rows.splice(0);
+}
+propertyValues.delete('LAST_PLAYER_NUMBER');
+ticketStatuses.clear();
+firstNames.clear();
+orderFixtures = [
+  {
+    id: 500,
+    status: 'COMPLETED',
+    buyer: {
+      email: 'newer@example.com',
+      phone: '+3725550500',
+    },
+    event: {
+      id: 300,
+    },
+    tickets: ['E', 'F'].map((code) => ticket(code, true, 500)),
+  },
+  {
+    id: 100,
+    status: 'COMPLETED',
+    buyer: {
+      email: 'older@example.com',
+      phone: '+3725550100',
+    },
+    event: {
+      id: 300,
+    },
+    tickets: ['A', 'B', 'C', 'D'].map((code) => ticket(code, true, 100)),
+  },
+];
+rangeCallCount = 0;
+setValuesCallCount = 0;
+appendRowCallCount = 0;
+propertyReadCount = 0;
+
+vm.runInContext('syncFientaRegistrations()', context);
+
+const initialHeaders = sheets.get('Registrations').rows[0];
+const initialTicketColumn = initialHeaders.indexOf('Fienta Ticket ID');
+const initialPlayerNumberColumn = initialHeaders.indexOf('Player Number');
+const initialRows = sheets.get('Registrations').rows.slice(1);
+
+assert.deepEqual(
+  initialRows.map((row) => row[initialTicketColumn]),
+  ['A', 'B', 'C', 'D', 'E', 'F'],
+);
+assert.deepEqual(
+  initialRows.map((row) => row[initialPlayerNumberColumn]),
+  ['2000', '2001', '2002', '2003', '2004', '2005'],
+);
+assert.equal(appendRowCallCount, 0);
+assert.ok(setValuesCallCount <= 4);
+assert.ok(rangeCallCount <= 4);
+assert.ok(propertyReadCount <= 6);
+
+// A repeated synchronization keeps row order and existing player numbers.
+vm.runInContext('syncFientaRegistrations()', context);
+assert.equal(sheets.get('Registrations').rows.length, 7);
+assert.equal(recordFor('Registrations', 'A')['Player Number'], '2000');
+assert.equal(recordFor('Registrations', 'F')['Player Number'], '2005');
+
+// A later order is appended and receives the next unused player number.
+orderFixtures.unshift({
+  id: 700,
+  status: 'COMPLETED',
+  buyer: {
+    email: 'latest@example.com',
+    phone: '+3725550700',
+  },
+  event: {
+    id: 300,
+  },
+  tickets: [ticket('G', true, 700)],
+});
+vm.runInContext('syncFientaRegistrations()', context);
+assert.equal(recordFor('Registrations', 'G')['Player Number'], '2006');
+assert.equal(sheets.get('Registrations').rows.at(-1)[initialTicketColumn], 'G');
+
+// Updates and cancellations still affect both technical and working sheets.
+firstNames.set('A', 'Updated oldest player');
+ticketStatuses.set('B', 'CANCELED');
+orderFixtures[2].tickets = ['A', 'B', 'C', 'D'].map((code) => ticket(code, true, 100));
+vm.runInContext('syncFientaRegistrations()', context);
+assert.equal(recordFor('Registrations', 'A')['First Name'], 'Updated oldest player');
+assert.equal(recordFor('Registrations', 'A')['Player Number'], '2000');
+assert.equal(recordFor('Registrations', 'B')['Fienta Ticket ID'], '');
+assert.equal(recordFor('Game Registrations', 'B')['Fienta Ticket ID'], '');
+
+// A 63-ticket import still uses batch writes instead of per-ticket sheet writes.
+for (const sheet of sheets.values()) {
+  sheet.rows.splice(0);
+}
+propertyValues.delete('LAST_PLAYER_NUMBER');
+ticketStatuses.clear();
+orderFixtures = Array.from({ length: 21 }, (_, orderIndex) => {
+  const orderId = 1000 + orderIndex;
+  const codes = Array.from({ length: 3 }, (_, ticketIndex) => (
+    `P${String(orderIndex * 3 + ticketIndex + 1).padStart(3, '0')}`
+  ));
+
+  return {
+    id: orderId,
+    status: 'COMPLETED',
+    buyer: {
+      email: `buyer${orderIndex}@example.com`,
+      phone: '+3725550000',
+    },
+    event: {
+      id: 300,
+    },
+    tickets: codes.map((code) => ticket(code, true, orderId)),
+  };
+}).reverse();
+rangeCallCount = 0;
+setValuesCallCount = 0;
+appendRowCallCount = 0;
+propertyReadCount = 0;
+
+vm.runInContext('syncFientaRegistrations()', context);
+assert.equal(sheets.get('Registrations').rows.length, 64);
+assert.equal(sheets.get('Game Registrations').rows.length, 64);
+assert.equal(appendRowCallCount, 0);
+assert.ok(setValuesCallCount <= 4);
+assert.ok(rangeCallCount <= 4);
+assert.ok(propertyReadCount <= 6);
 
 console.log('Apps Script integration tests passed.');

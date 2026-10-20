@@ -663,6 +663,130 @@ h2 {
   display: block;
 }
 
+.game-tasks {
+  width: min(100%, 70rem);
+  margin-inline: auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.game-tasks-header,
+.game-task {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--white);
+}
+
+.game-tasks-header {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: var(--white);
+}
+
+.game-tasks-header h3 {
+  margin: 0 0 1rem;
+  color: var(--signal);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  overflow-wrap: anywhere;
+}
+
+.game-tasks-header p,
+.game-task p {
+  margin: 0.75rem 0 0;
+  line-height: 1.65;
+}
+
+.game-tasks-start {
+  font-size: 1.25rem;
+}
+
+.game-tasks-respawn {
+  max-width: 52rem;
+}
+
+.game-task {
+  border-left: 0.35rem solid var(--forest);
+}
+
+.game-task h4,
+.game-task h5 {
+  margin: 0;
+  color: var(--forest);
+}
+
+.game-task h4 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.game-task h5 {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.game-task-highlight,
+.game-task-score {
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--paper-dark);
+  font-weight: 700;
+}
+
+.game-task-score {
+  border-left: 0.25rem solid var(--signal);
+}
+
+.game-task-points {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  font-weight: 700;
+}
+
+.game-task-points li + li {
+  margin-top: 0.45rem;
+}
+
+.game-task-vehicle-hit {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.game-task-table-wrap {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.game-task-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.game-task-table th,
+.game-task-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.game-task-table thead th {
+  background: var(--forest);
+  color: var(--white);
+}
+
+.game-task-table th:first-child {
+  width: 10rem;
+}
+
+.game-task-table tbody th {
+  background: var(--paper-dark);
+  color: var(--forest);
+  font-size: 1.05rem;
+}
+
 .map-lightbox {
   width: min(96vw, 100rem);
   height: min(94vh, 70rem);
@@ -1161,6 +1285,20 @@ h2 {
 
   .map-lightbox-viewport {
     height: calc(100% - 8.5rem);
+  }
+
+  .game-tasks-header,
+  .game-task {
+    padding: 1.1rem;
+  }
+
+  .game-task-table th,
+  .game-task-table td {
+    padding: 0.7rem;
+  }
+
+  .game-task-table th:first-child {
+    width: 34%;
   }
 
   .friend-item {
