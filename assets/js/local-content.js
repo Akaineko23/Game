@@ -51,7 +51,7 @@ export const localContent = {
       </h3>
       <ul>
       <li>Mängualal asub <strong>1 kütuse hankimise punkt</strong>.</li>
-      <li>Iga <strong>30 minuti</strong> järel ilmub sinna 1 kanister. (Näiteks kell 11:15 ja 11:45.)</li>
+      <li>Iga <strong>30 minuti</strong> järel ilmub sinna 1 kanister. (Näiteks kell хх:15 ja хх:45.)</li>
       <li>
       <strong>1 kanister = 1 tund sõiduki tööaega.</strong> (Alates tankimise hetkest.)</li>
       <li>Mängu alguses saab kumbki pool <strong>2 kanistrit</strong>.</li>
@@ -304,7 +304,7 @@ export const localContent = {
       </h3>
       <ul>
       <li>На полигоне находится <strong>1 точка добычи топлива</strong>.</li>
-      <li>Каждые <strong>30 минут</strong> появляется 1 канистра. (например 11:15 и 11:45)</li>
+      <li>Каждые <strong>30 минут</strong> появляется 1 канистра. (например хх:15 и хх:45)</li>
       <li>
       <strong>1 канистра = 1 час работы машины.  (С момента заправки)</strong>
       </li>
@@ -577,7 +577,7 @@ export const localContent = {
       <ul>
       <li>There is <strong>1 fuel collection point</strong> in the game area.</li>
       <li>
-      <strong>1 fuel canister</strong> appears every <strong>30 minutes</strong>. (For example, at 11:15 and 11:45.)</li>
+      <strong>1 fuel canister</strong> appears every <strong>30 minutes</strong>. (For example, at хх:15 and хх:45.)</li>
       <li>
       <strong>1 canister = 1 hour of vehicle operation.</strong> (Starting from the moment the vehicle is refueled.)</li>
       <li>At the start of the game, each faction receives <strong>2 canisters</strong>.</li>
