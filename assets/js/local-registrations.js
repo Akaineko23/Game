@@ -724,6 +724,14 @@ export const localRegistrations = {
         "Rõžov",
         "Alliance",
         "Maksmata"
+      ],
+      [
+        "2091",
+        "",
+        "Bruno",
+        "Rõžov",
+        "Alliance",
+        "Makstud"
       ]
     ]
   },
@@ -1450,6 +1458,14 @@ export const localRegistrations = {
         "Rõžov",
         "Alliance",
         "Не оплачен"
+      ],
+      [
+        "2091",
+        "",
+        "Bruno",
+        "Rõžov",
+        "Alliance",
+        "Оплачен"
       ]
     ]
   },
@@ -2176,6 +2192,14 @@ export const localRegistrations = {
         "Rõžov",
         "Alliance",
         "Unpaid"
+      ],
+      [
+        "2091",
+        "",
+        "Bruno",
+        "Rõžov",
+        "Alliance",
+        "Paid"
       ]
     ]
   }
