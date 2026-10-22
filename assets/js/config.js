@@ -31,7 +31,7 @@ export const config = {
       {
         key: 'lateBird',
         price: '35 €',
-        dates: '05.10–23.10',
+        dates: '05.10–22.10',
       },
       {
         key: 'onSite',
