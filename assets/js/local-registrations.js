@@ -710,27 +710,27 @@ export const localRegistrations = {
         "Makstud"
       ],
       [
-        "2089",
-        "",
-        "Bruno",
-        "Bruno",
-        "Alliance",
-        "Maksmata"
-      ],
-      [
-        "2090",
-        "",
-        "Bruno Rõžov",
-        "Rõžov",
-        "Alliance",
-        "Maksmata"
-      ],
-      [
         "2091",
         "",
         "Bruno",
         "Rõžov",
         "Alliance",
+        "Makstud"
+      ],
+      [
+        "2092",
+        "",
+        "Oleksi",
+        "Vandal",
+        "Alliance",
+        "Makstud"
+      ],
+      [
+        "2093",
+        "",
+        "Vladislav",
+        "whatislove",
+        "Villagers",
         "Makstud"
       ]
     ]
@@ -1444,27 +1444,27 @@ export const localRegistrations = {
         "Оплачен"
       ],
       [
-        "2089",
-        "",
-        "Bruno",
-        "Bruno",
-        "Alliance",
-        "Не оплачен"
-      ],
-      [
-        "2090",
-        "",
-        "Bruno Rõžov",
-        "Rõžov",
-        "Alliance",
-        "Не оплачен"
-      ],
-      [
         "2091",
         "",
         "Bruno",
         "Rõžov",
         "Alliance",
+        "Оплачен"
+      ],
+      [
+        "2092",
+        "",
+        "Oleksi",
+        "Vandal",
+        "Alliance",
+        "Оплачен"
+      ],
+      [
+        "2093",
+        "",
+        "Vladislav",
+        "whatislove",
+        "Villagers",
         "Оплачен"
       ]
     ]
@@ -2178,27 +2178,27 @@ export const localRegistrations = {
         "Paid"
       ],
       [
-        "2089",
-        "",
-        "Bruno",
-        "Bruno",
-        "Alliance",
-        "Unpaid"
-      ],
-      [
-        "2090",
-        "",
-        "Bruno Rõžov",
-        "Rõžov",
-        "Alliance",
-        "Unpaid"
-      ],
-      [
         "2091",
         "",
         "Bruno",
         "Rõžov",
         "Alliance",
+        "Paid"
+      ],
+      [
+        "2092",
+        "",
+        "Oleksi",
+        "Vandal",
+        "Alliance",
+        "Paid"
+      ],
+      [
+        "2093",
+        "",
+        "Vladislav",
+        "whatislove",
+        "Villagers",
         "Paid"
       ]
     ]
