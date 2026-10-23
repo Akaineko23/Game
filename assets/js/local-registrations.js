@@ -748,6 +748,22 @@ export const localRegistrations = {
         "BEC",
         "Villagers",
         "Makstud"
+      ],
+      [
+        "2096",
+        "",
+        "Biniam",
+        "Bini",
+        "Villagers",
+        "Makstud"
+      ],
+      [
+        "2097",
+        "",
+        "Bogdan",
+        "",
+        "Villagers",
+        "Makstud"
       ]
     ]
   },
@@ -1498,6 +1514,22 @@ export const localRegistrations = {
         "BEC",
         "Villagers",
         "Оплачен"
+      ],
+      [
+        "2096",
+        "",
+        "Biniam",
+        "Bini",
+        "Villagers",
+        "Оплачен"
+      ],
+      [
+        "2097",
+        "",
+        "Bogdan",
+        "",
+        "Villagers",
+        "Оплачен"
       ]
     ]
   },
@@ -2246,6 +2278,22 @@ export const localRegistrations = {
         "",
         "Andrii",
         "BEC",
+        "Villagers",
+        "Paid"
+      ],
+      [
+        "2096",
+        "",
+        "Biniam",
+        "Bini",
+        "Villagers",
+        "Paid"
+      ],
+      [
+        "2097",
+        "",
+        "Bogdan",
+        "",
         "Villagers",
         "Paid"
       ]
