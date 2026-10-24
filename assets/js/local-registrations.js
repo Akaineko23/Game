@@ -370,7 +370,7 @@ export const localRegistrations = {
         "",
         "Roman",
         "Boba",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -378,7 +378,7 @@ export const localRegistrations = {
         "",
         "Bohdan",
         "Biba",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -410,7 +410,7 @@ export const localRegistrations = {
         "",
         "Artur",
         "",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -418,7 +418,7 @@ export const localRegistrations = {
         "",
         "Nikolai",
         "Nikruspro",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -426,7 +426,7 @@ export const localRegistrations = {
         "",
         "Konstantin",
         "",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -578,7 +578,7 @@ export const localRegistrations = {
         "",
         "Artjom",
         "",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -666,7 +666,7 @@ export const localRegistrations = {
         "",
         "Sadullo",
         "Bazuka",
-        "Villagers",
+        "Alliance",
         "Makstud"
       ],
       [
@@ -1136,7 +1136,7 @@ export const localRegistrations = {
         "",
         "Roman",
         "Boba",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1144,7 +1144,7 @@ export const localRegistrations = {
         "",
         "Bohdan",
         "Biba",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1176,7 +1176,7 @@ export const localRegistrations = {
         "",
         "Artur",
         "",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1184,7 +1184,7 @@ export const localRegistrations = {
         "",
         "Nikolai",
         "Nikruspro",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1192,7 +1192,7 @@ export const localRegistrations = {
         "",
         "Konstantin",
         "",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1344,7 +1344,7 @@ export const localRegistrations = {
         "",
         "Artjom",
         "",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1432,7 +1432,7 @@ export const localRegistrations = {
         "",
         "Sadullo",
         "Bazuka",
-        "Villagers",
+        "Alliance",
         "Оплачен"
       ],
       [
@@ -1902,7 +1902,7 @@ export const localRegistrations = {
         "",
         "Roman",
         "Boba",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
@@ -1910,7 +1910,7 @@ export const localRegistrations = {
         "",
         "Bohdan",
         "Biba",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
@@ -1942,7 +1942,7 @@ export const localRegistrations = {
         "",
         "Artur",
         "",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
@@ -1950,7 +1950,7 @@ export const localRegistrations = {
         "",
         "Nikolai",
         "Nikruspro",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
@@ -1958,7 +1958,7 @@ export const localRegistrations = {
         "",
         "Konstantin",
         "",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
@@ -2110,7 +2110,7 @@ export const localRegistrations = {
         "",
         "Artjom",
         "",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
@@ -2198,7 +2198,7 @@ export const localRegistrations = {
         "",
         "Sadullo",
         "Bazuka",
-        "Villagers",
+        "Alliance",
         "Paid"
       ],
       [
