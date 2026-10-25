@@ -764,6 +764,30 @@ export const localRegistrations = {
         "",
         "Villagers",
         "Makstud"
+      ],
+      [
+        "2098",
+        "",
+        "ilja",
+        "",
+        "Alliance",
+        "Makstud"
+      ],
+      [
+        "2099",
+        "",
+        "ivan",
+        "",
+        "Alliance",
+        "Makstud"
+      ],
+      [
+        "2100",
+        "",
+        "arenda",
+        "",
+        "Alliance",
+        "Maksmata"
       ]
     ]
   },
@@ -1530,6 +1554,30 @@ export const localRegistrations = {
         "",
         "Villagers",
         "Оплачен"
+      ],
+      [
+        "2098",
+        "",
+        "ilja",
+        "",
+        "Alliance",
+        "Оплачен"
+      ],
+      [
+        "2099",
+        "",
+        "ivan",
+        "",
+        "Alliance",
+        "Оплачен"
+      ],
+      [
+        "2100",
+        "",
+        "arenda",
+        "",
+        "Alliance",
+        "Не оплачен"
       ]
     ]
   },
@@ -2296,6 +2344,30 @@ export const localRegistrations = {
         "",
         "Villagers",
         "Paid"
+      ],
+      [
+        "2098",
+        "",
+        "ilja",
+        "",
+        "Alliance",
+        "Paid"
+      ],
+      [
+        "2099",
+        "",
+        "ivan",
+        "",
+        "Alliance",
+        "Paid"
+      ],
+      [
+        "2100",
+        "",
+        "arenda",
+        "",
+        "Alliance",
+        "Unpaid"
       ]
     ]
   }
