@@ -488,6 +488,7 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <h3>—----------------------------------------------------------------------------</h3>
       <h3>20.10.26</h3>
       <p>Обновлён раздел «Карта». Теперь на карте отмечены точки интереса, а ниже описаны задания, которые необходимо будет выполнять.</p>
       <p>Обратите внимание, что <strong>количество баллов, начисляемых за выполнение заданий, было скорректировано</strong>.</p>
@@ -752,6 +753,34 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <p>
+      <strong>Well, the game “Undertail” has come to an end!</strong>
+      </p>
+      <p>I am very grateful to all the players who came to the game and supported me!</p>
+      <p>Thank you to everyone who played on the Village side for your amazing costumes and all the effort you put into preparing them! Also, a big thank you to the Alliance side for the active gameplay at the sandbox!</p>
+      <p>A huge thank you to the X-Force store, the organizing team, and our wonderful girls who helped us!</p>
+      <p>Many thanks to Airtsoft Wars for their support in creating this game. Special thanks to Yura and Vitaliy!</p>
+      <p>And special thanks to the Chimera team, as well as Ilyav from Narva CQB, for their help on site!</p>
+      <p>Let’s continue with our traditional debriefing.</p>
+      <p>The battles for the Village were very fierce and intense. The Alliance put a lot of effort into capturing the Village and transporting the valuable minerals out. But the Village did not give up so easily! The villagers put up strong resistance and fought until the very end to defend their lands.</p>
+      <p>The Village defended its lands!</p>
+      <p>But the Village’s treasury was emptied… The Alliance managed to transport almost all the valuable minerals out.</p>
+      <p>The Alliance won by a large margin in points!</p>
+      <p>🏆 Alliance — 551 points</p>
+      <p>Village — 364 points</p>
+      <p>The Undertail team once again thanks everyone for participating!</p>
+      <p>I don’t even know what else I can say to you. Perhaps we will see each other again…</p>
+      <p>The Village may take revenge…</p>
+      <p>⸻</p>
+      <p>
+      <strong>P.S.</strong> Regarding the patches at the game.</p>
+      <p>The patches you received as gifts are handmade by me and a close friend of mine.</p>
+      <p>Please do not leave them in direct sunlight for too long, as prolonged exposure to strong sunlight may cause the design to change.</p>
+      <p>
+      <strong>P.P.S.</strong> Please make sure to leave your feedback about the game! </p>
+      <p>
+      <strong>—----------------------------------------------------------------------------</strong>
+      </p>
       <h3>
       <strong>20.10.26</strong>
       </h3>
