@@ -219,6 +219,43 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <p>
+      <strong>Noh, mäng „Undertail“ ongi läbi saanud!</strong>
+      </p>
+      <p>Olen väga tänulik kõigile mängijatele, kes kohale tulid ja mind toetasid!</p>
+      <p>Suur aitäh kõigile, kes mängisid Küla poolel, ägedate ja hoolikalt ettevalmistatud kostüümide eest! Samuti suur tänu Alliansi poolele aktiivse mängu eest liivakasti juures!</p>
+      <p>Tohutu tänu X-Force’i poele, korraldusmeeskonnale ja meie tublidele abilistele!</p>
+      <p>Samuti suur aitäh Airtsoft Warsile toetuse eest selle mängu loomisel. Eriline tänu Jurale ja Vitalile!</p>
+      <p>Eraldi tänu ka Chimera meeskonnale ning Ilyavile Narva CQB-st kohapealse abi eest!</p>
+      <p>Jätkame traditsioonilise mängujärgse kokkuvõttega.</p>
+      <p>Lahingud Küla pärast olid väga ägedad ja intensiivsed. Allianss nägi palju vaeva, et Küla vallutada ja väärtuslikud maavarad ära viia. Kuid Küla ei andnud nii lihtsalt alla! Külaelanikud osutasid tugevat vastupanu ja võitlesid viimase hetkeni, et oma maad kaitsta.</p>
+      <p>Küla suutis oma maad kaitsta!</p>
+      <p>Kuid Küla varakamber jäi tühjaks… Alliansil õnnestus peaaegu kõik väärtuslikud maavarad ära viia.</p>
+      <p>Punktiarvestuses võitis suure edumaaga Allianss!</p>
+      <p>🏆 Allianss — 551 punkti</p>
+      <p>Küla — 364 punkti</p>
+      <p>Undertaili meeskond tänab veel kord kõiki osalemise eest!</p>
+      <p>Ma isegi ei tea, mida teile veel öelda. Võib-olla kohtume teiega veel kunagi…</p>
+      <p>Küla võib kätte maksta…</p>
+      <p>⸻</p>
+      <p>
+      <strong>P.S.</strong> Seoses mängul jagatud patch’idega.</p>
+      <p>Patch’id, mille saite kingituseks, on käsitsi valmistatud minu ja mu lähedase sõbra poolt.</p>
+      <p>Palume neid mitte jätta pikaks ajaks otsese tugeva päikesevalguse kätte, sest päikese mõjul võib nende kujundus muutuda.</p>
+      <p>
+      <strong>P.P.S</strong>. Jätke kindlasti mängu kohta tagasisidet! </p>
+      <p>
+      <a href="https://t.me/AirSoftEstonia/34073" target="_blank" rel="noopener noreferrer">https://t.me/AirSoftEstonia/34073</a>
+      </p>
+      <p>
+      <a href="https://t.me/c/2189111370/4295" target="_blank" rel="noopener noreferrer">https://t.me/c/2189111370/4295</a>
+      </p>
+      <p>
+      <a href="https://www.facebook.com/groups/243448691806903" target="_blank" rel="noopener noreferrer">
+      <strong>https://www.facebook.com/groups/243448691806903</strong>
+      </a>
+      </p>
+      <h3>—----------------------------------------------------------------------------</h3>
       <h3>20.10.26</h3>
       <p>Kaardi jaotist on uuendatud. Nüüd on kaardile märgitud huvipunktid ning kaardi all on kirjeldatud ülesanded, mida mängu jooksul tuleb täita.</p>
       <p>Pange tähele, et <strong>ülesannete eest antavaid punkte on korrigeeritud</strong>.</p>
@@ -488,6 +525,53 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <p>
+      <strong>Что ж, вот и прошла игра «Подхвостье»!</strong>
+      </p>
+      <p>Я очень благодарна всем игрокам, которые приехали на игру и поддержали меня!</p>
+      <p>Спасибо всем, кто играл на стороне Деревни, за подготовленные и крутые костюмы! Также большое спасибо стороне Альянса за активную игру у песочницы!</p>
+      <p>Огромное спасибо магазину X-Force, организаторской команде и нашим девочкам-помощницам!</p>
+      <p>Также большое спасибо Airtsoft Wars за поддержку при создании этой игры. Отдельное спасибо Юре и Виталию!</p>
+      <p>И отдельная благодарность команде «Химера», а также Ильяву из Narva CQB за помощь на месте!</p>
+      <p>
+      <strong>Продолжим традиционный дебрифинг.</strong>
+      </p>
+      <p>Бои за Деревню были очень ожесточёнными и активными. Альянс приложил немало усилий, чтобы захватить Деревню и вывезти ценные ископаемые. Но Деревня не сдалась просто так! Жители дали серьёзный отпор и сражались до последнего, чтобы отстоять свои земли.</p>
+      <p>
+      <strong>Деревня отстояла свои земли!</strong>
+      </p>
+      <p>Но казна Деревни опустела… Альянс вывез почти все ценные ископаемые.</p>
+      <p>
+      <strong>По очкам победил Альянс с большим отрывом!</strong>
+      </p>
+      <p>🏆 Альянс — 551 очко</p>
+      <p>Деревня — 364 очка</p>
+      <p>Команда «Подхвостья» ещё раз благодарит всех за участие!</p>
+      <p>Я даже не знаю, что ещё могу вам сказать. Возможно, мы увидимся с вами снова…</p>
+      <p>
+      <strong>Деревня может отомстить…</strong>
+      </p>
+      <p>⸻</p>
+      <p>
+      <strong>P.S. Касательно патчей на игре.</strong>
+      </p>
+      <p>Патчи, которые вы получили в подарок, — это ручная работа, выполненная мной и моим близким другом.</p>
+      <p>Большая просьба не оставлять их надолго под прямыми солнечными лучами, так как под воздействием сильного солнца рисунок может измениться.</p>
+      <p>
+      <strong>P.P.S. Обязательно оставляйте свои отзывы об игре!</strong>
+      <strong> </strong>
+      </p>
+      <p>
+      <a href="https://t.me/AirSoftEstonia/34073" target="_blank" rel="noopener noreferrer">https://t.me/AirSoftEstonia/34073</a>
+      </p>
+      <p>
+      <a href="https://t.me/c/2189111370/4295" target="_blank" rel="noopener noreferrer">https://t.me/c/2189111370/4295</a>
+      </p>
+      <p>
+      <a href="https://www.facebook.com/groups/243448691806903" target="_blank" rel="noopener noreferrer">
+      <strong>https://www.facebook.com/groups/243448691806903</strong>
+      </a>
+      </p>
       <h3>—----------------------------------------------------------------------------</h3>
       <h3>20.10.26</h3>
       <p>Обновлён раздел «Карта». Теперь на карте отмечены точки интереса, а ниже описаны задания, которые необходимо будет выполнять.</p>
@@ -778,6 +862,17 @@ export const localContent = {
       <p>Please do not leave them in direct sunlight for too long, as prolonged exposure to strong sunlight may cause the design to change.</p>
       <p>
       <strong>P.P.S.</strong> Please make sure to leave your feedback about the game! </p>
+      <p>
+      <a href="https://t.me/AirSoftEstonia/34073" target="_blank" rel="noopener noreferrer">https://t.me/AirSoftEstonia/34073</a>
+      </p>
+      <p>
+      <a href="https://t.me/c/2189111370/4295" target="_blank" rel="noopener noreferrer">https://t.me/c/2189111370/4295</a>
+      </p>
+      <p>
+      <a href="https://www.facebook.com/groups/243448691806903" target="_blank" rel="noopener noreferrer">
+      <strong>https://www.facebook.com/groups/243448691806903</strong>
+      </a>
+      </p>
       <p>
       <strong>—----------------------------------------------------------------------------</strong>
       </p>
