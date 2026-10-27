@@ -219,9 +219,7 @@ export const localContent = {
       </ul>
     `,
     "news": `
-      <p>
-      <strong>Noh, mäng „Undertail“ ongi läbi saanud!</strong>
-      </p>
+      <h3>Noh, mäng „Undertail“ ongi läbi saanud!</h3>
       <p>Olen väga tänulik kõigile mängijatele, kes kohale tulid ja mind toetasid!</p>
       <p>Suur aitäh kõigile, kes mängisid Küla poolel, ägedate ja hoolikalt ettevalmistatud kostüümide eest! Samuti suur tänu Alliansi poolele aktiivse mängu eest liivakasti juures!</p>
       <p>Tohutu tänu X-Force’i poele, korraldusmeeskonnale ja meie tublidele abilistele!</p>
@@ -535,9 +533,7 @@ export const localContent = {
       </ul>
     `,
     "news": `
-      <p>
-      <strong>Что ж, вот и прошла игра «Подхвостье»!</strong>
-      </p>
+      <h3>Что ж, вот и прошла игра «Подхвостье»!</h3>
       <p>Я очень благодарна всем игрокам, которые приехали на игру и поддержали меня!</p>
       <p>Спасибо всем, кто играл на стороне Деревни, за подготовленные и крутые костюмы! Также большое спасибо стороне Альянса за активную игру у песочницы!</p>
       <p>Огромное спасибо магазину X-Force, организаторской команде и нашим девочкам-помощницам!</p>
@@ -849,6 +845,31 @@ export const localContent = {
       </ul>
     `,
     "news": `
+      <h3>Well, the game “Undertail” has come to an end!</h3>
+      <p>I am very grateful to all the players who came to the game and supported me!</p>
+      <p>Thank you to everyone who played on the Village side for your amazing costumes and all the effort you put into preparing them! Also, a big thank you to the Alliance side for the active gameplay at the sandbox!</p>
+      <p>A huge thank you to the X-Force store, the organizing team, and our wonderful girls who helped us!</p>
+      <p>Many thanks to Airtsoft Wars for their support in creating this game. Special thanks to Yura and Vitaliy!</p>
+      <p>And special thanks to the Chimera team, as well as Ilyav from Narva CQB, for their help on site!</p>
+      <p>
+      <strong>Let’s continue with our traditional debriefing.</strong>
+      </p>
+      <p>The battles for the Village were very fierce and intense. The Alliance put a lot of effort into capturing the Village and transporting the valuable minerals out. But the Village did not give up so easily! The villagers put up strong resistance and fought until the very end to defend their lands.</p>
+      <p>
+      <strong>The Village defended its lands!</strong>
+      </p>
+      <p>But the Village’s treasury was emptied… The Alliance managed to transport almost all the valuable minerals out.</p>
+      <p>
+      <strong>The Alliance won by a large margin in points!</strong>
+      </p>
+      <p>🏆 <strong>Alliance</strong> — 551 points</p>
+      <p>
+      <strong>Village</strong> — 364 points</p>
+      <p>The Undertail team once again thanks everyone for participating!</p>
+      <p>I don’t even know what else I can say to you. Perhaps we will see each other again…</p>
+      <p>
+      <strong>The Village may take revenge…</strong>
+      </p>
       <p>⸻</p>
       <p>
       <strong>P.S.</strong> Regarding the patches at the game.</p>
