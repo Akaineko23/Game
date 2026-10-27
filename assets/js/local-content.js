@@ -227,16 +227,26 @@ export const localContent = {
       <p>Tohutu tänu X-Force’i poele, korraldusmeeskonnale ja meie tublidele abilistele!</p>
       <p>Samuti suur aitäh Airtsoft Warsile toetuse eest selle mängu loomisel. Eriline tänu Jurale ja Vitalile!</p>
       <p>Eraldi tänu ka Chimera meeskonnale ning Ilyavile Narva CQB-st kohapealse abi eest!</p>
-      <p>Jätkame traditsioonilise mängujärgse kokkuvõttega.</p>
+      <p>
+      <strong>Jätkame traditsioonilise mängujärgse kokkuvõttega.</strong>
+      </p>
       <p>Lahingud Küla pärast olid väga ägedad ja intensiivsed. Allianss nägi palju vaeva, et Küla vallutada ja väärtuslikud maavarad ära viia. Kuid Küla ei andnud nii lihtsalt alla! Külaelanikud osutasid tugevat vastupanu ja võitlesid viimase hetkeni, et oma maad kaitsta.</p>
-      <p>Küla suutis oma maad kaitsta!</p>
+      <p>
+      <strong>Küla suutis oma maad kaitsta!</strong>
+      </p>
       <p>Kuid Küla varakamber jäi tühjaks… Alliansil õnnestus peaaegu kõik väärtuslikud maavarad ära viia.</p>
-      <p>Punktiarvestuses võitis suure edumaaga Allianss!</p>
-      <p>🏆 Allianss — 551 punkti</p>
-      <p>Küla — 364 punkti</p>
+      <p>
+      <strong>Punktiarvestuses võitis suure edumaaga Allianss!</strong>
+      </p>
+      <p>🏆<strong> </strong>
+      <strong>Allianss </strong>— 551 punkti</p>
+      <p>
+      <strong>Küla</strong> — 364 punkti</p>
       <p>Undertaili meeskond tänab veel kord kõiki osalemise eest!</p>
       <p>Ma isegi ei tea, mida teile veel öelda. Võib-olla kohtume teiega veel kunagi…</p>
-      <p>Küla võib kätte maksta…</p>
+      <p>
+      <strong>Küla võib kätte maksta…</strong>
+      </p>
       <p>⸻</p>
       <p>
       <strong>P.S.</strong> Seoses mängul jagatud patch’idega.</p>
@@ -544,8 +554,10 @@ export const localContent = {
       <p>
       <strong>По очкам победил Альянс с большим отрывом!</strong>
       </p>
-      <p>🏆 Альянс — 551 очко</p>
-      <p>Деревня — 364 очка</p>
+      <p>🏆<strong> </strong>
+      <strong>Альянс</strong> — 551 очко</p>
+      <p>
+      <strong>Деревня</strong> — 364 очка</p>
       <p>Команда «Подхвостья» ещё раз благодарит всех за участие!</p>
       <p>Я даже не знаю, что ещё могу вам сказать. Возможно, мы увидимся с вами снова…</p>
       <p>
@@ -837,24 +849,6 @@ export const localContent = {
       </ul>
     `,
     "news": `
-      <p>
-      <strong>Well, the game “Undertail” has come to an end!</strong>
-      </p>
-      <p>I am very grateful to all the players who came to the game and supported me!</p>
-      <p>Thank you to everyone who played on the Village side for your amazing costumes and all the effort you put into preparing them! Also, a big thank you to the Alliance side for the active gameplay at the sandbox!</p>
-      <p>A huge thank you to the X-Force store, the organizing team, and our wonderful girls who helped us!</p>
-      <p>Many thanks to Airtsoft Wars for their support in creating this game. Special thanks to Yura and Vitaliy!</p>
-      <p>And special thanks to the Chimera team, as well as Ilyav from Narva CQB, for their help on site!</p>
-      <p>Let’s continue with our traditional debriefing.</p>
-      <p>The battles for the Village were very fierce and intense. The Alliance put a lot of effort into capturing the Village and transporting the valuable minerals out. But the Village did not give up so easily! The villagers put up strong resistance and fought until the very end to defend their lands.</p>
-      <p>The Village defended its lands!</p>
-      <p>But the Village’s treasury was emptied… The Alliance managed to transport almost all the valuable minerals out.</p>
-      <p>The Alliance won by a large margin in points!</p>
-      <p>🏆 Alliance — 551 points</p>
-      <p>Village — 364 points</p>
-      <p>The Undertail team once again thanks everyone for participating!</p>
-      <p>I don’t even know what else I can say to you. Perhaps we will see each other again…</p>
-      <p>The Village may take revenge…</p>
       <p>⸻</p>
       <p>
       <strong>P.S.</strong> Regarding the patches at the game.</p>
